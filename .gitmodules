@@ -1,0 +1,3 @@
+[submodule "src/min"]
+	path = src/min
+	url = http://gitlab.kashuo.net/uigroup/ksmin.git
