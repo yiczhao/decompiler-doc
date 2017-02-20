@@ -1,0 +1,4479 @@
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+.hljs {
+  display: block;
+  background: white;
+  padding: 0.5em;
+  color: #333333;
+  overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-meta {
+  color: #969896;
+}
+
+.hljs-string,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+  color: #df5000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: #a71d5d;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+  color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+  color: #63a35c;
+}
+
+.hljs-tag {
+  color: #333333;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #795da3;
+}
+
+.hljs-addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+
+.hljs-deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+@charset "UTF-8";
+/**
+ * @author: pkeros.
+ * @date: 2016/6/12.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+* @file:      Neat.css V1.1.0
+* @author:    一丝
+* @update:    2013-11-22 14:55:29;
+* @copyright: 基于 normalize.css | MIT License
+* @doc:
+*/
+/**
+* Neat.css 解决的问题
+* 基于业务需要兼容的浏览器做到以下几点：
+* 1.解决BUG，特别是低级浏览器的常见BUG；
+* 2.统一效果，但不盲目追求重置为0；
+* 3.向后兼容；
+* 4.考虑响应式；
+* 5.考虑移动设备。
+*/
+/* ==========================================================================
+ 有即是无，无即是有
+ ========================================================================== */
+body, dl, dd, ul, ol, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, optgroup,
+p, blockquote, figure, hr, menu, dir,
+thead, tbody, tfoot, th, td {
+  margin: 0;
+  padding: 0; }
+
+/**
+* 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
+*/
+ul, ol {
+  list-style-type: none;
+  list-style-image: none; }
+
+/* ==========================================================================
+ 链接
+ ========================================================================== */
+/**
+* 去除链接默认的下划线，提高文字可读性
+*/
+a {
+  text-decoration: none; }
+
+/**
+* 去掉 IE 10+ 点击链接时的灰色背景
+*/
+a:active {
+  background-color: transparent; }
+
+/**
+* 去掉点击时的焦点框，同时保证使用键盘可以显示焦点框
+*/
+a:active,
+a:hover {
+  outline: 0 none; }
+
+/**
+* 统一 Chrome 和 Safari 的焦点框样式
+* Chrome 中 thin 关键字放大页面后焦点框不会放大 http://jsbin.com/ehakom/1
+* Firefox 中 box-shadow 会导致焦点框位置偏移，需用「outline-offset」修正
+*
+*/
+/* ==========================================================================
+ 字体和基础排版
+ ========================================================================== */
+/**
+* 1.防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常
+*/
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* 1 */
+  font-size: 62.5%;
+  /* 10/16=62.5% */ }
+
+/**
+* 所有 font-family 小写，存在空格的字体名加单引号
+* @default-font: 'helvetica neue', tahoma, \5B8B\4F53, sans-serif;
+* @heading-font: 'helvetica neue', tahoma, 'hiragino sans gb', stheiti,
+  \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, 'wenquanyi micro hei', sans-serif;
+* @code-font: monaco, menlo, consolas, monospace;
+*/
+/**
+* 中文优先使用冬青黑体简体(OS X)、微软雅黑(Windows)和文泉驿微米黑(Linux)
+* 西文使用 tahoma
+* 1. 防止元素中「font-family」不能继承
+* 2. 西文字体和 OS X 字体写在前面
+* 3. Opera 12.1 之前版本不支持中文字体的英文名称
+* 4. 微软雅黑「\5FAE\8F6F\96C5\9ED1」,中易宋体「\5B8B\4F53」
+*/
+body,
+button, input, select, textarea {
+  font-family: 'helvetica neue',arial,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  /* 5 */
+  text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  /* 5 */ }
+
+/**
+* 中文小于 12px 可读性很差
+* 1. 统一 IE 6-7 中字体大小
+* 2. 统一 Firefox 4+，Safari 5 和 Chrome 中「section」和「article」内的字体大小
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 22px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+/**
+* 修正「abbr」元素在 Firefox 外其他浏览器没有下划线的问题
+* 添加问号光标，明确语义
+*/
+abbr,
+acronym {
+  border-bottom: 1px dotted;
+  /* 1 */
+  cursor: help;
+  /* 2 */ }
+
+/**
+* Firefox3+，Safari4/5 和 Chrome 中统一设置为粗体
+*/
+b,
+strong {
+  font-weight: bold; }
+
+/**
+* 修正 Safari5 和 Chrome 中没有样式的问题
+*/
+dfn {
+  font-style: italic; }
+
+/**
+* 修正 Firefox 和其他浏览器之间的差异
+*/
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+* 网页标记，荧光笔
+* 修正 IE6-11 中没有样式的问题
+*/
+mark {
+  background-color: #D2E5FF;
+  color: #000; }
+
+/**
+* 统一代码的字体设置
+* 字体要能明确区分数字 0 和字母 o
+* Mac 优先使用 Monaco，Windows 优先使用 Consolas
+* XP自带 Courier New
+* Windows 7开始自带的 Consolas
+* Mac上自带的Monaco，Osaka-Mono
+*/
+code,
+kbd,
+pre,
+samp {
+  font-family: monaco, menlo, consolas, 'courier new', courier, monospace; }
+
+/**
+* 增强所有浏览器中 pre 标签中文本的可读性
+* 1. IE 6-7 不支持 pre-wrap
+* 2. pre 标签应当包含滚溢出
+*/
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  /* 1 */
+  word-wrap: break-word;
+  overflow: auto; }
+
+/**
+* 行内引用
+* IE 6-7 不支持 quotes 属性
+* 现代浏览器去除 quotes 内容
+*/
+q {
+  quotes: none; }
+
+/**
+* Safari 4 不支持<q>标签
+*/
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+/**
+* 中文网页<small>元素字号小于 12px 不易阅读
+*/
+small {
+  font-size: 85.7%;
+  /* 12/14=0.8571428571 */ }
+
+/**
+* 防止所有浏览器中的<sub>和<sup>影响行高
+* http://jsbin.com/usoyal/1/edit
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+ 表格
+ ========================================================================== */
+/**
+* 合并单元格边框
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+* 修复 IE 中 th 不能继承 text-align 的问题并统一左对齐
+* http://jsbin.com/evoxif/2/edit
+*/
+th {
+  text-align: left; }
+
+/**
+* 单元格添加边框
+*/
+/**
+* 表头底部边框
+*/
+/* ==========================================================================
+ 嵌入元素
+ ========================================================================== */
+/**
+* 1. 去除 IE6-9 和 Firefox 3 中 a 内部 img 元素默认的边框
+* 2. 修正 IE8 图片消失bug
+* 3. 防止 img 指定「height」时图片高度不能按照宽度等比缩放，导致图片变形
+    http://jsbin.com/aJoTUca/2
+* 4. 让图片支持响应式
+* 5. 去除现代浏览器图片底部的空隙
+* 6. 修复 IE7 图片缩放失真
+*/
+img {
+  border: 0 none;
+  /* 1 */
+  width: auto\9;
+  /* 2 */
+  height: auto;
+  /* 3 */
+  max-width: 100%;
+  /* 4 */
+  vertical-align: top;
+  /* 5 */
+  -ms-interpolation-mode: bicubic;
+  /* 6 */ }
+
+/**
+* 修复 IE9 中的「overflow」的怪异表现
+*/
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+ 表单
+ ========================================================================== */
+/**
+* 定义一致的边框、外边距和内边距
+*/
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+* 1. 修正 IE 6-9 中颜色不能继承的问题
+* 2. 修正 Firefox3 中文字不换行的问题
+* 3. 修正 IE6-7 中怪异的对齐方式
+*/
+legend {
+  border: 0 none;
+  /* 1 */
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/**
+* 1. 修正所有浏览器中字体不继承的问题
+* 2. 修正所有浏览器中字号不继承的问题
+* 3. 修正 Firefox 3+， Safari5 和 Chrome 中外边距不同的问题
+* 4. 改善在所有浏览器下的垂直对齐方式
+*/
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  vertical-align: baseline;
+  /* 4 */
+  *vertical-align: middle;
+  /* 4 */ }
+
+/**
+* 修正 IE7 随着字数增加边距不断增加的问题
+*/
+input,
+button {
+  *overflow: visible; }
+
+/**
+* 统一各浏览器「text-transform」不会继承的问题
+* http://jsbin.com/iqecic/1/edit
+* http://tjvantoll.com/2012/07/10/default-browser-handling-of-the-css-text-transform-property/
+*/
+button,
+select {
+  text-transform: none; }
+
+/**
+* 1. 避免 Android 4.0.* 中的 WebKit bug ，该bug会破坏原生的
+ 「audio」 和「video」的控制器
+* 2. 更正 iOS 中无法设置可点击的「input」的问题
+* 3. 统一其他类型的「input」的光标样式
+*/
+button,
+html input[type="button"], input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+* 重置按钮禁用时光标样式
+*/
+button[disabled],
+input[disabled] {
+  cursor: default;
+  opacity: .6; }
+
+/**
+* 1. 修正 IE 8/9 box-sizing 被设置为「content-box」的问题
+* 2. 移除 IE 8/9 中多余的内边距
+* 3. 移除 IE7 中多余的内边距(IE6 中任然存在)
+*/
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/**
+* 1. 修正 Safari 5 和 Chrome 中「appearance」被设置为「searchfield」的问题
+* 2. 修正 Safari 5 和 Chrome 中「box-sizing」被设置为 「border-box」的问题
+*/
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/**
+* 1.移除 OS X 中 Safari5 和 Chrome 搜索框内侧的左边距
+* 2.如果需要隐藏清除按钮需要加上
+ input[type="search"]::-webkit-search-cancel-button
+*/
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+* 移除 Firefox 3+ 的内边距
+*/
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+* 修正 Chrome 中 input [type="number"] 在特定高度和 font-size 时,
+* 下面一个箭头光标变成「cursor: text」
+* @demo: http://jsfiddle.net/FFXEc/
+* 动画演示：http://gtms04.alicdn.com/tps/i4/T18kd8FCtaXXc_FhcF-330-350.gif
+*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+* 1. 移除 IE6-11 中默认的垂直滚动条
+* 2. 禁止水平拖动，防止破坏布局
+*/
+textarea {
+  overflow: auto;
+  /* 1 */
+  resize: vertical;
+  /* 2 */ }
+
+/**
+* 修正 Chrome 30- option 中文字无法显示的问题
+* http://jsbin.com/avujas/1/edit
+*/
+select:disabled option:checked,
+option:disabled:checked {
+  color: #D2D2D2; }
+
+/**
+* 修正 Safari 3+, Chrome 1+ Placeholder 居中问题
+*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input {
+    line-height: normal !important; } }
+
+/**
+* 修正 Firefox 19+ Placeholder 设置了opacity 的问题
+*/
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: darkGray;
+  opacity: 1; }
+
+/**
+* label 元素给予手型，暗示此处可点击
+*/
+label {
+  cursor: pointer; }
+
+/**
+* 统一 select 样式, Firefox 中有 padding:1px 0
+* http://jsbin.com/avujas/1/edit
+*/
+select[size],
+select[multiple],
+select[size][multiple] {
+  border: 1px solid #AAA;
+  padding: 0; }
+
+/* ==========================================================================
+ HTML5 元素
+ ========================================================================== */
+/**
+* 修正未定义为「block」的元素
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+* 1. 修正未定义为「inline-block」的元素
+* 2. 修正 Chrome、Firefox、Opera 中 「progress」元素 vertical-align 默认值不一致
+*/
+audio,
+canvas,
+video,
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+* 1.防止现代浏览器将没有「controls」属性的 「audio」元素显示出来
+* 2.去掉 iOS 5 中多余的高度
+*/
+audio:not([controls]) {
+  display: none;
+  /* 1 */
+  height: 0;
+  /* 2 */ }
+
+/**
+* 修复 IE 7/8/9，Firefox 3 和 Safari 4 中 「hidden」属性不起作用的问题
+* 在IE、Safari、Firefox 22- 中隐藏「template」元素
+*/
+[hidden], template {
+  display: none; }
+
+/**
+* 为可拖动元素添加拖动的光标
+* http://jsbin.com/apavod/1/edit
+*/
+[draggable] {
+  cursor: move; }
+
+/**
+* 居中 HTML5 dialog 元素
+* Chrome 31 支持，需开启 chrome://flags/#enable-experimental-web-platform-features
+* Chrome 28 之前、Firefox 中不支持 height:fit-content;
+ https://src.chromium.org/viewvc/blink?revision=148314&view=revision
+* ::backdrop 定义遮罩样式
+* @demo: http://jsbin.com/iPACab/1
+*/
+dialog {
+  border: 1px solid;
+  padding: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
+
+dialog::-webkit-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.ks-row, .tb, .form-box-center .form-group, .form-ver .col.label, .control-group {
+  display: table;
+  table-layout: fixed;
+  border-spacing: 0; }
+
+.ks-col-auto, .ks-col, .form-box-center .form-group .label, .control-group .col-percent7, .control-group-auto .col-percent7, .control-group .col-wauto, .control-group-auto .col-wauto, .control-group .col-percent3, .control-group-auto .col-percent3, .tb-cell {
+  display: table-cell;
+  vertical-align: middle;
+  word-break: break-all; }
+
+.ib-w, .ib-w.ib {
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: PingFangSC-Regular, microsoft yahei, Arial, sans-serif;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+  -ms-align-content: flex-start;
+  -webkit-align-content: flex-start;
+  align-content: flex-start; }
+
+.ib {
+  display: inline-block;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  box-sizing: border-box; }
+
+.ks-row-auto, .control-group-auto {
+  box-sizing: border-box;
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  table-layout: auto; }
+
+.ks-col-auto {
+  width: 1px;
+  white-space: nowrap; }
+
+.ks-row, .tb, .form-box-center .form-group, .form-ver .col.label, .control-group {
+  box-sizing: border-box;
+  width: 100%; }
+
+/* h1 ~ h6 字体大小 */
+.h1 {
+  font-size: 30px; }
+
+.h2 {
+  font-size: 24px; }
+
+.h3 {
+  font-size: 18px; }
+
+.h4 {
+  font-size: 16px; }
+
+.h5 {
+  font-size: 14px; }
+
+.h6 {
+  font-size: 12px; }
+
+/* 颜色  primary danger info warning dark gray */
+.primary {
+  color: #2196F3;
+  border-color: #2196F3; }
+
+.primary-light {
+  color: #42A5F5;
+  border-color: #42A5F5; }
+
+.primary-deep {
+  color: #1E88E5;
+  border-color: #1E88E5; }
+
+.success {
+  color: #4CAF50;
+  border-color: #4CAF50; }
+
+.success-light {
+  color: #66BB6A;
+  border-color: #66BB6A; }
+
+.success-deep {
+  color: #43A047;
+  border-color: #43A047; }
+
+.info {
+  color: #00BCD4;
+  border-color: #00BCD4; }
+
+.info-light {
+  color: #26C6DA;
+  border-color: #26C6DA; }
+
+.info-deep {
+  color: #00ACC1;
+  border-color: #00ACC1; }
+
+.danger {
+  color: #F44336;
+  border-color: #F44336; }
+
+.danger-light {
+  color: #EF5350;
+  border-color: #EF5350; }
+
+.danger-deep {
+  color: #E53935;
+  border-color: #E53935; }
+
+.warning {
+  color: #FF5722;
+  border-color: #FF5722; }
+
+.warning-light {
+  color: #FF7043;
+  border-color: #FF7043; }
+
+.warning-deep {
+  color: #F4511E;
+  border-color: #F4511E; }
+
+.dark {
+  color: #777777;
+  border-color: #777777; }
+
+.dark-light {
+  color: #999999;
+  border-color: #999999; }
+
+.dark-deep {
+  color: #444444;
+  border-color: #444444; }
+
+.gray {
+  color: #F5F5F5;
+  border-color: #F5F5F5; }
+
+.gray-light {
+  color: #FCFCFC;
+  border-color: #FCFCFC; }
+
+.gray-deep {
+  color: #E9E9E9;
+  border-color: #E9E9E9; }
+
+.bg-primary {
+  background: #2196F3;
+  color: #fff; }
+
+.bg-primary-light {
+  background: #42A5F5;
+  color: #fff; }
+
+.bg-primary-deep {
+  background: #1E88E5;
+  color: #fff; }
+
+.bg-success {
+  background: #4CAF50;
+  color: #fff; }
+
+.bg-success-light {
+  background: #66BB6A;
+  color: #fff; }
+
+.bg-success-deep {
+  background: #43A047;
+  color: #fff; }
+
+.bg-info {
+  background: #00BCD4;
+  color: #fff; }
+
+.bg-info-light {
+  background: #26C6DA;
+  color: #fff; }
+
+.bg-info-deep {
+  background: #00ACC1;
+  color: #fff; }
+
+.bg-danger {
+  background: #F44336;
+  color: #fff; }
+
+.bg-danger-light {
+  background: #EF5350;
+  color: #fff; }
+
+.bg-danger-deep {
+  background: #E53935;
+  color: #fff; }
+
+.bg-warning {
+  background: #FF5722;
+  color: #fff; }
+
+.bg-warning-light {
+  background: #FF7043;
+  color: #fff; }
+
+.bg-warning-deep {
+  background: #F4511E;
+  color: #fff; }
+
+.bg-dark {
+  background: #777777;
+  color: #fff; }
+
+.bg-dark-light {
+  background: #999999;
+  color: #fff; }
+
+.bg-dark-deep {
+  background: #444444;
+  color: #fff; }
+
+.bg-gray {
+  background: #F5F5F5;
+  color: #fff; }
+
+.bg-gray-light {
+  background: #FCFCFC;
+  color: #fff; }
+
+.bg-gray-deep {
+  background: #E9E9E9;
+  color: #fff; }
+
+@font-face {
+  font-family: "iconfont";
+  src: url(/dist/./iconfont.eot?4ba232cd);
+  src: url(/dist/./iconfont.eot?4ba232cd) format("embedded-opentype"), url(/dist/./iconfont.woff?9dfebbc0) format("woff"), url(/dist/./iconfont.ttf?1fb796a6) format("truetype"), url(/dist/./iconfont.svg?049982a7) format("svg"); }
+
+.iconfont, .icon {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  line-height: 1;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-nanrentouxiang:before {
+  content: "\E651"; }
+
+.icon-xiajiantou:before {
+  content: "\E622"; }
+
+.icon-shangjiantou:before {
+  content: "\E623"; }
+
+.icon-sanjiaojiantouxia:before {
+  content: "\E656"; }
+
+.icon-lock:before {
+  content: "\E650"; }
+
+.icon-jianhao:before {
+  content: "\E64E"; }
+
+.icon-chengshishitu:before {
+  content: "\E668"; }
+
+.icon-zhexianquyuxingupolylineshapedregion:before {
+  content: "\E655"; }
+
+.icon-shizhong:before {
+  content: "\E624"; }
+
+.icon-xiangyoujiantou2:before {
+  content: "\E654"; }
+
+.icon-right-arrow:before {
+  content: "\E667"; }
+
+.icon-weixinzhifu:before {
+  content: "\E625"; }
+
+.icon-appshusandian:before {
+  content: "\E626"; }
+
+.icon-chenggong:before {
+  content: "\E627"; }
+
+.icon-arrow-right:before {
+  content: "\E659"; }
+
+.icon-huoxuanzhong:before {
+  content: "\E652"; }
+
+.icon-jiahao:before {
+  content: "\E64F"; }
+
+.icon-triangle-copy-copy:before {
+  content: "\E628"; }
+
+.icon-loading-copy:before {
+  content: "\E629"; }
+
+.icon-chenggong1:before {
+  content: "\E62A"; }
+
+.icon-iconzhenghe31:before {
+  content: "\E62B"; }
+
+.icon-1-copy-copy:before {
+  content: "\E677"; }
+
+.icon-icohongbao:before {
+  content: "\E62C"; }
+
+.icon-icohongbaoyouhui:before {
+  content: "\E62D"; }
+
+.icon-icohuiyuan:before {
+  content: "\E62E"; }
+
+.icon-icohui:before {
+  content: "\E62F"; }
+
+.icon-icoji:before {
+  content: "\E630"; }
+
+.icon-icohome:before {
+  content: "\E631"; }
+
+.icon-icomap:before {
+  content: "\E632"; }
+
+.icon-icostar:before {
+  content: "\E633"; }
+
+.icon-icowifi:before {
+  content: "\E634"; }
+
+.icon-icochongzhihuodong:before {
+  content: "\E635"; }
+
+.icon-icochu:before {
+  content: "\E636"; }
+
+.icon-icochuzhiqia:before {
+  content: "\E637"; }
+
+.icon-icoerweima:before {
+  content: "\E638"; }
+
+.icon-icofanhui:before {
+  content: "\E639"; }
+
+.icon-icofujinmendian:before {
+  content: "\E63A"; }
+
+.icon-icoyanzhengma:before {
+  content: "\E63B"; }
+
+.icon-icoyouhuiquan:before {
+  content: "\E63C"; }
+
+.icon-icozhekou:before {
+  content: "\E63D"; }
+
+.icon-ico12:before {
+  content: "\E63E"; }
+
+.icon-icojifen:before {
+  content: "\E63F"; }
+
+.icon-icojifenhuodong:before {
+  content: "\E640"; }
+
+.icon-icojiasu:before {
+  content: "\E641"; }
+
+.icon-icolipin:before {
+  content: "\E642"; }
+
+.icon-icomendian:before {
+  content: "\E643"; }
+
+.icon-icoshengri:before {
+  content: "\E644"; }
+
+.icon-icoshouji:before {
+  content: "\E645"; }
+
+.icon-icotequan:before {
+  content: "\E646"; }
+
+.icon-icoxiaofeiyouhui:before {
+  content: "\E647"; }
+
+.icon-icoxingbie:before {
+  content: "\E648"; }
+
+.icon-bangzhu:before {
+  content: "\E649"; }
+
+.icon-daohangico:before {
+  content: "\E64A"; }
+
+.icon-kongico:before {
+  content: "\E64B"; }
+
+.icon-jiayouzhanico:before {
+  content: "\E64C"; }
+
+.icon-jiantou:before {
+  content: "\E64D"; }
+
+.icon-rentouliangrenhover:before {
+  content: "\E653"; }
+
+.icon-copy:before {
+  content: "\E600"; }
+
+.icon-anonymous-iconfont:before {
+  content: "\E601"; }
+
+.icon-copy1:before {
+  content: "\E602"; }
+
+.icon-copy2:before {
+  content: "\E603"; }
+
+.icon-anonymous-iconfont1:before {
+  content: "\E604"; }
+
+.icon-danxuanweixuan:before {
+  content: "\E605"; }
+
+.icon-danxuanxuanze:before {
+  content: "\E606"; }
+
+.icon-fuxuanbukexuan:before {
+  content: "\E607"; }
+
+.icon-fuxuanweixuan:before {
+  content: "\E608"; }
+
+.icon-fuxuanxuanze:before {
+  content: "\E609"; }
+
+.icon-anquanzhongxin:before {
+  content: "\E60A"; }
+
+.icon-chenggongtubiao:before {
+  content: "\E60B"; }
+
+.icon-cuowu:before {
+  content: "\E60C"; }
+
+.icon-cuowutubiao:before {
+  content: "\E60D"; }
+
+.icon-jibenshezhi:before {
+  content: "\E60E"; }
+
+.icon-jiaoyiguanli:before {
+  content: "\E60F"; }
+
+.icon-mendian:before {
+  content: "\E610"; }
+
+.icon-guanbitubiaoanniu:before {
+  content: "\E611"; }
+
+.icon-huiyuanqia:before {
+  content: "\E612"; }
+
+.icon-jifen:before {
+  content: "\E613"; }
+
+.icon-quedingxiaotubiao:before {
+  content: "\E614"; }
+
+.icon-rili:before {
+  content: "\E615"; }
+
+.icon-shijian:before {
+  content: "\E616"; }
+
+.icon-sousuo:before {
+  content: "\E617"; }
+
+.icon-quxiaoxiaotubiao:before {
+  content: "\E618"; }
+
+.icon-xialajiantou:before {
+  content: "\E619"; }
+
+.icon-xianjinhongbao:before {
+  content: "\E61A"; }
+
+.icon-xinxitubiao:before {
+  content: "\E61B"; }
+
+.icon-yingxiao:before {
+  content: "\E61C"; }
+
+.icon-yonghu:before {
+  content: "\E61D"; }
+
+.icon-zhengque:before {
+  content: "\E61E"; }
+
+.icon-zhuyi:before {
+  content: "\E61F"; }
+
+.icon-xialajiantoufuben:before {
+  content: "\E620"; }
+
+.icon-chuzhiqia:before {
+  content: "\E621"; }
+
+.icon-hongbaoicocopy:before {
+  content: "\E65A"; }
+
+.icon-shuzi:before {
+  content: "\E65B"; }
+
+.icon-shuzi0:before {
+  content: "\E65C"; }
+
+.icon-shuzi01:before {
+  content: "\E65D"; }
+
+.icon-shuzi02:before {
+  content: "\E65E"; }
+
+.icon-shuzi03:before {
+  content: "\E65F"; }
+
+.icon-shuzi04:before {
+  content: "\E660"; }
+
+.icon-shuzi05:before {
+  content: "\E661"; }
+
+.icon-shuzi06:before {
+  content: "\E662"; }
+
+.icon-shuzi08:before {
+  content: "\E663"; }
+
+.icon-shuzi09:before {
+  content: "\E664"; }
+
+.icon-jiazai:before {
+  content: "\E666"; }
+
+.icon-jiahao1:before {
+  content: "\E657"; }
+
+.icon-jianhao1:before {
+  content: "\E658"; }
+
+.icon-buzoupen:before {
+  content: "\E665"; }
+
+.icon-biaogegengduoneirongico:before {
+  content: "\E6C0"; }
+
+.icon-quanxiancaozuoico:before {
+  content: "\E6C1"; }
+
+.icon-shanchuico:before {
+  content: "\E6C2"; }
+
+.icon-shezhiico:before {
+  content: "\E6C3"; }
+
+.icon-shouyeico:before {
+  content: "\E6C4"; }
+
+body {
+  font: 13px/1.7 PingFangSC-Regular, microsoft yahei, Arial, sans-serif;
+  color: #444; }
+
+.KsPopoverBottom, .KsPopoverLeft, .KsPopoverRight, .KsPopoverTop {
+  display: inline-block;
+  position: relative;
+  background: #444;
+  padding: 7px 18px;
+  border-radius: 4px;
+  color: #fff; }
+  .KsPopoverBottom span, .KsPopoverLeft span, .KsPopoverRight span, .KsPopoverTop span {
+    border: 10px solid transparent;
+    width: 0;
+    height: 0;
+    display: block;
+    margin: 0 auto;
+    position: absolute; }
+
+.KsPopoverBottom, .KsPopoverLeft, .KsPopoverRight, .KsPopoverTop {
+  background: #fff;
+  border: 1px solid #c8c8c8;
+  color: #444;
+  padding: 10px 20px;
+  max-width: 300px; }
+  .KsPopoverBottom h2, .KsPopoverLeft h2, .KsPopoverRight h2, .KsPopoverTop h2 {
+    font-size: 18px; }
+  .KsPopoverBottom span::after, .KsPopoverLeft span::after, .KsPopoverRight span::after, .KsPopoverTop span::after {
+    content: " ";
+    position: absolute;
+    border: 10px solid transparent; }
+
+.KsPopoverBottom span, .KsPopoverTop span {
+  transform: translate(-50%);
+  left: 50%; }
+  .KsPopoverBottom span::after, .KsPopoverTop span::after {
+    left: -10px; }
+
+.KsPopoverLeft span, .KsPopoverRight span {
+  transform: translate(0, -50%);
+  top: 50%; }
+  .KsPopoverLeft span::after, .KsPopoverRight span::after {
+    transform: translate(0, -50%);
+    top: 50%; }
+
+.KsPopoverBottom {
+  margin-top: 10px; }
+  .KsPopoverBottom span {
+    border-bottom: 10px solid #c8c8c8;
+    top: -20px; }
+    .KsPopoverBottom span::after {
+      border-bottom: 10px solid #fff;
+      top: -8px; }
+
+.KsPopoverLeft {
+  margin-right: 10px; }
+  .KsPopoverLeft span {
+    border-left: 10px solid #c8c8c8;
+    right: -20px; }
+    .KsPopoverLeft span::after {
+      border-left: 10px solid #fff;
+      right: -8px; }
+
+.KsPopoverRight {
+  margin-left: 10px; }
+  .KsPopoverRight span {
+    border-right: 10px solid #c8c8c8;
+    left: -20px; }
+    .KsPopoverRight span::after {
+      border-right: 10px solid #fff;
+      left: -8px; }
+
+.KsPopoverTop {
+  margin-bottom: 10px; }
+  .KsPopoverTop span {
+    border-top: 10px solid #c8c8c8;
+    bottom: -20px; }
+    .KsPopoverTop span::after {
+      border-top: 10px solid #fff;
+      top: -12px; }
+
+.KsPopoverBottom, .KsPopoverLeft, .KsPopoverRight, .KsPopoverTop {
+  display: inline-block;
+  position: relative;
+  background: #444;
+  padding: 7px 18px;
+  border-radius: 4px;
+  color: #fff; }
+  .KsPopoverBottom span, .KsPopoverLeft span, .KsPopoverRight span, .KsPopoverTop span {
+    border: 10px solid transparent;
+    width: 0;
+    height: 0;
+    display: block;
+    margin: 0 auto;
+    position: absolute; }
+
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/*!
+* by zhangxinxu(.com) 2010-?
+* https://github.com/zhangxinxu/zxx.lib.css
+* under MIT license
+*/
+/*
+* 2010-07-12 v1.0
+* 2010-07-21 v1.1 添加block元素居中之auto属性，增加鼠标手形样式
+* 2010-09-17 v1.2 添加z-index层级属性
+* 2010-09-29 v1.3 添加break-word属性
+* 2010-11-12 v1.4 添加white-space:nowrap;值，去掉Georgia字体
+* 2011-01-17 v1.5 去除red颜色，添加cell双栏自适应属性，z样式影响扩至IE7，样式位置以及顺序调整，dib样式忽略Firefox 2，去除Lucida Console字体，添加Verdana字体，添加letter-spacing样式
+* 2011-07-28 v1.6 增加vertical-align:bottom属性，增加点点点效果多样
+* 2012-01-18 v1.7 点点点效果样式去除-moz-前缀，多余；增加修复cell下连续单词字符换行问题；去除.ovs{overflow:scroll;}
+                  去除.vimg{margin-bottom:-3px;}
+* 2013-05-24 v2.0 为开源到github上做大改
+                  1. 增加margin负值范围
+                  2. margin/padding增加15px/30px组
+                  3. 中文字体改成英文字符表示，例如“微软雅黑” → "microsoft yahei"
+                  4. 新增border系列, background-color系列, width(fixed value/percent value)系列以及.ell以下所有样式
+* 2013-07-31 v2.1 inline_any等12px字体大小限制去除，inline_box的-3px间距缩进改成-.25em, 以便适应各种字体大小环境
+* 2013-09-13 v2.2 12px字体大小限制修改为1px笔误了，应该为1em, 删除-ms-transition
+* 2013-10-11 v2.3 float_seven一直没删除，清掉。增加两个绝对定位隐藏：abs_out和abs_clip
+* 2013-11-23 v2.4 add p0, ova, f18. 去除trans中-moz-和-o-私有前缀
+* 2014-02-26 v2.5 fix two name mistake
+* 2014-02-27 v2.6 add fl
+* 2015-02-08 v2.7 具体改动有：
+                  1. 添加h0
+                  2. 修改 .vn -2px → -4px
+                  3. zoom增加webkit重绘修复
+                  4. 去除.trans非webkit私有前缀
+                  5. loading背景图使用about:blank代替
+* 2015-02-09 v2.8 具体改动有：
+                  1. 添加.lh0
+                  2. 移除.f10, .f13, 添加f28，因为现代web站点字号越来越大
+                  3. .n添加white-space: normal声明
+                  4. 移除.vn使用具体负值代替，因为图标+不同字号，vertical-align的负值也不同，新增.v-1 ~ .v-5 按钮与文字的垂直对齐也可使用，兼容IE6+
+                  5. 移除.z中-webkit-transform: translateZ(0)此声明虽然能修复一些重绘问题，但同时也会带来垂直位置，position:fixed限制，影响overflow对absolute元素限制等一系列问题，移除之~
+                  6. 移除cell_bk, 若遭遇不换行问题，使用.cell_ovh代替~
+                  7. .trans中时间0.3s → .3s
+                  8. .disabled禁用大改造，使适用性更广泛
+                  9. 增加.opa0 透明度0
+                  10. float percent more accurate for IE8+
+* 2016-03-25 v2.9 本次改动有：
+                  1. fix w300宽度值为280px的错误
+                  2. dib增加div,p等标签的IE7特别处理，之前建议使用inline_any
+                  3. add h30, lh30，因为随着大屏普及，页面元素尺寸更大了
+                  4. transition时间从.3s → .15s
+                  5. pointer-events增加-ms-私有前缀for IE10+
+*/
+/* ---------------------single CSS----------------------- */
+/* display */
+.dn {
+  display: none; }
+
+.di {
+  display: inline; }
+
+.db {
+  display: block; }
+
+.dib {
+  display: inline-block; }
+
+div.dib {
+  *display: inline;
+  *zoom: 1; }
+
+/* other block level tag(eg. p, li, h1~h6), using 'inline_any' instead */
+/* height */
+.h0 {
+  height: 0; }
+
+.h16 {
+  height: 14px; }
+
+.h16 {
+  height: 16px; }
+
+.h18 {
+  height: 18px; }
+
+.h20 {
+  height: 20px; }
+
+.h22 {
+  height: 22px; }
+
+.h24 {
+  height: 24px; }
+
+.h30 {
+  height: 30px; }
+
+/* width */
+/* fixed width value */
+.w20 {
+  width: 20px; }
+
+.w50 {
+  width: 50px; }
+
+.w70 {
+  width: 70px; }
+
+.w100 {
+  width: 100px; }
+
+.w120 {
+  width: 120px; }
+
+.w140 {
+  width: 140px; }
+
+.w160 {
+  width: 160px; }
+
+.w180 {
+  width: 180px; }
+
+.w200 {
+  width: 200px; }
+
+.w220 {
+  width: 220px; }
+
+.w250 {
+  width: 250px; }
+
+.w280 {
+  width: 280px; }
+
+.w300 {
+  width: 300px; }
+
+.w320 {
+  width: 320px; }
+
+.w360 {
+  width: 360px; }
+
+.w400 {
+  width: 400px; }
+
+.w460 {
+  width: 460px; }
+
+.w500 {
+  width: 500px; }
+
+.w600 {
+  width: 600px; }
+
+.w640 {
+  width: 640px; }
+
+.w700 {
+  width: 700px; }
+
+/* percent width value */
+.pct10 {
+  width: 10%; }
+
+.pct15 {
+  width: 15%; }
+
+.pct20 {
+  width: 20%; }
+
+.pct25 {
+  width: 25%; }
+
+.pct30 {
+  width: 30%; }
+
+.pct33 {
+  width: 33.3%; }
+
+.pct40 {
+  width: 40%; }
+
+.pct50 {
+  width: 50%; }
+
+.pct60 {
+  width: 60%; }
+
+.pct66 {
+  width: 66.6%; }
+
+.pct70 {
+  width: 70%; }
+
+.pct75 {
+  width: 75%; }
+
+.pct80 {
+  width: 80%; }
+
+.pct90 {
+  width: 90%; }
+
+.pct100 {
+  width: 100%; }
+
+/* line-height */
+.lh0 {
+  line-height: 0; }
+
+.lh16 {
+  line-height: 14px; }
+
+.lh16 {
+  line-height: 16px; }
+
+.lh18 {
+  line-height: 18px; }
+
+.lh20 {
+  line-height: 20px; }
+
+.lh22 {
+  line-height: 22px; }
+
+.lh24 {
+  line-height: 24px; }
+
+.lh30 {
+  line-height: 30px; }
+
+/* margin */
+.m0 {
+  margin: 0; }
+
+.ml1 {
+  margin-left: 1px; }
+
+.ml2 {
+  margin-left: 2px; }
+
+.ml5 {
+  margin-left: 5px; }
+
+.ml10 {
+  margin-left: 10px; }
+
+.ml15 {
+  margin-left: 15px; }
+
+.ml20 {
+  margin-left: 20px; }
+
+.ml30 {
+  margin-left: 30px; }
+
+.mr1 {
+  margin-right: 1px; }
+
+.mr2 {
+  margin-right: 2px; }
+
+.mr5 {
+  margin-right: 5px; }
+
+.mr10 {
+  margin-right: 10px; }
+
+.mr15 {
+  margin-right: 15px; }
+
+.mr20 {
+  margin-right: 20px; }
+
+.mr30 {
+  margin-right: 30px; }
+
+.mt1 {
+  margin-top: 1px; }
+
+.mt2 {
+  margin-top: 2px; }
+
+.mt5 {
+  margin-top: 5px; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt15 {
+  margin-top: 15px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mb1 {
+  margin-bottom: 1px; }
+
+.mb2 {
+  margin-bottom: 2px; }
+
+.mb5 {
+  margin-bottom: 5px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.mb15 {
+  margin-bottom: 15px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.mb30 {
+  margin-bottom: 30px; }
+
+/* margin negative */
+.ml-1 {
+  margin-left: -1px; }
+
+.mr-1 {
+  margin-right: -1px; }
+
+.mt-1 {
+  margin-top: -1px; }
+
+.mb-1 {
+  margin-bottom: -1px; }
+
+.ml-3 {
+  margin-left: -3px; }
+
+.mr-3 {
+  margin-right: -3px; }
+
+.mt-3 {
+  margin-top: -3px; }
+
+.mb-3 {
+  margin-bottom: -3px; }
+
+.ml-20 {
+  margin-left: -20px; }
+
+.mr-20 {
+  margin-right: -20px; }
+
+.mt-20 {
+  margin-top: -20px; }
+
+.mb-20 {
+  margin-bottom: -20px; }
+
+/* padding */
+.p0 {
+  padding: 0; }
+
+.p1 {
+  padding: 1px; }
+
+.pl1 {
+  padding-left: 1px; }
+
+.pt1 {
+  padding-top: 1px; }
+
+.pr1 {
+  padding-right: 1px; }
+
+.pb1 {
+  padding-bottom: 1px; }
+
+.p2 {
+  padding: 2px; }
+
+.pl2 {
+  padding-left: 2px; }
+
+.pt2 {
+  padding-top: 2px; }
+
+.pr2 {
+  padding-right: 2px; }
+
+.pb2 {
+  padding-bottom: 2px; }
+
+.pl5 {
+  padding-left: 5px; }
+
+.p5 {
+  padding: 5px; }
+
+.pt5 {
+  padding-top: 5px; }
+
+.pr5 {
+  padding-right: 5px; }
+
+.pb5 {
+  padding-bottom: 5px; }
+
+.p10 {
+  padding: 10px; }
+
+.pl10 {
+  padding-left: 10px; }
+
+.pt10 {
+  padding-top: 10px; }
+
+.pr10 {
+  padding-right: 10px; }
+
+.pb10 {
+  padding-bottom: 10px; }
+
+.p15 {
+  padding: 15px; }
+
+.pl15 {
+  padding-left: 15px; }
+
+.pt15 {
+  padding-top: 15px; }
+
+.pr15 {
+  padding-right: 15px; }
+
+.pb15 {
+  padding-bottom: 15px; }
+
+.p20 {
+  padding: 20px; }
+
+.pl20 {
+  padding-left: 20px; }
+
+.pt20 {
+  padding-top: 20px; }
+
+.pr20 {
+  padding-right: 20px; }
+
+.pb20 {
+  padding-bottom: 20px; }
+
+.p30 {
+  padding: 30px; }
+
+.pl30 {
+  padding-left: 30px; }
+
+.pt30 {
+  padding-top: 30px; }
+
+.pr30 {
+  padding-right: 30px; }
+
+.pb30 {
+  padding-bottom: 30px; }
+
+/* border-color name rule: border(b)-position(l/r/t/b/d)-width(null/2)-style(null/sh)-color(first one letter/first two letter) |-> All colors are safe color*/
+.bdc {
+  border: 1px solid #ccc; }
+
+.blc {
+  border-left: 1px solid #ccc; }
+
+.brc {
+  border-right: 1px solid #ccc; }
+
+.btc {
+  border-top: 1px solid #ccc; }
+
+.bbc {
+  border-bottom: 1px solid #ccc; }
+
+.bdd {
+  border: 1px solid #ddd; }
+
+.bld {
+  border-left: 1px solid #ddd; }
+
+.brd {
+  border-right: 1px solid #ddd; }
+
+.btd {
+  border-top: 1px solid #ddd; }
+
+.bbd {
+  border-bottom: 1px solid #ddd; }
+
+.bde {
+  border: 1px solid #eee; }
+
+.ble {
+  border-left: 1px solid #eee; }
+
+.bre {
+  border-right: 1px solid #eee; }
+
+.bte {
+  border-top: 1px solid #eee; }
+
+.bbe {
+  border-bottom: 1px solid #eee; }
+
+/* background-color name rule: bg - (key word/Hex color) |-> All colors are safe color */
+.bgwh {
+  background-color: #fff; }
+
+.bgfb {
+  background-color: #fbfbfb; }
+
+.bgf5 {
+  background-color: #f5f5f5; }
+
+.bgf0 {
+  background-color: #f0f0f0; }
+
+.bgeb {
+  background-color: #ebebeb; }
+
+.bge0 {
+  background-color: #e0e0e0; }
+
+/* safe color */
+.g0 {
+  color: #000; }
+
+.g3 {
+  color: #333; }
+
+.g6 {
+  color: #666; }
+
+.g9 {
+  color: #999; }
+
+.gc {
+  color: #ccc; }
+
+.wh {
+  color: white; }
+
+/* font-size */
+.f0 {
+  font-size: 0; }
+
+.f12 {
+  font-size: 12px; }
+
+.f13 {
+  font-size: 13px; }
+
+.f14 {
+  font-size: 14px; }
+
+.f16 {
+  font-size: 16px; }
+
+.f18 {
+  font-size: 18px; }
+
+.f20 {
+  font-size: 20px; }
+
+.f24 {
+  font-size: 24px; }
+
+.f28 {
+  font-size: 28px; }
+
+/* font-family */
+.fa {
+  font-family: Arial; }
+
+.ft {
+  font-family: Tahoma; }
+
+.fv {
+  font-family: Verdana; }
+
+.fs {
+  font-family: Simsun; }
+
+.fl {
+  font-family: 'Lucida Console'; }
+
+.fw {
+  font-family: 'Microsoft Yahei'; }
+
+/* font-style */
+.n {
+  font-weight: normal;
+  font-style: normal;
+  white-space: normal; }
+
+.b {
+  font-weight: bold; }
+
+.i {
+  font-style: italic; }
+
+/* text-align */
+.tc {
+  text-align: center; }
+
+.tr {
+  text-align: right; }
+
+.tl {
+  text-align: left; }
+
+.tj {
+  text-align: justify; }
+
+/* text-decoration */
+.tdl {
+  text-decoration: underline; }
+
+.tdn, .tdn:hover, .tdn a:hover, a.tdl:hover {
+  text-decoration: none; }
+
+/* letter-spacing */
+.lt-1 {
+  letter-spacing: -1px; }
+
+.lt0 {
+  letter-spacing: 0; }
+
+.lt1 {
+  letter-spacing: 1px; }
+
+/* white-space */
+.nowrap {
+  white-space: nowrap; }
+
+/* word-wrap */
+.bk {
+  word-wrap: break-word; }
+
+/* vertical-align */
+.vm {
+  vertical-align: middle; }
+
+.vtb {
+  vertical-align: text-bottom; }
+
+.vb {
+  vertical-align: bottom; }
+
+.vt {
+  vertical-align: top; }
+
+.v-1 {
+  vertical-align: -1px; }
+
+.v-2 {
+  vertical-align: -2px; }
+
+.v-3 {
+  vertical-align: -3px; }
+
+.v-4 {
+  vertical-align: -4px; }
+
+.v-5 {
+  vertical-align: -5px; }
+
+/* float */
+.l {
+  float: left; }
+
+.r {
+  float: right; }
+
+/* clear */
+.cl {
+  clear: both; }
+
+/* position */
+.rel {
+  position: relative; }
+
+.abs {
+  position: absolute; }
+
+/*z-index*/
+.zx1 {
+  z-index: 1; }
+
+.zx2 {
+  z-index: 2; }
+
+/* cursor */
+.poi {
+  cursor: pointer; }
+
+.def {
+  cursor: default; }
+
+/* overflow */
+.ovh {
+  overflow: hidden; }
+
+.ova {
+  overflow: auto; }
+
+/* visibility */
+.vh {
+  visibility: hidden; }
+
+.vv {
+  visibility: visible; }
+
+/* opacity */
+.opa0 {
+  opacity: 0;
+  filer: alpha(opacity=0); }
+
+/* zoom */
+.z {
+  *zoom: 1; }
+
+/* ------------------- multiply CSS ------------------ */
+/* 块状元素水平居中 */
+.auto {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* 清除浮动*/
+.fix {
+  *zoom: 1; }
+
+.fix:after {
+  display: table;
+  content: '';
+  clear: both; }
+
+/* 基于display:table-cell的自适应布局 */
+.cell {
+  display: table-cell;
+  *display: inline-block;
+  width: 2000px;
+  *width: auto; }
+
+/* 双栏自适应cell部分连续英文字符换行 */
+.cell2 {
+  overflow: hidden;
+ -display: inline-block; }
+
+/* 单行文字溢出虚点显 示*/
+.ell {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* css3过渡动画效果 */
+.trans {
+  -webkit-transition: all .15s;
+  transition: all .15s; }
+
+/* 大小不定元素垂直居中 */
+.dib_vm {
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle; }
+
+/* 无框文本框文本域 */
+.bd_none {
+  border: 0;
+  outline: none; }
+
+/* 绝对定位隐藏 */
+.abs_out {
+  position: absolute;
+  left: -999em;
+  top: -999em; }
+
+.abs_clip {
+  position: absolute;
+  clip: rect(0 0 0 0); }
+
+/* 按钮禁用 */
+.disabled {
+  outline: 0 none;
+  cursor: default !important;
+  opacity: .4;
+  filer: alpha(opacity=40);
+  -ms-pointer-events: none;
+  pointer-events: none; }
+
+/*inline-block与float等宽列表*/
+.inline_box {
+  font-size: 1em;
+  letter-spacing: -.25em;
+  font-family: Arial; }
+
+.inline_two, .inline_three, .inline_four, .inline_five, .inline_six, .inline_any {
+  display: inline-block;
+  *display: inline;
+  letter-spacing: 0;
+  vertical-align: top;
+  *zoom: 1; }
+
+.float_two, .float_three, .float_four, .float_five, .float_six {
+  float: left; }
+
+.inline_two, .float_two {
+  width: 50%;
+  *width: 49.9%; }
+
+.inline_three, .float_three {
+  width: 33.33333%;
+  *width: 33.3%; }
+
+.inline_four, .float_four {
+  width: 25%;
+  *width: 24.9%; }
+
+.inline_five, .float_five {
+  width: 20%;
+  *width: 19.9%; }
+
+.inline_six, .float_six {
+  width: 16.66666%;
+  *width: 16.6%; }
+
+.inline_fix {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  overflow: hidden; }
+
+/**
+ * @description views bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description index page style file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description project bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+blockquote {
+  padding: 0 1em !important;
+  color: #777;
+  border-left: 0.25em solid #ddd; }
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px dashed #d8d8d8;
+  margin: 10px 0 !important; }
+
+.ks-code-inline {
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding: 0 3px; }
+
+.ks-hljs {
+  line-height: 1.8;
+  font-family: Menlo,Monaco,Consolas,Courier,monospace;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto; }
+
+.app-container {
+  font-family: PingFangSC-Regular, microsoft yahei, Arial, sans-serif; }
+
+.content-container {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  width: 100%; }
+
+.work-container {
+  position: absolute;
+  left: 260px;
+  right: 0;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #f1f1f1; }
+
+.router-container {
+  min-width: 888px;
+  padding: 20px 20px 70px 20px; }
+
+.router-wrap {
+  border: 1px solid #e3e3e3;
+  background: white; }
+
+/**
+ * @description 欢迎页面.
+ * @author pkeros
+ * @data 2016/12/8
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description project bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+blockquote {
+  padding: 0 1em !important;
+  color: #777;
+  border-left: 0.25em solid #ddd; }
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px dashed #d8d8d8;
+  margin: 10px 0 !important; }
+
+.ks-code-inline {
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding: 0 3px; }
+
+.ks-hljs {
+  line-height: 1.8;
+  font-family: Menlo,Monaco,Consolas,Courier,monospace;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto; }
+
+.welcome-container {
+  height: 100%;
+  padding-top: 7%;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 0 0 3px rgba(203, 203, 203, 0.7); }
+  .welcome-container > img {
+    max-width: 100%;
+    max-height: 100%; }
+  .welcome-container h4 {
+    font-weight: normal;
+    color: #444;
+    margin-top: 30px; }
+
+/**
+ * @description 全局样式.
+ * @author pkeros
+ * @data 2016/12/8
+ * @email pkeros@vip.qq.com
+ */
+.spacing-0-7 {
+  border-spacing: 0 7px; }
+
+.spacing-20-0 {
+  border-spacing: 20px 0; }
+
+.table-striped .tools .item {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 3px;
+  color: #444;
+  cursor: pointer;
+  zoom: 1; }
+
+.form-box-center .has-error .input {
+  border-color: #F44336; }
+
+.input[readonly] {
+  background: #f4f4f4; }
+
+.KSMask__wrapper {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  text-align: center; }
+  .KSMask__wrapper .userEdit-wrap {
+    padding: 0;
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: lr-tb;
+    writing-mode: horizontal-tb;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    background-color: transparent; }
+    .KSMask__wrapper .userEdit-wrap .form-box-center {
+      padding-bottom: 20px;
+      background: #fff; }
+      .KSMask__wrapper .userEdit-wrap .form-box-center .userEdit-title {
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid #c2c2c2;
+        font-size: 14px;
+        font-weight: 400; }
+      .KSMask__wrapper .userEdit-wrap .form-box-center .ks-row-auto {
+        border-spacing: 30px 5px; }
+        .KSMask__wrapper .userEdit-wrap .form-box-center .ks-row-auto .form-group {
+          margin-bottom: 15px; }
+          .KSMask__wrapper .userEdit-wrap .form-box-center .ks-row-auto .form-group .label {
+            font-weight: 400; }
+            .KSMask__wrapper .userEdit-wrap .form-box-center .ks-row-auto .form-group .label .sup-red {
+              vertical-align: text-bottom; }
+      .KSMask__wrapper .userEdit-wrap .form-box-center .has-error .txt {
+        font-size: 12px; }
+
+/**
+ * @description component bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description menu block style file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description project bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+blockquote {
+  padding: 0 1em !important;
+  color: #777;
+  border-left: 0.25em solid #ddd; }
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px dashed #d8d8d8;
+  margin: 10px 0 !important; }
+
+.ks-code-inline {
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding: 0 3px; }
+
+.ks-hljs {
+  line-height: 1.8;
+  font-family: Menlo,Monaco,Consolas,Courier,monospace;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto; }
+
+.k-menu-container {
+  position: fixed;
+  top: 50px;
+  bottom: 0; }
+  .k-menu-container ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+
+.k-menu {
+  width: 260px;
+  height: 100%;
+  color: white;
+  font-size: 14px;
+  background: #253238; }
+  .k-menu .menu-container:first-of-type .title {
+    border-top: none; }
+  .k-menu .title {
+    color: #999;
+    background: #253238; }
+  .k-menu .v-link-active {
+    color: #FFF;
+    background: #2196f3; }
+  .k-menu__item {
+    padding: 0 20px;
+    line-height: 44px;
+    cursor: pointer;
+    background: #1d272c; }
+    .k-menu__item:not(.title):hover {
+      color: #FFF;
+      background: #2196f3; }
+    .k-menu__item:not(.title):active {
+      background: #2196f3; }
+  .k-menu__icon {
+    padding-right: 12px;
+    font-size: 16px; }
+
+/**
+ * @description header black style file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description project bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+blockquote {
+  padding: 0 1em !important;
+  color: #777;
+  border-left: 0.25em solid #ddd; }
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px dashed #d8d8d8;
+  margin: 10px 0 !important; }
+
+.ks-code-inline {
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding: 0 3px; }
+
+.ks-hljs {
+  line-height: 1.8;
+  font-family: Menlo,Monaco,Consolas,Courier,monospace;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto; }
+
+.k-header {
+  position: relative;
+  z-index: 100;
+  height: 50px;
+  color: #FFF;
+  box-shadow: 0 0 3px #36474f;
+  background-color: #36474f;
+  background: -webkit-linear-gradient(left,  #36474f 50%,  #36474f 100% );
+  background: -moz-linear-gradient(left,  #36474f 50%,  #36474f 100% );
+  background: -ms-linear-gradient(left,  #36474f 50%,  #36474f 100% );
+  background: -o-linear-gradient(left,  #36474f 50%,  #36474f 100% );
+  background: linear-gradient(to right,  #36474f 50%,  #36474f 100% ); }
+  .k-header div {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; }
+  .k-header .logo-wrap {
+    font-size: 0; }
+    .k-header .logo-wrap > img {
+      vertical-align: inherit; }
+  .k-header .k-system-choose {
+    width: 145px;
+    line-height: 46px;
+    text-align: center;
+    color: #eee;
+    display: inline-block;
+    position: relative;
+    cursor: pointer; }
+  .k-header .k-system-header:hover {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2); }
+  .k-header .k-system-header.active {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2); }
+  .k-header .k-menu__icon1 {
+    font-size: 12px;
+    vertical-align: middle; }
+  .k-header .k-system-choose-ul {
+    min-width: 145px;
+    line-height: 45px;
+    color: #eee;
+    background: #2b393f;
+    position: absolute;
+    z-index: 1000; }
+  .k-header .k-system-choose-ul li a {
+    display: block;
+    color: #eee; }
+  .k-header .k-system-choose-ul li a:hover {
+    background: rgba(0, 0, 0, 0.2); }
+  .k-header__item {
+    padding: 0 20px;
+    height: 100%;
+    line-height: 50px; }
+    .k-header__item:first-child {
+      padding-right: 0; }
+    .k-header__item:last-child {
+      margin-right: 20px; }
+  .k-header__title {
+    font-weight: normal; }
+  .k-header__menu {
+    cursor: pointer;
+    user-select: none; }
+    .k-header__menu:hover {
+      background: rgba(0, 0, 0, 0.2); }
+    .k-header__menu.active {
+      background: rgba(0, 0, 0, 0.2);
+      margin-right: 20px; }
+    .k-header__menu--active {
+      padding: 7px 0;
+      min-width: 180px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      background: #FAFAFA;
+      color: #444;
+      line-height: 16px;
+      list-style: none;
+      top: 50px;
+      right: 17px;
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline; }
+      .k-header__menu--active li:hover {
+        background: rgba(211, 211, 211, 0.2); }
+      .k-header__menu--active a {
+        height: 26px;
+        padding: 6px 16px;
+        line-height: 26px;
+        font-size: 15px;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom: 1;
+        *display: inline; }
+  .k-header__list {
+    cursor: pointer;
+    user-select: none; }
+    .k-header__list:hover {
+      background: rgba(0, 0, 0, 0.2); }
+    .k-header__list.active {
+      background: rgba(0, 0, 0, 0.2); }
+    .k-header__list--active {
+      margin-left: -20px;
+      margin-top: -1px;
+      padding: 7px 0;
+      min-width: 145px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      background: #2b393f;
+      color: #eee;
+      line-height: 16px;
+      list-style: none;
+      top: 50px;
+      position: absolute;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline; }
+      .k-header__list--active li:hover {
+        background: rgba(0, 0, 0, 0.2); }
+      .k-header__list--active a {
+        height: 26px;
+        padding: 6px 16px;
+        line-height: 26px;
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom: 1;
+        *display: inline; }
+
+/**
+ * @description crumbs block style file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description project bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+blockquote {
+  padding: 0 1em !important;
+  color: #777;
+  border-left: 0.25em solid #ddd; }
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px dashed #d8d8d8;
+  margin: 10px 0 !important; }
+
+.ks-code-inline {
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding: 0 3px; }
+
+.ks-hljs {
+  line-height: 1.8;
+  font-family: Menlo,Monaco,Consolas,Courier,monospace;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto; }
+
+.k-crumbs-container {
+  background: white; }
+
+.k-crumbs {
+  padding: 12px 0 12px 20px;
+  border-bottom: 1px solid #e3e3e3;
+  color: #444; }
+  .k-crumbs__home {
+    padding-right: 15px;
+    vertical-align: -4px !important; }
+  .k-crumbs__item {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; }
+    .k-crumbs__item > a {
+      color: #444; }
+    .k-crumbs__item > a:hover {
+      color: #999; }
+  .k-crumbs__active {
+    color: #002325 !important; }
+
+/**
+ * @description footer black style file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description project bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+blockquote {
+  padding: 0 1em !important;
+  color: #777;
+  border-left: 0.25em solid #ddd; }
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px dashed #d8d8d8;
+  margin: 10px 0 !important; }
+
+.ks-code-inline {
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding: 0 3px; }
+
+.ks-hljs {
+  line-height: 1.8;
+  font-family: Menlo,Monaco,Consolas,Courier,monospace;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto; }
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 260px;
+  right: 0;
+  height: 50px;
+  padding: 0 20px;
+  line-height: 50px;
+  font-size: 13px;
+  color: #9a9a9a;
+  background: #FAFAFA;
+  border-top: 1px solid #E9E9E9; }
+  #footer a {
+    color: #9a9a9a;
+    text-decoration: none; }
+  #footer .beian {
+    color: #737373; }
+
+/**
+ * @author: pkeros.
+ * @date: 2016/6/24.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+.kframe {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  background: white; }
+  .kframe__header {
+    position: relative;
+    z-index: 99;
+    padding: 20px 0;
+    background: rgba(254, 254, 254, 0.7);
+    line-height: 50px;
+    border-bottom: 1px solid #e9e9e9; }
+    .kframe__header .title {
+      font-size: 18px; }
+
+.ktable-container {
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: white; }
+
+.kpager-wrap {
+  padding: 6px 0;
+  background: white;
+  box-shadow: 0 0 3px rgba(203, 203, 203, 0.7); }
+
+/**
+ * @author: pkeros.
+ * @date: 2016/6/24.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+.kadd__sel, .kadd__content {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  color: #444;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  outline: none;
+  font-size: 13px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .3s, box-shadow ease-in-out .3s; }
+  .kadd__sel:hover, .kadd__content:hover {
+    border-color: #00BCD4; }
+  .kadd__sel:focus, .kadd__content:focus {
+    border-color: #00BCD4; }
+
+.kadd-container {
+  writing-mode: vertical-lr;
+  text-align: center; }
+
+.kadd-container-shadow {
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  text-align: left;
+  width: 100%; }
+
+.kadd {
+  width: 400px;
+  padding: 0 15px;
+  box-shadow: 0 0 3px #666;
+  margin: auto;
+  font-family: PingFangSC-Regular, microsoft yahei, Arial, sans-serif;
+  background: #FFF;
+  overflow: hidden; }
+  .kadd__title {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #c2c2c2;
+    font-size: 14px;
+    font-weight: normal; }
+  .kadd .input-normal input {
+    height: 32px !important; }
+  .kadd__sel option[checked] {
+    color: #999; }
+  .kadd__sel option {
+    color: #333; }
+  .kadd__content {
+    font-size: 14px;
+    resize: none; }
+
+/**
+ * @author: pkeros.
+ * @date: 2016/6/24.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+.ksearch {
+  padding: 10px 20px;
+  background: #FFF; }
+  .ksearch label {
+    font-size: 14px;
+    padding: 0 15px; }
+  .ksearch__input {
+    width: 168px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; }
+  .ksearch__button {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; }
+
+/**
+ * @description 选择器样式，用户管理中权限配置，和角色管理中权限配置组件的样式.
+ * @author pkeros
+ * @data 2016/12/21
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @description project bootstrap file.
+ * @author pkeros
+ * @data 2016/12/7
+ * @email pkeros@vip.qq.com
+ */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/6/6.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+/* h1 ~ h6 字体大小 */
+/*
+	颜色
+	primary danger info warning dark gray
+*/
+/* 颜色修改 */
+/**
+ * @author: pkeros.
+ * @date: 2016/7/25.
+ * @mail: pkeros@vip.qq.com
+ * @see: https://www.github.com/pkeros/
+ */
+blockquote {
+  padding: 0 1em !important;
+  color: #777;
+  border-left: 0.25em solid #ddd; }
+
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px dashed #d8d8d8;
+  margin: 10px 0 !important; }
+
+.ks-code-inline {
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  padding: 0 3px; }
+
+.ks-hljs {
+  line-height: 1.8;
+  font-family: Menlo,Monaco,Consolas,Courier,monospace;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 12px;
+  background-color: #f9fafc;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto; }
+
+.kgroup-container {
+  writing-mode: vertical-lr;
+  text-align: center; }
+
+.kgroup-container-shadow {
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  text-align: left;
+  width: 100%; }
+
+.kgroup-select {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 777px;
+  height: 550px;
+  padding: 20px;
+  font-size: 13px;
+  color: #444;
+  background: white; }
+  .kgroup-select__header {
+    position: absolute;
+    top: -25px;
+    margin: 0 0 6px;
+    font-size: 13px;
+    font-weight: normal; }
+  .kgroup-select__list {
+    position: absolute;
+    top: 40px;
+    bottom: 70px;
+    padding: 6px;
+    width: 40%;
+    border-radius: 3px;
+    border: 1px solid #ddd; }
+  .kgroup-select__ul {
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden; }
+  .kgroup-select .right {
+    right: 20px; }
+  .kgroup-select .left {
+    left: 20px; }
+  .kgroup-select__item {
+    padding: 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    background: rgba(233, 233, 233, 0.7); }
+    .kgroup-select__item .content {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 90%;
+      overflow: hidden; }
+    .kgroup-select__item:active {
+      background: rgba(220, 220, 220, 0.7); }
+  .kgroup-select .kgroup-select__item {
+    /*line-height: 38px;*/
+    /*vertical-align: middle;*/ }
+  .kgroup-select .kgroup-select__child .kgroup-select__item {
+    background: white; }
+    .kgroup-select .kgroup-select__child .kgroup-select__item:hover {
+      background: #36474f;
+      color: white; }
+    .kgroup-select .kgroup-select__child .kgroup-select__item:hover .icon {
+      display: inline; }
+    .kgroup-select .kgroup-select__child .kgroup-select__item:active {
+      background: #28343a;
+      color: white; }
+  .kgroup-select__btn {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px; }
+
+.form-box-center .form-ver, .form-box-center .form-group {
+  margin-bottom: 30px; }
+  .form-box-center .form-ver .label, .form-box-center .form-group .label {
+    padding-right: 20px;
+    font-weight: bold;
+    line-height: 34px; }
+  .form-box-center .form-ver input, .form-box-center .form-group input {
+    width: 100%; }
+
+.form-box-center {
+  min-width: 430px;
+  max-width: 680px;
+  margin: auto; }
+  .form-box-center .form-group .label {
+    width: 100px;
+    text-align: right;
+    vertical-align: top; }
+    .form-box-center .form-group .label .sup-red {
+      color: red;
+      padding-right: 5px; }
+  .form-box-center .form-group .txt, .form-box-center .form-group .desc {
+    line-height: 24px;
+    color: #c8c8c8; }
+  .form-box-center .form-group .txt {
+    position: absolute; }
+  .form-box-center .form-group .desc {
+    padding-left: 10px; }
+  .form-box-center .form-group .static {
+    line-height: 34px; }
+  .form-box-center .form-group .way-negative {
+    margin-right: -75px; }
+  .form-box-center .form-group .icon-input {
+    position: relative; }
+    .form-box-center .form-group .icon-input i {
+      position: absolute;
+      left: 10px;
+      top: 9px;
+      color: #999; }
+    .form-box-center .form-group .icon-input input {
+      padding-left: 34px; }
+  .form-box-center .has-error .txt, .form-box-center .has-success .txt, .form-box-center .has-warning .txt {
+    color: #F44336; }
+    .form-box-center .has-error .txt i, .form-box-center .has-success .txt i, .form-box-center .has-warning .txt i {
+      padding-right: 10px;
+      line-height: 24px; }
+  .form-box-center .has-error input {
+    border-color: #F44336; }
+  .form-box-center .has-error .txt {
+    color: #F44336; }
+  .form-box-center .has-success input {
+    border-color: #4CAF50; }
+  .form-box-center .has-success .txt {
+    color: #4CAF50; }
+  .form-box-center .has-warning input {
+    border-color: #FF5722; }
+  .form-box-center .has-warning .txt {
+    color: #FF5722; }
+
+.form-ver .col.label {
+  text-align: left; }
+
+.form-ver .deposit-right-auto {
+  max-width: 640px;
+  min-width: 440px; }
+
+.control-group-warpper .control-group, .control-group-warpper .control-group-auto {
+  margin-bottom: 30px; }
+
+.control-group .col-percent7, .control-group-auto .col-percent7 {
+  width: 70%;
+  position: relative; }
+
+.control-group .col-wauto, .control-group-auto .col-wauto {
+  width: auto;
+  position: relative; }
+
+.control-group .col-percent3, .control-group-auto .col-percent3 {
+  width: 30%; }
+
+.control-group .vertical-align, .control-group-auto .vertical-align {
+  vertical-align: middle; }
+
+.control-group .label, .control-group-auto .label {
+  font-weight: bold;
+  text-align: right;
+  line-height: 34px; }
+
+.control-group .desc-msg, .control-group-auto .desc-msg {
+  position: absolute; }
+
+.control-group .control-top, .control-group-auto .control-top {
+  line-height: 34px;
+  vertical-align: top; }
+
+.form-box-center {
+  min-width: 430px;
+  max-width: 680px;
+  margin: auto; }
+
+.sup-red {
+  color: red; }
+
+@media screen and (max-width: 1300px) {
+  /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+  .form-ver .deposit-right-auto {
+    max-width: 550px;
+    min-width: 440px; } }
+
+.tab-bor li, .tab-bor-vertical li {
+  padding: 12px 44px; }
+  .tab-bor li a, .tab-bor-vertical li a {
+    font-size: 1.38em;
+    color: #444; }
+
+.tab-bor .active, .tab-bor-vertical .active {
+  background-color: #fff;
+  font-weight: bold; }
+
+.tab-bor {
+  margin-left: -1px;
+  border-bottom: 1px solid #E9E9E9; }
+  .tab-bor li {
+    margin-bottom: -2px;
+    display: inline-block; }
+  .tab-bor .active {
+    border-top: 3px solid #2196F3;
+    border-right: 1px solid #E9E9E9;
+    border-left: 1px solid #E9E9E9; }
+
+.tab-bor-vertical {
+  display: inline-block;
+  border-right: 1px solid #E9E9E9; }
+  .tab-bor-vertical li {
+    margin-right: -2px; }
+  .tab-bor-vertical .active {
+    border-left: 3px solid #2196F3;
+    border-top: 1px solid #E9E9E9;
+    border-bottom: 1px solid #E9E9E9; }
+
+.input-xl, .input-l, .input, .input-s, .input-xs, .input-min {
+  font-family: PingFang SC,Arial,"\82F9\65B9","\5FAE\8F6F\96C5\9ED1";
+  display: inline-block;
+  padding: 0 10px;
+  height: 34px;
+  font-size: 13px;
+  color: #444444;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  box-sizing: border-box; }
+  .input-xl:focus, .input-l:focus, .input:focus, .input-s:focus, .input-xs:focus, .input-min:focus {
+    border-color: #00BCD4;
+    outline: 0; }
+
+.input-xl {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px; }
+
+.input-l {
+  height: 38px;
+  line-height: 38px;
+  font-size: 16px; }
+
+.input {
+  height: 34px;
+  line-height: 34px;
+  font-size: 13px; }
+
+.input-s {
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px; }
+
+.input-xs {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px; }
+
+.input-min {
+  width: 60px; }
+
+/* 添加左右滚动条 */
+.table-striped table {
+  /* table基础样式 */
+  width: 100%;
+  white-space: nowrap; }
+  .table-striped table th, .table-striped table td {
+    padding: 10px 20px;
+    border: 0;
+    line-height: 1.7em; }
+  .table-striped table th {
+    border-bottom: 2px solid #999;
+    font-weight: bold; }
+  .table-striped table td {
+    border-bottom: 1px solid #e9e9e9; }
+    .table-striped table td a {
+      color: #2196F3;
+      cursor: pointer; }
+    .table-striped table td i {
+      padding-right: 10px; }
+
+.table-striped {
+  overflow-y: hidden; }
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc; }
+
+/**
+ * @description components 导入文件.
+ * @author pkeros
+ * @data 2016/12/8
+ * @email pkeros@vip.qq.com
+ */
+.KsPageGroup-statistical {
+  display: table-cell;
+  vertical-align: middle;
+  word-break: break-all; }
+
+.KsPageGroup {
+  box-sizing: border-box;
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  table-layout: auto; }
+
+.KsPageGroup-statistical {
+  width: 1px;
+  white-space: nowrap; }
+
+blockquote, body, dd, dir, dl, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr, input, legend, menu, ol, optgroup, p, pre, tbody, td, textarea, tfoot, th, thead, ul {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style-type: none;
+  list-style-image: none; }
+
+a {
+  text-decoration: none; }
+
+a:active {
+  background-color: transparent; }
+
+a:active, a:hover {
+  outline: 0 none; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 62.5%; }
+
+body, button, input, select, textarea {
+  font-family: helvetica neue,arial,hiragino sans gb,stheiti,wenquanyi micro hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  -ms-text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 22px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+mark {
+  background-color: #d2e5ff;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monaco,menlo,consolas,courier new,courier,monospace; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto; }
+
+q {
+  quotes: none; }
+
+q:after, q:before {
+  content: '';
+  content: none; }
+
+small {
+  font-size: 85.7%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  text-align: left; }
+
+img {
+  border: 0 none;
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0 none;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  *overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default;
+  opacity: .6; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+option:disabled:checked, select:disabled option:checked {
+  color: #d2d2d2; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input {
+    line-height: normal !important; } }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
+label {
+  cursor: pointer; }
+
+select[multiple], select[size], select[size][multiple] {
+  border: 1px solid #aaa;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+[draggable] {
+  cursor: move; }
+
+dialog {
+  border: 1px solid;
+  padding: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
+
+dialog::-webkit-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.KsPageGroup li, .KsPage li {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.KsPageGroup li:hover, .KsPage li:hover {
+  background: #f5f5f5;
+  color: #000; }
+
+.KsPage .active, .KsPageGroup .active, .KsPageGroup li.active:hover, .KsPage li.active:hover {
+  background: #2196f3;
+  color: #fff; }
+
+.KsPage .disabled, .KsPageGroup .disabled {
+  color: #999;
+  cursor: not-allowed; }
+
+.KsPage .disabled:hover, .KsPageGroup .disabled:hover {
+  background: transparent;
+  color: #999; }
+
+.KsPageGroup {
+  color: #999;
+  line-height: 36px; }
+
+.KsPageGroup-statistical {
+  padding-right: 20px; }
+
+.KsPageGroup-statistical span {
+  color: #000;
+  padding: 0 5px; }
+
+.input, .input-l, .input-min, .input-s, .input-xl, .input-xs {
+  font-family: PingFang SC,Arial,\\82F9\65B9,\\5FAE\8F6F\96C5\9ED1;
+  display: inline-block;
+  padding: 0 10px;
+  height: 34px;
+  font-size: 13px;
+  color: #444;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  box-sizing: border-box; }
+
+.input-l:focus, .input-min:focus, .input-s:focus, .input-xl:focus, .input-xs:focus, .input:focus {
+  border-color: #00bcd4;
+  outline: 0; }
+
+.input-xl {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px; }
+
+.input-l {
+  height: 38px;
+  line-height: 38px;
+  font-size: 16px; }
+
+.input {
+  height: 34px;
+  line-height: 34px;
+  font-size: 13px; }
+
+.input-s {
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px; }
+
+.input-xs {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px; }
+
+.input-min {
+  width: 60px; }
+
+.KsPageGroup-statistical {
+  display: table-cell;
+  vertical-align: middle;
+  word-break: break-all; }
+
+.KsPageGroup {
+  box-sizing: border-box;
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  table-layout: auto; }
+
+.KsPageGroup-statistical {
+  width: 1px;
+  white-space: nowrap; }
+
+blockquote, body, dd, dir, dl, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr, input, legend, menu, ol, optgroup, p, pre, tbody, td, textarea, tfoot, th, thead, ul {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style-type: none;
+  list-style-image: none; }
+
+a {
+  text-decoration: none; }
+
+a:active {
+  background-color: transparent; }
+
+a:active, a:hover {
+  outline: 0 none; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 62.5%; }
+
+body, button, input, select, textarea {
+  font-family: helvetica neue,arial,hiragino sans gb,stheiti,wenquanyi micro hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  -ms-text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 22px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+mark {
+  background-color: #d2e5ff;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monaco,menlo,consolas,courier new,courier,monospace; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto; }
+
+q {
+  quotes: none; }
+
+q:after, q:before {
+  content: '';
+  content: none; }
+
+small {
+  font-size: 85.7%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  text-align: left; }
+
+img {
+  border: 0 none;
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0 none;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  *overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default;
+  opacity: .6; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+option:disabled:checked, select:disabled option:checked {
+  color: #d2d2d2; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input {
+    line-height: normal !important; } }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
+label {
+  cursor: pointer; }
+
+select[multiple], select[size], select[size][multiple] {
+  border: 1px solid #aaa;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+[draggable] {
+  cursor: move; }
+
+dialog {
+  border: 1px solid;
+  padding: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
+
+dialog::-webkit-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.KsPageGroup li, .KsPage li {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.KsPageGroup li:hover, .KsPage li:hover {
+  background: #f5f5f5;
+  color: #000; }
+
+.KsPage .active, .KsPageGroup .active, .KsPageGroup li.active:hover, .KsPage li.active:hover {
+  background: #2196f3;
+  color: #fff; }
+
+.KsPage .disabled, .KsPageGroup .disabled {
+  color: #999;
+  cursor: not-allowed; }
+
+.KsPage .disabled:hover, .KsPageGroup .disabled:hover {
+  background: transparent;
+  color: #999; }
+
+.KsPageGroup {
+  color: #999;
+  line-height: 36px; }
+
+.KsPageGroup-statistical {
+  padding-right: 20px; }
+
+.KsPageGroup-statistical span {
+  color: #000;
+  padding: 0 5px; }
+
+.KsPageGroup-statistical {
+  display: table-cell;
+  vertical-align: middle;
+  word-break: break-all; }
+
+.KsPageGroup {
+  box-sizing: border-box;
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  table-layout: auto; }
+
+.KsPageGroup-statistical {
+  width: 1px;
+  white-space: nowrap; }
+
+blockquote, body, dd, dir, dl, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr, input, legend, menu, ol, optgroup, p, pre, tbody, td, textarea, tfoot, th, thead, ul {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style-type: none;
+  list-style-image: none; }
+
+a {
+  text-decoration: none; }
+
+a:active {
+  background-color: transparent; }
+
+a:active, a:hover {
+  outline: 0 none; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 62.5%; }
+
+body, button, input, select, textarea {
+  font-family: helvetica neue,arial,hiragino sans gb,stheiti,wenquanyi micro hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  -ms-text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  text-spacing: ideograph-alpha ideograph-numeric ideograph-parenthesis; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 22px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 12px; }
+
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+mark {
+  background-color: #d2e5ff;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monaco,menlo,consolas,courier new,courier,monospace; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto; }
+
+q {
+  quotes: none; }
+
+q:after, q:before {
+  content: '';
+  content: none; }
+
+small {
+  font-size: 85.7%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  text-align: left; }
+
+img {
+  border: 0 none;
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0 none;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  *overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default;
+  opacity: .6; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+option:disabled:checked, select:disabled option:checked {
+  color: #d2d2d2; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input {
+    line-height: normal !important; } }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
+label {
+  cursor: pointer; }
+
+select[multiple], select[size], select[size][multiple] {
+  border: 1px solid #aaa;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+[draggable] {
+  cursor: move; }
+
+dialog {
+  border: 1px solid;
+  padding: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
+
+dialog::-webkit-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.KsPageGroup li, .KsPage li {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.KsPageGroup li:hover, .KsPage li:hover {
+  background: #f5f5f5;
+  color: #000; }
+
+.KsPage .active, .KsPageGroup .active, .KsPageGroup li.active:hover, .KsPage li.active:hover {
+  background: #2196f3;
+  color: #fff; }
+
+.KsPage .disabled, .KsPageGroup .disabled {
+  color: #999;
+  cursor: not-allowed; }
+
+.KsPage .disabled:hover, .KsPageGroup .disabled:hover {
+  background: transparent;
+  color: #999; }
+
+.KsPageGroup {
+  color: #999;
+  line-height: 36px; }
+
+.KsPageGroup-statistical {
+  padding-right: 20px; }
+
+.KsPageGroup-statistical span {
+  color: #000;
+  padding: 0 5px; }
+
+.input, .input-l, .input-min, .input-s, .input-xl, .input-xs {
+  font-family: PingFang SC,Arial,\\82F9\65B9,\\5FAE\8F6F\96C5\9ED1;
+  display: inline-block;
+  padding: 0 10px;
+  height: 34px;
+  font-size: 13px;
+  color: #444;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  box-sizing: border-box; }
+
+.input-l:focus, .input-min:focus, .input-s:focus, .input-xl:focus, .input-xs:focus, .input:focus {
+  border-color: #00bcd4;
+  outline: 0; }
+
+.input-xl {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px; }
+
+.input-l {
+  height: 38px;
+  line-height: 38px;
+  font-size: 16px; }
+
+.input {
+  height: 34px;
+  line-height: 34px;
+  font-size: 13px; }
+
+.input-s {
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px; }
+
+.input-xs {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px; }
+
+.input-min {
+  width: 60px; }
+
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; }
