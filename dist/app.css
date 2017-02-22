@@ -890,8 +890,8 @@ dialog::backdrop {
 
 @font-face {
   font-family: "iconfont";
-  src: url(/dist/./iconfont.eot?4ba232cd);
-  src: url(/dist/./iconfont.eot?4ba232cd) format("embedded-opentype"), url(/dist/./iconfont.woff?9dfebbc0) format("woff"), url(/dist/./iconfont.ttf?1fb796a6) format("truetype"), url(/dist/./iconfont.svg?049982a7) format("svg"); }
+  src: url(./dist/./iconfont.eot?4ba232cd);
+  src: url(./dist/./iconfont.eot?4ba232cd) format("embedded-opentype"), url(./dist/./iconfont.woff?9dfebbc0) format("woff"), url(./dist/./iconfont.ttf?1fb796a6) format("truetype"), url(./dist/./iconfont.svg?049982a7) format("svg"); }
 
 .iconfont, .icon {
   font-family: "iconfont" !important;

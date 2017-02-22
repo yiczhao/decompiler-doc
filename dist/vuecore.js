@@ -1,37 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// install a JSONP callback for chunk loading
-/******/ 	var parentJsonpFunction = window["webpackJsonp"];
-/******/ 	window["webpackJsonp"] = function webpackJsonpCallback(chunkIds, moreModules) {
-/******/ 		// add "moreModules" to the modules object,
-/******/ 		// then flag all "chunkIds" as loaded and fire callback
-/******/ 		var moduleId, chunkId, i = 0, callbacks = [];
-/******/ 		for(;i < chunkIds.length; i++) {
-/******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId])
-/******/ 				callbacks.push.apply(callbacks, installedChunks[chunkId]);
-/******/ 			installedChunks[chunkId] = 0;
-/******/ 		}
-/******/ 		for(moduleId in moreModules) {
-/******/ 			modules[moduleId] = moreModules[moduleId];
-/******/ 		}
-/******/ 		if(parentJsonpFunction) parentJsonpFunction(chunkIds, moreModules);
-/******/ 		while(callbacks.length)
-/******/ 			callbacks.shift().call(null, __webpack_require__);
-/******/ 		if(moreModules[0]) {
-/******/ 			installedModules[0] = 0;
-/******/ 			return __webpack_require__(0);
-/******/ 		}
-/******/ 	};
-
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
-/******/ 	// object to store loaded and loading chunks
-/******/ 	// "0" means "already loaded"
-/******/ 	// Array means "loading", array contains callbacks
-/******/ 	var installedChunks = {
-/******/ 		12:0
-/******/ 	};
 
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -57,29 +26,6 @@
 /******/ 		return module.exports;
 /******/ 	}
 
-/******/ 	// This file contains only the entry chunk.
-/******/ 	// The chunk loading function for additional chunks
-/******/ 	__webpack_require__.e = function requireEnsure(chunkId, callback) {
-/******/ 		// "0" is the signal for "already loaded"
-/******/ 		if(installedChunks[chunkId] === 0)
-/******/ 			return callback.call(null, __webpack_require__);
-
-/******/ 		// an array means "currently loading".
-/******/ 		if(installedChunks[chunkId] !== undefined) {
-/******/ 			installedChunks[chunkId].push(callback);
-/******/ 		} else {
-/******/ 			// start chunk loading
-/******/ 			installedChunks[chunkId] = [callback];
-/******/ 			var head = document.getElementsByTagName('head')[0];
-/******/ 			var script = document.createElement('script');
-/******/ 			script.type = 'text/javascript';
-/******/ 			script.charset = 'utf-8';
-/******/ 			script.async = true;
-
-/******/ 			script.src = __webpack_require__.p + "" + ({"0":"app","11":"vuecore"}[chunkId]||chunkId) + "." + {"0":"7f9e2181","1":"43a588c7","2":"4fbbf189","3":"67eb78e7","4":"6f149c21","5":"ef677a65","6":"b7c08a59","7":"27ed2499","8":"333c63ab","9":"d42cc901","10":"35258259","11":"a1c8cce1"}[chunkId] + ".js";
-/******/ 			head.appendChild(script);
-/******/ 		}
-/******/ 	};
 
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -88,11 +34,41 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
+/******/ 	__webpack_require__.p = "./dist/";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _vue = __webpack_require__(5);
+
+	var _vue2 = _interopRequireDefault(_vue);
+
+	var _vuex = __webpack_require__(6);
+
+	var _vuex2 = _interopRequireDefault(_vuex);
+
+	var _vueRouter = __webpack_require__(30);
+
+	var _vueRouter2 = _interopRequireDefault(_vueRouter);
+
+	var _vueResource = __webpack_require__(31);
+
+	var _vueResource2 = _interopRequireDefault(_vueResource);
+
+	var _vueValidator = __webpack_require__(55);
+
+	var _vueValidator2 = _interopRequireDefault(_vueValidator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ },
 /* 1 */
 /***/ function(module, exports) {
 
