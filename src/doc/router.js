@@ -110,6 +110,46 @@ export default (router) => {
           }
         },
 
+
+        /* 验证 validate */
+        '/validate': {
+          name: 'validate',
+          cnName: '验证',
+          component: (resolve) => {
+            require(['./views/validate/index.vue'], resolve)
+          },
+
+          subRoutes: {
+
+            /* 默认校验规则 */
+            '/defaultValidateRules': {
+              name: 'defaultValidateRules',
+              cnName: '默认校验规则',
+              component: (resolve) => {
+                require(['./views/validate/defaultValidateRules.md'], resolve)
+              }
+            },
+
+             /* 默认提示 */
+            '/defaultPrompt': {
+              name: 'defaultPrompt',
+              cnName: '默认提示',
+              component: (resolve) => {
+                require(['./views/validate/defaultPrompt.md'], resolve)
+              }
+            },
+
+            /* 使用方式 */
+            '/usageMode': {
+              name: 'usageMode',
+              cnName: '使用方式',
+              component: (resolve) => {
+                require(['./views/validate/usageMode.md'], resolve)
+              }
+            },
+          }
+        },
+
       }
     }
   })
