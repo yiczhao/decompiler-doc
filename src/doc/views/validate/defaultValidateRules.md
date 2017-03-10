@@ -60,6 +60,33 @@ Validate 插件为表单提供了强大的验证功能，让客户端表单验�
 <br/>
 
 ### 使用方式
+
+<form class="cmxform" id="commentForm" method="get" action="">
+  <fieldset>
+    <legend>输入您的名字，邮箱，URL，备注。</legend>
+    <p>
+      <label for="cname">Name (必需, 最小两个字母)</label>
+      <input id="cname" name="name" minlength="2" type="text" required>
+    </p>
+    <p>
+      <label for="cemail">E-Mail (必需)</label>
+      <input id="cemail" type="email" name="email" required>
+    </p>
+    <p>
+      <label for="curl">URL (可选)</label>
+      <input id="curl" type="url" name="url">
+    </p>
+    <p>
+      <label for="ccomment">备注 (必需)</label>
+      <textarea id="ccomment" name="comment" required></textarea>
+    </p>
+    <p>
+      <input class="submit" type="submit" value="Submit">
+    </p>
+  </fieldset>
+</form>
+
+
 ```html
 <script>
   $.validator.setDefaults({
@@ -97,28 +124,3 @@ Validate 插件为表单提供了强大的验证功能，让客户端表单验�
   </fieldset>
 </form>
 ```
-
-<form class="cmxform" id="commentForm" method="get" action="">
-  <fieldset>
-    <legend>输入您的名字，邮箱，URL，备注。</legend>
-    <p>
-      <label for="cname">Name (必需, 最小两个字母)</label>
-      <input id="cname" name="name" minlength="2" type="text" required>
-    </p>
-    <p>
-      <label for="cemail">E-Mail (必需)</label>
-      <input id="cemail" type="email" name="email" required>
-    </p>
-    <p>
-      <label for="curl">URL (可选)</label>
-      <input id="curl" type="url" name="url">
-    </p>
-    <p>
-      <label for="ccomment">备注 (必需)</label>
-      <textarea id="ccomment" name="comment" required></textarea>
-    </p>
-    <p>
-      <input class="submit" type="submit" value="Submit">
-    </p>
-  </fieldset>
-</form>
