@@ -147,6 +147,24 @@ export default (router) => {
                 require(['./views/validate/usageMode.md'], resolve)
               }
             },
+
+            /* demo 示例 */
+            '/demo': {
+              name: 'demo',
+              cnName: 'demo',
+              component: (resolve) => {
+                require(['./views/validate/demo.md'], resolve)
+              }
+            },
+
+            /* 使用方式 */
+            '/api': {
+              name: 'api',
+              cnName: 'api',
+              component: (resolve) => {
+                require(['./views/validate/validate_api.md'], resolve)
+              }
+            },
           }
         },
 

@@ -34,8 +34,8 @@ export default [
           {name:'默认校验规则',icon:'icon',link:'defaultValidateRules'},
           {name:'默认提示',icon:'icon',link:'defaultPrompt'},
           {name:'使用方式',icon:'icon',link:'usageMode'},
-          {name:'validate API',icon:'icon',link:''},
-          {name:'demo 示例',icon:'icon',link:''},
+          {name:'demo 示例',icon:'icon',link:'demo'},
+          {name:'validate API',icon:'icon',link:'api'},
         ]
       }
     ]
