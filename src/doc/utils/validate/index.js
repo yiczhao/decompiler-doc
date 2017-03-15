@@ -1,2 +1,3 @@
-window.$ = window.jQuery = require('./jquery-1.11.1')
+window.$ = window.jQuery = require('./jquery.min.js')
 require('./jquery.validate')
+require('./jquery.validator')
