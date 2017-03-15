@@ -21,7 +21,6 @@ import Utils from './utils'
 import Directives from './directives'
 import Filter from './filters'
 
-console.log('==jquer:',$.prototype)
 
 
 
