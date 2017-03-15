@@ -44,7 +44,19 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                             
                             item.val.default && (item.val = item.val.default)
                             // console.log(item.type,item.name,item.val)
-                            Vue[item.type](item.name,item.val)
+                            if('KsDialog' == item.name){
+                                Object.defineProperties(Vue.prototype, {
+                                    $KsDialog: {get() {
+                                      return item.val
+                                    }
+                                    }
+                                });
+                            }else{
+                                Vue[item.type](item.name,item.val)    
+                            }
+                            
+                            
+
                         })
                         new Vue({
                             el:options.el,
@@ -61,7 +73,8 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
 
 
                 // 验证
-                Promise.all([loader.jquery(),loader.validator()])
+                Promise.all([loader.jquery()
+                             ,loader.validator()])
                     .then(function(arg){
                         console.log(arg)
                         var $ = arg[0]
@@ -105,8 +118,8 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         },
         validator:function(){
             return new Promise(function(resolve,reject) {
-                require(['validator','validator-cn'],function(validator,cn) {
-                    console.log(cn)
+                require(['validator'],function(validator) {
+                    require(['validator-cn'])    
                     resolve(validator)
                 })    
             })

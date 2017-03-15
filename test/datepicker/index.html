@@ -23,11 +23,23 @@
     <input type="text" v-ks-limit-number-fixed:2="max" name="">
     <button type="button" v-on:click="sublime">sublime</button>
     
-    <form id="form1">
-        <label>Email</label>
-        <input type="email" name="email" data-rule="required;email">
-        <label>Password</label>
-        <input type="password" name="pwd" data-rule="required;length(6~16)">
+    <form class="form" data-validator-option='{stopOnError:false, timely:2, theme:"yellow_top"}'>
+        <div class="form-item">
+            <label class="label">Username</label>
+            <input type="text"
+                class="input" 
+                name="username"
+                data-rule="required;username;"
+                data-rule-username="[/^[\w\d]{3,12}$/, '请输入 3到12 包含数字、字符、下划线']"
+                data-tip="这是输入提示"
+            >
+            <input name="demo" 
+            data-rule="required; abc" 
+            data-rule-abc="[/^\d{6}$/, '请输入6位数字']"
+            data-tip="6位数字备注信息">
+         </div>
+        <div class="form-item">
+    </div>
     </form>
 
     <script src="/test/datepicker/ks/index.js"></script>
@@ -42,7 +54,7 @@
                 }
             },
             // kspath:'aa',
-            components:['KsDatePicker','KsPage'],
+            components:['KsDatePicker','KsPage','KsDialog'],
             directives:['KsLimitNumberFixed'],
             validator:['#signupForm'],
             // filters:['cc'],
@@ -56,7 +68,9 @@
                 }
             },
             ready:function(){
-
+                // alert('pp')
+                console.log('$KsDialog',this.$KsDialog)
+                this.$KsDialog.info('1', '2', '3')();
             }
         })
 
