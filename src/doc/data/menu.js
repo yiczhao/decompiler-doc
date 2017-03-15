@@ -9,22 +9,11 @@ export default [
   {
     name: '开发指南 Guide',
     subMenu: [
-      {name: '安装', icon: 'icon', link: 'install'},
+      {name: '简介', icon: 'icon', link: 'install'},
       {name: '快速上手', icon: 'icon', link: ''}
     ]
   },
-  {
-    name: '基础组件 Base',
-    subMenu: [
-      {
-        name: '基础 Base', icon: 'icon', link: '',
-        subMenu: [
-          {name: 'Layout 布局', icon: 'icon', link: 'layout'},
-          {name: 'Button 按钮', icon: 'icon', link: 'button'}
-        ]
-      }
-    ]
-  },
+  
    {
     name: '验证 Validate',
     subMenu: [

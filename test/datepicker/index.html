@@ -9,7 +9,7 @@
 <body id="app">
     <div>
         <ks-date-picker :value.sync="datepicker" :validator=""></ks-date-picker>
-        <input type="hidden" name=""  value="{{datepicker}}" id="datepicker">
+        <input type="hidden" name=""  value="{{datepicker}}">
     </div>
     <br>
     <ks-page 
@@ -20,10 +20,17 @@
         v-bind:on-change="change"></ks-page>
 
     <h3>指令 </h3>
-    <input type="text" v-ks-limit-number-fixed:2="max" name="" id="age">
+    <input type="text" v-ks-limit-number-fixed:2="max" name="">
     <button type="button" v-on:click="sublime">sublime</button>
+    
+    <form id="form1">
+        <label>Email</label>
+        <input type="email" name="email" data-rule="required;email">
+        <label>Password</label>
+        <input type="password" name="pwd" data-rule="required;length(6~16)">
+    </form>
 
-    <script src="./index.js"></script>
+    <script src="/test/datepicker/ks/index.js"></script>
     <script type="text/javascript">
         
         KS({
@@ -37,17 +44,22 @@
             // kspath:'aa',
             components:['KsDatePicker','KsPage'],
             directives:['KsLimitNumberFixed'],
+            validator:['#signupForm'],
             // filters:['cc'],
             data:{
-                max:1000,
-                datepicker:''
+                max:10000,
+                datepicker:'2011-10-10'
             },
             methods:{
                 sublime:function(){
                     alert('lll')
                 }
+            },
+            ready:function(){
+
             }
         })
+
         
 
         

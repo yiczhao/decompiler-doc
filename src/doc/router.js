@@ -34,41 +34,13 @@ export default (router) => {
         /* 开发指南-安装 */
         '/install': {
           name: 'install',
-          cnName: '安装',
+          cnName: '简介',
           component: (resolve) => {
             require(['./views/guide/install.md'], resolve)
           }
         },
 
-        /* 基础组件 */
-        '/base': {
-          name: 'base',
-          cnName: '基础组件',
-          component: (resolve) => {
-            require(['./views/base/index.vue'], resolve)
-          },
-
-          subRoutes: {
-
-            /* 基础组件-布局 */
-            '/layout': {
-              name: 'layout',
-              cnName: '布局',
-              component: (resolve) => {
-                require(['./views/base/layout.md'], resolve)
-              }
-            },
-
-            /* 基础组件-按钮 */
-            '/button': {
-              name: 'button',
-              cnName: '按钮',
-              component: (resolve) => {
-                require(['./views/base/button.md'], resolve)
-              }
-            },
-          }
-        },
+        
         /* form */
         '/form': {
           name: 'form',

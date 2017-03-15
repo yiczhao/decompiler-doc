@@ -194,11 +194,11 @@ ready:function(){
     <legend>验证完整的表单</legend>
     <p>
       <label for="firstname">名字</label>
-      <input id="firstname" name="firstname" type="text">
+      <input id="firstname" name="firstname" required title="3~10位" type="text">
     </p>
     <p>
       <label for="lastname">姓氏</label>
-      <input id="lastname" name="lastname" type="text">
+      <input id="lastname" name="lastname"  type="text">
     </p>
     <p>
       <label for="username">用户名</label>
@@ -273,7 +273,7 @@ ready:function(){
       // 在键盘按下并释放及提交后验证提交表单
       $("#signupForm").validate({
           rules: {
-            firstname: "required",
+            // firstname: "required",
             lastname: "required",
             username: {
               required: true,
@@ -299,7 +299,7 @@ ready:function(){
             agree: "required"
           },
           messages: {
-            firstname: "请输入您的名字",
+            // firstname: "请输入您的名字",
             lastname: "请输入您的姓氏",
             username: {
               required: "请输入用户名",
@@ -314,7 +314,10 @@ ready:function(){
               minlength: "密码长度不能小于 5 个字母",
               equalTo: "两次密码输入不一致"
             },
-            email: "请输入一个正确的邮箱",
+            email: {
+              email:"请输入一个正确的邮箱",
+              required:"必填",
+            },
             agree: "请接受我们的声明",
             topic: "请选择两个主题"
           }
