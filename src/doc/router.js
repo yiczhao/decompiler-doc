@@ -139,6 +139,52 @@ export default (router) => {
             },
           }
         },
+        
+         /* ValidatorPlus */
+        '/validator': {
+          name: 'validator',
+          cnName: 'ValidatorPlus',
+          component: (resolve) => {
+            require(['./views/validator/index.vue'], resolve)
+          },
+
+          subRoutes: {
+            /* 了解规则*/
+            '/understandingRules': {
+              name: 'understandingRules',
+              cnName: '了解规则',
+              component: (resolve) => {
+                require(['./views/validator/understandingRules.md'], resolve)
+              }
+            },
+            /* DOM 绑定*/
+            '/domBindings': {
+              name: 'domBindings',
+              cnName: 'DOM 绑定',
+              component: (resolve) => {
+                require(['./views/validator/domBindings.md'], resolve)
+              }
+            },
+            /* 方法 & 事件*/
+            '/methodAndEvent': {
+              name: 'methodAndEvent',
+              cnName: '方法 & 事件',
+              component: (resolve) => {
+                require(['./views/validator/methodAndEvent.md'], resolve)
+              }
+            },
+
+            /* 示例*/
+            '/validatorDemo': {
+              name: 'validatorDemo',
+              cnName: 'demo 示例',
+              component: (resolve) => {
+                require(['./views/validator/validatorDemo.md'], resolve)
+              }
+            },
+
+          },
+        },
 
       }
     }
