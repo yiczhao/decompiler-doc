@@ -4,26 +4,79 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    
+    <link rel="stylesheet" type="text/css" href="http://fed.dev.kashuo.net/bootsrap-core/dist/bootstrap.css?51112805229539555619">
+    <script src="/test/datepicker/ks/index.js"></script>
+    <script type="text/javascript">
+        
+        KS({
+            // kspath:'aa',
+            // loads:{
+            //     i18n:'//cdn.bootcss.com/require-i18n/2.0.6/i18n',
+            //     bootstrapcc:{
+            //         js:'//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.js',
+            //         css:'//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.css',
+            //     }
+            // },
+            components:['KsDatePicker','KsPage','KsDialog','KsModal','KsModalEntity'], 
+            directives:['KsLimitNumberFixed'],
+            // filters:['cc'],
+            data:{
+                name:'zdzDesigner-----',
+                checked:false,
+                max:10000,
+                page:1,
+                datepicker:'2011-10-10'
+            },
+            methods:{
+                change:function(val){
+                    console.log(val)
+                },
+                sublime:function(){
+                    alert('lll')
+                }
+            },
+            ready:function(){
+                // app.style.display = 'block'
+                // alert('pp')
+                // console.log('$KsDialog',this.$KsModal)
+                // this.$KsDialog.info('1', '2', '3')();
+                // this.$KsModal.info('1', '2', '3')();
+                $('#form1').validator({
+                            valid: function(form) {
+                                form.submit();
+                            }
+                        });
+            }
+        })
+
+        
+
+        
+       
+    </script>
 </head>
 <body id="app">
+    {{name}}
+    <input type="text" name="" v-model="name">
     <div>
-        <ks-date-picker :value.sync="datepicker" :validator=""></ks-date-picker>
+        <ks-date-picker :value.sync="datepicker" style="width:200px"></ks-date-picker>
         <input type="hidden" name=""  value="{{datepicker}}">
+        {{datepicker}}
     </div>
     <br>
     <ks-page 
-        v-bind:current.sync="3" 
-        v-bind:length="7"
-        v-bind:total="100"
+        v-bind:current.sync="page" 
+        v-bind:length="9"
+        v-bind:total="1000"
         v-bind:size="13"
         v-bind:on-change="change"></ks-page>
-
+    {{page}}
     <h3>指令 </h3>
     <input type="text" v-ks-limit-number-fixed:2="max" name="">
     <button type="button" v-on:click="sublime">sublime</button>
     
-    <form class="form" data-validator-option='{stopOnError:false, timely:2, theme:"yellow_top"}'>
+    <h3>验证 </h3>
+    <form class="form" data-validator-option='{stopOnError:false, timely:2, theme:"yellow_right"}'>
         <div class="form-item">
             <label class="label">Username</label>
             <input type="text"
@@ -41,43 +94,17 @@
         <div class="form-item">
     </div>
     </form>
+    
+    <!-- 弹框 -->
+    <h3>弹框</h3>
+    <input type="checkbox" name="" v-model="checked">
+    <ks-modal-entity :show.sync="checked">
+      <!-- ! 注意: 作为 slot 的包裹元素最好使用行内元素 -->
+      <span slot="title">通过 Slot 自定义标题eee</span>
+      <span slot="content">通过 Slot 自定义内容eee</span>
+    </ks-modal-entity>
 
-    <script src="/test/datepicker/ks/index.js"></script>
-    <script type="text/javascript">
-        
-        KS({
-            loads:{
-                i18n:'//cdn.bootcss.com/require-i18n/2.0.6/i18n',
-                bootstrap:{
-                    js:'//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.js',
-                    css:'//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.css',
-                }
-            },
-            // kspath:'aa',
-            components:['KsDatePicker','KsPage','KsDialog'],
-            directives:['KsLimitNumberFixed'],
-            validator:['#signupForm'],
-            // filters:['cc'],
-            data:{
-                max:10000,
-                datepicker:'2011-10-10'
-            },
-            methods:{
-                sublime:function(){
-                    alert('lll')
-                }
-            },
-            ready:function(){
-                // alert('pp')
-                console.log('$KsDialog',this.$KsDialog)
-                this.$KsDialog.info('1', '2', '3')();
-            }
-        })
+    
 
-        
-
-        
-       
-    </script>
 </body>
 </html>

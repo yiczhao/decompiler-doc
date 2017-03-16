@@ -17,8 +17,12 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
     // console.log(Promise)
 
     function KS (options) {
+        options.el = options.el 
+                     || document.body 
+                     || document.getElementsByTagName('html')[0]
+
+        options.el.style.display = 'none'
         
-        options.el = options.el || document.body
 
         loader.config
             .then(function(configCB){
@@ -44,16 +48,20 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                             
                             item.val.default && (item.val = item.val.default)
                             // console.log(item.type,item.name,item.val)
-                            if('KsDialog' == item.name){
-                                Object.defineProperties(Vue.prototype, {
-                                    $KsDialog: {get() {
-                                      return item.val
-                                    }
-                                    }
-                                });
-                            }else{
-                                Vue[item.type](item.name,item.val)    
+                            var statics = ['KsDialog','KsModal']
+                            if(~statics.indexOf(item.name)){
+                                var proto = {}
+
+                                proto['$'+item.name] = {
+                                            get() {
+                                              return item.val
+                                            }
+                                        }
+                                Object.defineProperties(Vue.prototype,proto);
+                                // console.log(proto)
                             }
+
+                            Vue[item.type](item.name,item.val)    
                             
                             
 
@@ -65,7 +73,10 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                             filters:options.filters,
                             methods:options.methods,
                             watch:options.watch,
-                            ready:options.ready
+                            ready:function(){
+                                options.el.style.display = 'block'
+                                options.ready()
+                            }
 
                         })
                         
@@ -76,17 +87,11 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                 Promise.all([loader.jquery()
                              ,loader.validator()])
                     .then(function(arg){
-                        console.log(arg)
+                        
                         var $ = arg[0]
-                        var validator = arg[1]
-                        console.log($('#form1'))
-                        $('#form1').validator({
-                            valid: function(form) {
-                                // do something
-                                // use native submit.
-                                form.submit();
-                            }
-                        });
+                        
+                        
+
                     })
             })
             
@@ -112,6 +117,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         jquery:function(){
             return new Promise(function(resolve,reject) {
                 require(['jquery'],function(jquery) {
+                    // global.$ = jquery
                     resolve(jquery)
                 })    
             })
@@ -206,13 +212,14 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
     
     /**
      * [getPathsAndShim ]
-     * @param  {[type]} args [description]
-     * @return {[type]}      [description]
+     * @param  {[Object]} args  [配置]
+     * @return {[type]}         [description]
      */
     function getPathsAndShim(args){
         var paths = {}
         var shim = {}
-        // console.log(Object.keys(args))
+        console.log(args)
+        // return
         Object.keys(args).forEach(function(key){
             // console.log(key)
             if('string' != typeof args[key]){
@@ -224,7 +231,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                 paths[key] = args[key]
             }
         })
-        console.log(paths)
+        console.log(paths,shim)
         return {paths:paths,shim:shim}
     }
 
@@ -236,12 +243,15 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
      */
     function getConfig(configCB,loadAndKspath) {
         var config = configCB(loadAndKspath.kspath,ksroot)
-        // console.log(config,loadAndKspath)
-        Object.keys(loadAndKspath.loads)
+        
+        loadAndKspath.loads
+        && Object.keys(loadAndKspath.loads)
             .forEach(function(key){
-                config[key] = loadAndKspath.loads[key]
+                console.log(loadAndKspath.loads[key])
+                config[key] = JSON.parse(JSON.stringify(loadAndKspath.loads[key]))
             })
 
+        // console.log(config)
         return config 
 
     }

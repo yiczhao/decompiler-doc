@@ -28,6 +28,14 @@
                 js:kspath+'/components/ksdialog/index',
                 css:kspath+'/components/ksdialog/style.css'
             },
+            'component-KsModal': {
+                js:kspath+'/components/ksmodal/index',
+                css:kspath+'/components/ksmodal/style.css'
+            },
+            'component-KsModalEntity': {
+                js:kspath+'/components/ksmodalentity/index',
+                css:kspath+'/components/ksmodalentity/style.css'
+            },
             'directive-KsLimitNumberFixed':kspath+'/directives/kslimitnumberfixed/index'
             
         }    
