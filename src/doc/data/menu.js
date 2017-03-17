@@ -26,6 +26,16 @@ export default [
           {name:'demo 示例',icon:'icon',link:'demo'},
           {name:'validate API',icon:'icon',link:'api'},
         ]
+      },
+      {
+        name: 'ValidatorPlus', icon: 'icon', link: '',
+        subMenu:[
+          {name:'了解规则',icon:'icon',link:'understandingRules'},
+          {name:'DOM 绑定',icon:'icon',link:'domBindings'},
+          {name:'方法 & 事件',icon:'icon',link:'methodAndEvent'},
+          {name:'demo 示例',icon:'icon',link:'validatorDemo'},
+          // {name:'validate API',icon:'icon',link:'api'},
+        ]
       }
     ]
   },
