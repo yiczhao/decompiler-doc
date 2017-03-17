@@ -28,16 +28,29 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
             .then(function(configCB){
 
                 // 配置项
-                var config = getConfig(configCB,{
+                var config = loader.compile(configCB,{
                                         loads:options.loads,
                                         kspath:options.kspath
                                     })
+
+                // console.log('====',config)
+                // 加载字体
+                loader.iconfont()
+                // 验证
+                loader.validator()
                 // 获取paths 和 shim
-                var pathsAndShim = getPathsAndShim(config)
+                var pathsAndShim = loader.compilePathsAndShim(config)
                 // requirejs配置 ，返回注入的模块
-                var moduleDefined = requireConfig(pathsAndShim)
+                var moduleDefined = loader.requirejs(pathsAndShim)
                 // 依赖的组件
-                var needModule = isModuleDefine(options,moduleDefined)
+                var needModule = isModuleDefine({
+                                    components:options.components,
+                                    directives:options.directives,
+                                    filters:options.filters
+                                },moduleDefined)
+
+
+                loader.apiLoad(options.loads)
 
                 // 依赖组件注册
                 Promise.all([loader.vue(),requireModule(needModule)])
@@ -83,23 +96,16 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                     })
 
 
-                // 验证
-                Promise.all([loader.jquery()
-                             ,loader.validator()])
-                    .then(function(arg){
-                        
-                        var $ = arg[0]
-                        
-                        
-
-                    })
+                
+               
             })
             
     }
 
     
-
+    // 加载器
     var loader = {
+        // 配置
         config:(function(ksroot){
             return new Promise(function(resolve,reject){
                 require([ksroot+'ks/config.js'],function(config) {
@@ -107,6 +113,10 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                 })
             })
         })(ksroot),
+        // 字体图标
+        iconfont:function(){
+            require(['css!iconfont'])    
+        },
         vue:function(){
             return new Promise(function(resolve,reject) {
                 require(['Vue'],function(Vue) {
@@ -114,33 +124,98 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                 })    
             })
         },
-        jquery:function(){
-            return new Promise(function(resolve,reject) {
-                require(['jquery'],function(jquery) {
-                    // global.$ = jquery
-                    resolve(jquery)
-                })    
-            })
-        },
         validator:function(){
             return new Promise(function(resolve,reject) {
-                require(['validator'],function(validator) {
+                require(['jquery','validator'],function(validator) {
                     require(['validator-cn'])    
                     resolve(validator)
                 })    
             })
-        }
+        },
+        /**
+         * [compile 获取config配置]
+         * @param  {[type]} configCB      [config回调]
+         * @param  {[type]} loadAndKspath [api接口loads 和 kspath]
+         * @return {[type]}               []
+         */
+        compile:function(configCB,loadAndKspath) {
+            var config = configCB(loadAndKspath.kspath,ksroot)
+            
+            loadAndKspath.loads
+            && Object.keys(loadAndKspath.loads)
+                .forEach(function(key){
+                    // console.log(loadAndKspath.loads[key])
+                    config[key] = JSON.parse(JSON.stringify(loadAndKspath.loads[key]))
+                })
 
+            // console.log(config)
+            return config 
+
+        },
+        /**
+         * [requirejs 配置]
+         * @param  {[Object]} options       []
+         * @param  {[Object]} loadAndKspath []
+         * @return {[Array]}         [已注册的组件]
+         */
+        requirejs:function(pathsAndShim){
+            
+            var options = {
+                baseUrl:'ks/',
+                map: {
+                  '*': {
+                    'css': 'CSS' // or whatever the path to require-css is
+                  }
+                },
+                paths:pathsAndShim.paths,
+                shim:pathsAndShim.shim
+            }
+            console.log(options)
+            require.config(options);
+            
+            var moduleDefined = Object.keys(pathsAndShim.paths)
+            // console.log(moduleDefined)
+            return moduleDefined
+        },
+        /**
+         * [compilePathsAndShim ]
+         * @param  {[Object]} config  [配置]
+         * @return {[type]}         [description]
+         */
+        compilePathsAndShim: function (config){
+            var paths = {}
+            var shim = {}
+            
+            // return
+            Object.keys(config).forEach(function(key){
+                // console.log(key)
+                if('string' != typeof config[key]){
+                    paths[key] = config[key].js
+                    shim[key] = {
+                        deps:['css!'+config[key].css]
+                    }
+                }else{
+                    paths[key] = config[key]
+                }
+            })
+            
+            return {paths:paths,shim:shim}
+        },
+        // 加载api中的loads
+        apiLoad:function(loads){
+            // console.log(loads)
+            require(Object.keys(loads))
+        }
     }
     
     /**
      * [isModuleDefine 检查模块是否注册]
-     * @param  {[type]}   dependModules     [依赖的module]
+     * @param  {[type]}   ksmodules         [依赖的module]
      * @param  {[type]}   moduleDefined     [注入的module]
      * @return {[Object]}               ['component-KsDatePicker',
      *                                   'directive-KsLimitNumberFixed']
      */
-    function isModuleDefine(dependModules,moduleDefined){
+    function isModuleDefine(ksmodules,moduleDefined){
         var cdfs = {
             components:'component',
             directives:'directive',
@@ -149,8 +224,8 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         var modules = Object.keys(cdfs)
                     .reduce(function(arr,key){ 
                         var names = []
-                        if(dependModules[key] && dependModules[key].length){
-                            names = dependModules[key].map(function(mame){
+                        if(ksmodules[key] && ksmodules[key].length){
+                            names = ksmodules[key].map(function(mame){
                                 return cdfs[key]+'-'+mame        
                             })
                         }
@@ -174,6 +249,8 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         // console.log(modules)
         return modules
     }
+
+    // .concat(['iconfont'])
 
     /**
      * [requireModule 异步加载组件]
@@ -210,76 +287,11 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
     //         new Vue({el:options.el,methods:options.methods,data:options.data})
     // }
     
-    /**
-     * [getPathsAndShim ]
-     * @param  {[Object]} args  [配置]
-     * @return {[type]}         [description]
-     */
-    function getPathsAndShim(args){
-        var paths = {}
-        var shim = {}
-        console.log(args)
-        // return
-        Object.keys(args).forEach(function(key){
-            // console.log(key)
-            if('string' != typeof args[key]){
-                paths[key] = args[key].js
-                shim[key] = {
-                    deps:['css!'+args[key].css]
-                }
-            }else{
-                paths[key] = args[key]
-            }
-        })
-        console.log(paths,shim)
-        return {paths:paths,shim:shim}
-    }
+    
 
-    /**
-     * [getConfig 获取config配置]
-     * @param  {[type]} configCB      [config回调]
-     * @param  {[type]} loadAndKspath [api接口loads 和 kspath]
-     * @return {[type]}               []
-     */
-    function getConfig(configCB,loadAndKspath) {
-        var config = configCB(loadAndKspath.kspath,ksroot)
-        
-        loadAndKspath.loads
-        && Object.keys(loadAndKspath.loads)
-            .forEach(function(key){
-                console.log(loadAndKspath.loads[key])
-                config[key] = JSON.parse(JSON.stringify(loadAndKspath.loads[key]))
-            })
-
-        // console.log(config)
-        return config 
-
-    }
-    /**
-     * [requireConfig 配置]
-     * @param  {[Object]} options       []
-     * @param  {[Object]} loadAndKspath []
-     * @return {[Array]}         [已注册的组件]
-     */
-    function requireConfig(pathsAndShim){
-        
-        var options = {
-            baseUrl:'ks/',
-            map: {
-              '*': {
-                'css': 'CSS' // or whatever the path to require-css is
-              }
-            },
-            paths:pathsAndShim.paths,
-            shim:pathsAndShim.shim
-        }
-
-        require.config(options);
-        
-        var moduleDefined = Object.keys(pathsAndShim.paths)
-        // console.log(moduleDefined)
-        return moduleDefined
-    }
+    
+    
+    
     
     KS.Promise = Promise
 
