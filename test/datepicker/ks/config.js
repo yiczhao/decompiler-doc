@@ -18,6 +18,7 @@
                 css:ksroot+'ks/util/validator/style'
             },
             'validator-cn':ksroot+'ks/util/validator/cn',
+            
             'component-KsDatePicker':{ 
                 js:kspath+'/components/ksdatepicker/index',
                 css:kspath+'/components/ksdatepicker/style'

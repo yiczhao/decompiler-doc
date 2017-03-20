@@ -85,7 +85,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                             
 
                         })
-
+                        
                         // console.log(Vue.prototype.$KsDialog)
                         new Vue({
                             el:options.el,
@@ -200,7 +200,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
             var paths = {}
             var shim = {}
             
-            // console.log(config)
+
             // return
             Object.keys(config).forEach(function(key){
                 // console.log(key)
