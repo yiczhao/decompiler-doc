@@ -35,7 +35,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                                         kspath:options.kspath
                                     })
 
-                console.log('====',config)
+                // console.log('====',config)
                 // 加载字体
                 loader.iconfont()
                 // 验证
@@ -52,14 +52,18 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                                 },moduleDefined)
 
 
-                loader.apiLoad(options.loads)
-
+                
+                // console.log('needModule',needModule)
                 // 依赖组件注册
-                Promise.all([loader.vue(),requireModule(needModule)])
+                Promise.all([loader.vue()
+                            ,requireModule(needModule)
+                            ,loader.apiLoad(options.loads)])
                     .then(function(arg){
                         
                         var Vue = arg[0]
-                        arg[1].forEach(function(item){
+                        var cdfsVue = arg[1]
+                        var loads = arg[2]
+                        cdfsVue.forEach(function(item){
                             
                             item.val.default && (item.val = item.val.default)
                             // console.log(item.type,item.name,item.val)
@@ -92,6 +96,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                             watch:options.watch,
                             created:function(){
                                 options.created && options.created.call(this)
+                                this.ksloads = loads
                             },
                             ready:function(){
                                 options.el.style.display = 'block'
@@ -195,7 +200,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
             var paths = {}
             var shim = {}
             
-            console.log(config)
+            // console.log(config)
             // return
             Object.keys(config).forEach(function(key){
                 // console.log(key)
@@ -208,13 +213,25 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                     paths[key] = config[key]
                 }
             })
-            
+            // console.log(paths,shim)
             return {paths:paths,shim:shim}
         },
         // 加载api中的loads
         apiLoad:function(loads){
-            // console.log(loads)
-            loads && require(Object.keys(loads))
+            // console.log(Object.keys(loads))
+            return new Promise(function(resolve,reject) {
+                if(loads){
+                    require(Object.keys(loads),function(){
+                        // console.log(arguments)
+                        resolve(arguments)
+                    }) 
+                }else{
+                    resolve(null)
+                }
+                
+            })
+            
+            
         }
     }
     
@@ -256,7 +273,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         if(noConfig.length) {
             console.error('请加载模块：'+noConfig.join(' , '))
         }
-        console.log(modules)
+        // console.log(modules)
         return modules
     }
 
