@@ -35,7 +35,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                                         kspath:options.kspath
                                     })
 
-                console.log('====',config)
+                // console.log('====',config)
                 // 加载字体
                 loader.iconfont()
                 // 验证
@@ -195,7 +195,6 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
             var paths = {}
             var shim = {}
             
-            console.log(config)
             // return
             Object.keys(config).forEach(function(key){
                 // console.log(key)
@@ -256,7 +255,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         if(noConfig.length) {
             console.error('请加载模块：'+noConfig.join(' , '))
         }
-        console.log(modules)
+        // console.log(modules)
         return modules
     }
 
