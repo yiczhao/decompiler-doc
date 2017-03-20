@@ -1,15 +1,15 @@
-webpackJsonp([7],{
+webpackJsonp([6],{
 
-/***/ 97:
+/***/ 153:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(98)
+	__vue_script__ = __webpack_require__(154)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/doc/views/form/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(99)
+	  console.warn("[vue-loader] src/doc/views/data/index.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(155)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -19,7 +19,7 @@ webpackJsonp([7],{
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/decompiler-doc/src/doc/views/form/index.vue"
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/decompiler-doc/src/doc/views/data/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -29,7 +29,7 @@ webpackJsonp([7],{
 
 /***/ },
 
-/***/ 98:
+/***/ 154:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -53,7 +53,7 @@ webpackJsonp([7],{
 
 /***/ },
 
-/***/ 99:
+/***/ 155:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"base-container\">\n  <router-view></router-view>\n</div>\n";

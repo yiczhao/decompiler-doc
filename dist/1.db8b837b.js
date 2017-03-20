@@ -1,15 +1,15 @@
 webpackJsonp([1],{
 
-/***/ 57:
+/***/ 116:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(58)
+	__vue_script__ = __webpack_require__(117)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/doc/views/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(79)
+	__vue_template__ = __webpack_require__(138)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -29,7 +29,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 58:
+/***/ 117:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38,23 +38,23 @@ webpackJsonp([1],{
 	  value: true
 	});
 
-	var _KHeader = __webpack_require__(59);
+	var _KHeader = __webpack_require__(118);
 
 	var _KHeader2 = _interopRequireDefault(_KHeader);
 
-	var _KMenu = __webpack_require__(63);
+	var _KMenu = __webpack_require__(122);
 
 	var _KMenu2 = _interopRequireDefault(_KMenu);
 
-	var _KFooter = __webpack_require__(67);
+	var _KFooter = __webpack_require__(126);
 
 	var _KFooter2 = _interopRequireDefault(_KFooter);
 
-	var _KCrumbs = __webpack_require__(69);
+	var _KCrumbs = __webpack_require__(128);
 
 	var _KCrumbs2 = _interopRequireDefault(_KCrumbs);
 
-	var _LoadingMask = __webpack_require__(72);
+	var _LoadingMask = __webpack_require__(131);
 
 	var _LoadingMask2 = _interopRequireDefault(_LoadingMask);
 
@@ -124,16 +124,16 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 59:
+/***/ 118:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(60)
+	__vue_script__ = __webpack_require__(119)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/doc/views/core/KHeader.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(61)
+	__vue_template__ = __webpack_require__(120)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -153,7 +153,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 60:
+/***/ 119:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -180,30 +180,30 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 61:
+/***/ 120:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<nav class=\"k-header\">\n  <div class=\"k-header__item logo-wrap\">\n    <img class=\"logo\" src=\"" + __webpack_require__(62) + "\" alt=\"LOGO\">\n  </div>\n</nav>\n";
+	module.exports = "\n<nav class=\"k-header\">\n  <div class=\"k-header__item logo-wrap\">\n    <img class=\"logo\" src=\"" + __webpack_require__(121) + "\" alt=\"LOGO\">\n  </div>\n</nav>\n";
 
 /***/ },
 
-/***/ 62:
+/***/ 121:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,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"
 
 /***/ },
 
-/***/ 63:
+/***/ 122:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(64)
+	__vue_script__ = __webpack_require__(123)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/doc/views/core/KMenu.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(66)
+	__vue_template__ = __webpack_require__(125)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -223,7 +223,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 64:
+/***/ 123:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -232,7 +232,7 @@ webpackJsonp([1],{
 	  value: true
 	});
 
-	var _menu = __webpack_require__(65);
+	var _menu = __webpack_require__(124);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -280,7 +280,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 65:
+/***/ 124:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -297,18 +297,23 @@ webpackJsonp([1],{
 
 	exports.default = [{
 	  name: '开发指南 Guide',
-	  subMenu: [{ name: '安装', icon: 'icon', link: 'install' }, { name: '快速上手', icon: 'icon', link: '' }]
-	}, {
-	  name: '基础组件 Base',
-	  subMenu: [{
-	    name: '基础 Base', icon: 'icon', link: '',
-	    subMenu: [{ name: 'Layout 布局', icon: 'icon', link: 'layout' }, { name: 'Button 按钮', icon: 'icon', link: 'button' }]
-	  }]
+	  subMenu: [{ name: '简介', icon: 'icon', link: 'install' }, { name: '快速上手', icon: 'icon', link: '' }]
 	}, {
 	  name: '验证 Validate',
-	  subMenu: [{
-	    name: '验证', icon: 'icon', link: '',
-	    subMenu: [{ name: '默认校验规则', icon: 'icon', link: 'defaultValidateRules' }, { name: '默认提示', icon: 'icon', link: 'defaultPrompt' }, { name: '使用方式', icon: 'icon', link: 'usageMode' }, { name: 'validate API', icon: 'icon', link: '' }, { name: 'demo 示例', icon: 'icon', link: '' }]
+	  subMenu: [
+	  // {
+	  //   name: '验证', icon: 'icon', link: '',
+	  //   subMenu:[
+	  //     {name:'默认校验规则',icon:'icon',link:'defaultValidateRules'},
+	  //     {name:'默认提示',icon:'icon',link:'defaultPrompt'},
+	  //     {name:'使用方式',icon:'icon',link:'usageMode'},
+	  //     {name:'demo 示例',icon:'icon',link:'demo'},
+	  //     {name:'validate API',icon:'icon',link:'api'},
+	  //   ]
+	  // },
+	  {
+	    name: 'ValidatorPlus', icon: 'icon', link: '',
+	    subMenu: [{ name: '简介', icon: 'icon', link: 'briefIntroduction' }, { name: '了解规则', icon: 'icon', link: 'understandingRules' }, { name: 'DOM 绑定', icon: 'icon', link: 'domBindings' }, { name: '方法 & 事件', icon: 'icon', link: 'methodAndEvent' }, { name: 'demo 示例', icon: 'icon', link: 'validatorDemo' }]
 	  }]
 	}, {
 	  name: '日志 Log',
@@ -317,18 +322,18 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 66:
+/***/ 125:
 /***/ function(module, exports) {
 
 	module.exports = "\n<nav class=\"k-menu-container fix l\">\n  <ul class=\"k-menu\" style=\"overflow-y: scroll\">\n    <div class=\"menu-container\" v-for=\"mobj in Menu\">\n      <li class=\"k-menu__item title\"\n          v-text=\"mobj.name\"\n      ></li>\n\n      <div class=\"subMenuContainer\" v-for=\"smobj in mobj.subMenu\">\n        <li class=\"k-menu__item trans\"\n            v-link=\"{name: smobj.link}\" :data-ksa=\"smobj.ksa\"\n        >\n          <i class=\"k-menu__icon icon\" :class=\"smobj.icon\"></i>\n          <span v-text=\"smobj.name\"></span>\n        </li>\n\n        <ul class=\"k-menuSub__container\" v-if=\"smobj.subMenu && smobj.subMenu.length\">\n          <li class=\"k-menu__item f12\" v-for=\"ssmobj in smobj.subMenu\"\n              v-link=\"{name: ssmobj.link}\" :data-ksa=\"ssmobj.ksa\"\n              style=\"padding-left: 40px\">\n            <i class=\"k-menu__icon icon\" :class=\"ssmobj.icon\"></i>\n            <span v-text=\"ssmobj.name\"></span>\n          </li>\n        </ul>\n      </div>\n\n\n    </div>\n  </ul>\n</nav>\n";
 
 /***/ },
 
-/***/ 67:
+/***/ 126:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_template__ = __webpack_require__(68)
+	__vue_template__ = __webpack_require__(127)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -348,23 +353,23 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 68:
+/***/ 127:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"footer\">\n  © {{new Date().getFullYear()}} <a>卡说 · 权限系统</a>\n  <a class=\"beian\" href=\"http://www.miibeian.gov.cn\" target=\"_blank\">南昌网安备案第360101011060901号.</a>\n  <span class=\"r\"><a href=\"http://www.kashuo.com/\" target=\"_blank\">Power by Suzhou KASHUO Inc.</a></span>\n</div>\n";
 
 /***/ },
 
-/***/ 69:
+/***/ 128:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(70)
+	__vue_script__ = __webpack_require__(129)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/doc/views/core/KCrumbs.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(71)
+	__vue_template__ = __webpack_require__(130)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -384,7 +389,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 70:
+/***/ 129:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -452,24 +457,24 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 71:
+/***/ 130:
 /***/ function(module, exports) {
 
 	module.exports = "\n<nav class=\"k-crumbs-container f14\">\n  <ul class=\"k-crumbs m0 p0 ell\">\n    <!-- 面包屑 Home 部分图标 -->\n    <!--<img class=\"k-crumbs__home\" src=\"../../../static/images/icons/home.png\" alt=\"home icon\">-->\n    <li class=\"k-crumbs__item\" v-for=\"path in routePath\" track-by=\"$index\"\n    >\n      <!-- 面包屑导航链接  @click=\"$router.go({name: path.route})\" -->\n      <a class=\"k-crumbs__point tdn\" :class=\"routePath.length - 1 === $index && 'k-crumbs__active'\"\n         v-text=\"path.cn\"\n      ></a>\n      <span v-if=\"routePath.length - 1 !== $index\"\n            class=\"k-crumbs__split\">/&nbsp;</span>\n    </li>\n  </ul>\n</nav>\n";
 
 /***/ },
 
-/***/ 72:
+/***/ 131:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(73)
-	__vue_script__ = __webpack_require__(77)
+	__webpack_require__(132)
+	__vue_script__ = __webpack_require__(136)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/doc/components/LoadingMask.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(78)
+	__vue_template__ = __webpack_require__(137)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -489,16 +494,16 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 73:
+/***/ 132:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(74);
+	var content = __webpack_require__(133);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(76)(content, {});
+	var update = __webpack_require__(135)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -516,10 +521,10 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 74:
+/***/ 133:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(75)();
+	exports = module.exports = __webpack_require__(134)();
 	// imports
 
 
@@ -531,7 +536,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 76:
+/***/ 135:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -754,7 +759,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 77:
+/***/ 136:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -826,14 +831,14 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 78:
+/***/ 137:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"kloading-mask\" v-show=\"loading\">\n  <div class=\"kloading-container\">\n    <i class=\"spiner iconfont icon-loading-copy abs\" style=\"font-size: 24px; color: #444\"></i>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 79:
+/***/ 138:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"app-container\">\n  <k-header></k-header>\n  <div class=\"content-container\">\n    <k-menu></k-menu>\n    <div class=\"work-container\" v-el:main-container>\n      <k-crumbs></k-crumbs>\n      <loading-mask></loading-mask>\n      <div class=\"router-container\">\n        <div class=\"router-wrap\">\n          <router-view class=\"p20\"></router-view>\n        </div>\n      </div>\n      <k-footer></k-footer>\n    </div>\n  </div>\n</div>\n";
