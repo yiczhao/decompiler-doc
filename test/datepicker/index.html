@@ -4,138 +4,145 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <link rel="stylesheet" href="../../src/min/ks/components/ksdatepicker/style.css">
-</head>
-<body id="app">
-    <div>
-        <ks-date-picker :value.sync="datepicker" :validator=""></ks-date-picker>
-        <input type="hidden" name=""  value="{{datepicker}}" id="datepicker">
-    </div>
-    <br>
-    <h3>指令 v-limit-number-fixed:1="10000"</h3>
-    <input type="text" v-limit-number-fixed:1="10000" name="" id="age">
-    <button id="sublime" type="button">sublime</button>
-    <script src="//cdn.bootcss.com/require.js/2.3.2/require.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8079/dist/bootstrap.css?6e659451bcc1da1d9b53">
+
+    <script src="/test/datepicker/ks/index.js"></script>
     <script type="text/javascript">
-        require.config({
-            paths: {
-                Vue: '//cdn.bootcss.com/vue/1.0.28/vue.min',
-                KsDatePicker: '/src/min/ks/components/ksdatepicker/index'
-            }
-        });
+        
+        KS({
+            // kspath:'aa',
 
-        require(['KsDatePicker','Vue'],function(KsDatePicker,Vue) {
-            // console.log(Vue)
-            // console.log(KsDatePicker)
-            Vue.directive('limit-number-fixed', {
-                params: ['limit','min'],
-                twoWay: true,
-                bind () {
-                    
-                    var limit = this.params.limit || 100000
-                    var min = this.params.min || 0
-
-                    if(this.el.addEventListener){
-                        this.el.addEventListener('input', e=>{
-                            this.handler.call(this,limit,min)
-                        })
-                    }else if(this.el.attachEvent){
-                        this.el.attachEvent('onpropertychange',event=> {
-                            if(event.propertyName!='value') return
-                            this.handler.call(this,limit,min)
-                        })
-                    }else{
-                        this.el.addEventListener('keyup', ()=>{
-                            this.handler.call(this,limit,min)
-                        })
-                    }
-
-
+            // loads:{
+            //     i18n:'//cdn.bootcss.com/require-i18n/2.0.6/i18n',
+            //     bootstrapcc:{
+            //         js:'//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap',
+            //         css:'//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap',
+            //     }
+            // },
+            components:['KsDatePicker','KsPage','KsDialog','KsModal'], 
+            directives:['KsLimitNumberFixed'],
+            // filters:['cc'],
+            data:{
+                name:'zdzDesigner-----',
+                checked:false,
+                max:10000,
+                page:1,
+                datepicker:'2011-10-10'
+            },
+            methods:{
+                change:function(val){
+                    console.log(val)
                 },
-                handler(limit,min) {
-
-                        //debugger
-                        // var reg = new RegExp('^[0-9]+(\\.[0-9]{0,'+this.arg+'})?$')
-
-                        var temp_val = this.el.value,ints,fixed = ''
-                        
-                        if(temp_val.length==1&&temp_val=="-"&&min!=0) return 
-                           
-                        if(parseInt(temp_val)<-1){
-                                temp_val="-"
-                        }else{
-                            if(temp_val=='' || isNaN(parseInt(temp_val))) {
-                                temp_val = ''
-                            }else{
-                                ints = this.get_ints(temp_val,limit,min)
-                                fixed = this.get_fixed(temp_val,this.arg)
-                                temp_val = ints+fixed
-                            }
-                        }
-
-                        this.el.value = temp_val
-                        this.set(temp_val)
-                        
-                    },
-
-                    /**
-                     * 获取整数部分
-                     * INF 无穷大
-                     */
-                    get_ints (temp_val,limit,min){
-                        var ints = parseInt(temp_val, 10)
-                        if(limit!='INF' && ints > limit){
-                            ints = (''+ints).substr(0,(''+ints).length-1)
-                        }
-
-                        return ints
-                    },
-
-                    // 获取小数部分
-                    get_fixed (temp_val,limit,min){
-                        //debugger
-                        var fixed = ''
-                        if(limit && ~temp_val.indexOf('.')){
-                            if(temp_val.split('.')[1].length!=1){
-                                temp_val.split('.')[1].split('').map(t=>{
-                                 fixed += isNaN(parseInt(t)) 
-                                                ? ''
-                                                : parseInt(t)
-                                })
-                            }else{
-                                fixed=temp_val.split('.')[1]
-                                fixed = isNaN(parseInt(fixed)) 
-                                                ? ''
-                                                : parseInt(fixed)
-                            }
-                            
-                           
-                            fixed = '.'+ ((''+fixed).substr(0,limit))
-                        }
-                        return fixed
-                    }
-            })
-            var app = new Vue({
-                el:'#app',
-                data:{
-                    datepicker:''
+                sublime:function(){
+                    alert('lll')
                 },
-                components:{
-                    'KsDatePicker':KsDatePicker
+                dialog(){
+                    this.$KsDialog.success('1111', '2333', true)();
+                    // this.$KsModal.info('1', '2', '3')();
                 }
-            })
-
-            setTimeout(function(){
-                console.log(app)    
-            },6000)
-            
-            sublime.addEventListener('click',function() {
-                console.log(datepicker.value)
-                console.log(age.value)
-            })
-
+            },
+            ready:function(){
+                // $('#form1').validator({
+                //     valid: function(form) {
+                //         form.submit();
+                //     }
+                // });
+                console.log(this.ksloads)
+            }
         })
+
+        
+
+        
        
     </script>
+</head>
+<body id="app">
+    {{name}}
+    <input type="text" name="" v-model="name">
+    <div>
+        <ks-date-picker :value.sync="datepicker" style="width:200px"></ks-date-picker>
+        <input type="hidden" name=""  value="{{datepicker}}">
+        {{datepicker}}
+    </div>
+    <br>
+    <ks-page 
+        v-bind:current.sync="page" 
+        v-bind:length="9"
+        v-bind:total="1000"
+        v-bind:size="13"
+        v-bind:on-change="change"></ks-page>
+    {{page}}
+    <h3>指令 </h3>
+    <input type="text" v-ks-limit-number-fixed:2="max" name="">
+    <button type="button" v-on:click="dialog">dialog</button>
+    
+    <h3>验证 </h3>
+    <form class="form" data-validator-option='{stopOnError:false, timely:2, theme:"yellow_right"}'>
+        <div class="form-item">
+            <label class="label">Username</label>
+            <input type="text"
+                class="input" 
+                name="username"
+                data-rule="required;username;"
+                data-rule-username="[/^[\w\d]{3,12}$/, '请输入 3到12 包含数字、字符、下划线']"
+                data-tip="这是输入提示"
+            >
+            <input name="demo" 
+            data-rule="required; abc" 
+            data-rule-abc="[/^\d{6}$/, '请输入6位数字']"
+            data-tip="6位数字备注信息">
+         </div>
+        <div class="form-item"><input type="submit" name="">submit</div>
+    </form>
+    
+    <!-- 弹框 -->
+    <h3>弹框</h3>
+    {{checked}}
+    <input type="checkbox" name="" v-model="checked">
+    <ks-modal-entity :show.sync="checked">
+      <!-- ! 注意: 作为 slot 的包裹元素最好使用行内元素 -->
+      <span slot="title">通过 Slot 自定义标题eee</span>
+      <span slot="content">通过 Slot 自定义内容eee</span>
+    </ks-modal-entity>
+
+
+
+    <form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputType1">标准输入框：</label>
+    <input type="text" id="exampleInputType1" placeholder="标准输入框">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputType2">输入：</label>
+    <input type="text" id="exampleInputType2" value="输入文字">
+  </div>
+  <div class="form-group">
+     <label for="exampleInputType3">密码：</label>
+     <input type="password" id="exampleInputType3" value="xxxx">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputType4">选择框：</label>
+    <select id="exampleInputType4">
+        <option>选择框</option>
+        <option>选择框</option>
+        <option>选择框</option>
+        <option>选择框</option>
+    </select>
+  </div>
+  <div class="form-group">
+       <label>纯文字：</label>
+       <span>静态文字</span>
+  </div>
+  <div class="form-group align-items-start">
+       <label for="exampleInputType5">多文本：</label>
+       <textarea rows="3"></textarea>
+  </div>
+  <div class="form-group justify-content-center">
+    <a class="btn-primary">提交</a>
+  </div>
+</form>
+
+
 </body>
 </html>

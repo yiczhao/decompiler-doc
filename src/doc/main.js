@@ -5,18 +5,24 @@
  * @email pkeros@vip.qq.com
  */
 require('./styles/app.scss')
+
+
+
 import App from './App.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
-import VueValidator from 'vue-validator'
-
+import  Z from 'vue-validator'
+import $validate from './utils/validate'
 import RouterMap from './router'
 import Utils from './utils'
 
 
 import Directives from './directives'
 import Filter from './filters'
+
+
+
 
 // Vue configure
 Vue.config.debug = process.env.NODE_ENV !== 'production'
