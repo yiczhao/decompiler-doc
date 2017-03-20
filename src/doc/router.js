@@ -150,6 +150,14 @@ export default (router) => {
 
           subRoutes: {
             /* 了解规则*/
+            '/briefIntroduction': {
+              name: 'briefIntroduction',
+              cnName: '简介',
+              component: (resolve) => {
+                require(['./views/validator/briefIntroduction.md'], resolve)
+              }
+            },
+             /* 了解规则*/
             '/understandingRules': {
               name: 'understandingRules',
               cnName: '了解规则',

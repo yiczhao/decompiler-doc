@@ -17,19 +17,20 @@ export default [
    {
     name: '验证 Validate',
     subMenu: [
-      {
-        name: '验证', icon: 'icon', link: '',
-        subMenu:[
-          {name:'默认校验规则',icon:'icon',link:'defaultValidateRules'},
-          {name:'默认提示',icon:'icon',link:'defaultPrompt'},
-          {name:'使用方式',icon:'icon',link:'usageMode'},
-          {name:'demo 示例',icon:'icon',link:'demo'},
-          {name:'validate API',icon:'icon',link:'api'},
-        ]
-      },
+      // {
+      //   name: '验证', icon: 'icon', link: '',
+      //   subMenu:[
+      //     {name:'默认校验规则',icon:'icon',link:'defaultValidateRules'},
+      //     {name:'默认提示',icon:'icon',link:'defaultPrompt'},
+      //     {name:'使用方式',icon:'icon',link:'usageMode'},
+      //     {name:'demo 示例',icon:'icon',link:'demo'},
+      //     {name:'validate API',icon:'icon',link:'api'},
+      //   ]
+      // },
       {
         name: 'ValidatorPlus', icon: 'icon', link: '',
         subMenu:[
+          {name:'简介',icon:'icon',link:'briefIntroduction'},
           {name:'了解规则',icon:'icon',link:'understandingRules'},
           {name:'DOM 绑定',icon:'icon',link:'domBindings'},
           {name:'方法 & 事件',icon:'icon',link:'methodAndEvent'},
