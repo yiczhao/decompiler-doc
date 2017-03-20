@@ -24,7 +24,6 @@
         kspath:'./kspath',
         components:['KsDatePicker','KsPage'],
         directives:['KsLimitNumberFixed'],
-        validator:['#signupForm'],
         filters:['addPrefix'],
         data:{
             max:10000,
