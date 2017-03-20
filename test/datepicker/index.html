@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8078/dist/bootstrap.css?e15cfde6308384263004">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8079/dist/bootstrap.css?6e659451bcc1da1d9b53">
+
     <script src="/test/datepicker/ks/index.js"></script>
     <script type="text/javascript">
         
         KS({
             // kspath:'aa',
-            loads:{
-                i18n:'//cdn.bootcss.com/require-i18n/2.0.6/i18n',
-                bootstrapcc:{
-                    js:'//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap',
-                    css:'//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap',
-                }
-            },
-            components:['KsDatePicker','KsPage','KsDialog','KsModal','KsModalEntity'], 
+            // loads:{
+            //     i18n:'//cdn.bootcss.com/require-i18n/2.0.6/i18n',
+            //     bootstrapcc:{
+            //         js:'//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap',
+            //         css:'//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap',
+            //     }
+            // },
+            components:['KsDatePicker','KsPage','KsDialog','KsModal'], 
             directives:['KsLimitNumberFixed'],
             // filters:['cc'],
             data:{
@@ -33,19 +34,18 @@
                 },
                 sublime:function(){
                     alert('lll')
+                },
+                dialog(){
+                    this.$KsDialog.success('1111', '2333', true)();
+                    // this.$KsModal.info('1', '2', '3')();
                 }
             },
             ready:function(){
-                // app.style.display = 'block'
-                // alert('pp')
-                // console.log('$KsDialog',this.$KsModal)
-                // this.$KsDialog.info('1', '2', '3')();
-                // this.$KsModal.info('1', '2', '3')();
-                $('#form1').validator({
-                            valid: function(form) {
-                                form.submit();
-                            }
-                        });
+                // $('#form1').validator({
+                //     valid: function(form) {
+                //         form.submit();
+                //     }
+                // });
             }
         })
 
@@ -73,7 +73,7 @@
     {{page}}
     <h3>指令 </h3>
     <input type="text" v-ks-limit-number-fixed:2="max" name="">
-    <button type="button" v-on:click="sublime">sublime</button>
+    <button type="button" v-on:click="dialog">dialog</button>
     
     <h3>验证 </h3>
     <form class="form" data-validator-option='{stopOnError:false, timely:2, theme:"yellow_right"}'>
@@ -91,18 +91,55 @@
             data-rule-abc="[/^\d{6}$/, '请输入6位数字']"
             data-tip="6位数字备注信息">
          </div>
-        <div class="form-item">
-    </div>
+        <div class="form-item"><input type="submit" name="">submit</div>
     </form>
     
     <!-- 弹框 -->
     <h3>弹框</h3>
+    {{checked}}
     <input type="checkbox" name="" v-model="checked">
     <ks-modal-entity :show.sync="checked">
       <!-- ! 注意: 作为 slot 的包裹元素最好使用行内元素 -->
       <span slot="title">通过 Slot 自定义标题eee</span>
       <span slot="content">通过 Slot 自定义内容eee</span>
     </ks-modal-entity>
+
+
+
+    <form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputType1">标准输入框：</label>
+    <input type="text" id="exampleInputType1" placeholder="标准输入框">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputType2">输入：</label>
+    <input type="text" id="exampleInputType2" value="输入文字">
+  </div>
+  <div class="form-group">
+     <label for="exampleInputType3">密码：</label>
+     <input type="password" id="exampleInputType3" value="xxxx">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputType4">选择框：</label>
+    <select id="exampleInputType4">
+        <option>选择框</option>
+        <option>选择框</option>
+        <option>选择框</option>
+        <option>选择框</option>
+    </select>
+  </div>
+  <div class="form-group">
+       <label>纯文字：</label>
+       <span>静态文字</span>
+  </div>
+  <div class="form-group align-items-start">
+       <label for="exampleInputType5">多文本：</label>
+       <textarea rows="3"></textarea>
+  </div>
+  <div class="form-group justify-content-center">
+    <a class="btn-primary">提交</a>
+  </div>
+</form>
 
     
 

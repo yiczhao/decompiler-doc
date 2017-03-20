@@ -7,6 +7,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
 
 
 ;(function(global){
+
     var ksroot = getCurrentScript()
                 .replace(location.origin, '')
                 .replace('ks/index.js', '');
@@ -17,6 +18,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
     // console.log(Promise)
 
     function KS (options) {
+
         options.el = options.el 
                      || document.body 
                      || document.getElementsByTagName('html')[0]
@@ -26,14 +28,14 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
 
         loader.config
             .then(function(configCB){
-
+                
                 // 配置项
                 var config = loader.compile(configCB,{
                                         loads:options.loads,
                                         kspath:options.kspath
                                     })
 
-                // console.log('====',config)
+                console.log('====',config)
                 // 加载字体
                 loader.iconfont()
                 // 验证
@@ -71,7 +73,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                                             }
                                         }
                                 Object.defineProperties(Vue.prototype,proto);
-                                // console.log(proto)
+                                
                             }
 
                             Vue[item.type](item.name,item.val)    
@@ -79,6 +81,8 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                             
 
                         })
+
+                        // console.log(Vue.prototype.$KsDialog)
                         new Vue({
                             el:options.el,
                             data:options.data,
@@ -86,18 +90,23 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                             filters:options.filters,
                             methods:options.methods,
                             watch:options.watch,
+                            created:function(){
+                                options.created && options.created.call(this)
+                            },
                             ready:function(){
                                 options.el.style.display = 'block'
-                                options.ready()
+                                options.ready && options.ready.call(this)
                             }
 
                         })
                         
+                    }).catch((err)=>{
+                        console.error(err)
                     })
 
-
-                
                
+            }).catch((err)=>{
+                console.error(err)
             })
             
     }
@@ -170,7 +179,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                 paths:pathsAndShim.paths,
                 shim:pathsAndShim.shim
             }
-            console.log(options)
+            // console.log(options)
             require.config(options);
             
             var moduleDefined = Object.keys(pathsAndShim.paths)
@@ -186,6 +195,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
             var paths = {}
             var shim = {}
             
+            console.log(config)
             // return
             Object.keys(config).forEach(function(key){
                 // console.log(key)
@@ -204,7 +214,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         // 加载api中的loads
         apiLoad:function(loads){
             // console.log(loads)
-            require(Object.keys(loads))
+            loads && require(Object.keys(loads))
         }
     }
     
@@ -246,7 +256,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         if(noConfig.length) {
             console.error('请加载模块：'+noConfig.join(' , '))
         }
-        // console.log(modules)
+        console.log(modules)
         return modules
     }
 

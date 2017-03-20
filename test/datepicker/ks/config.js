@@ -14,7 +14,7 @@
             'iconfont':ksroot+'ks/font-icon/iconfont',
             'jquery': ksroot+'ks/util/jquery.min',
             'validator': {
-                js:[ksroot+'ks/util/validator/index'],
+                js:ksroot+'ks/util/validator/index',
                 css:ksroot+'ks/util/validator/style'
             },
             'validator-cn':ksroot+'ks/util/validator/cn',
