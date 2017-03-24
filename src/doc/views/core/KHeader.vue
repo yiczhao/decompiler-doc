@@ -1,9 +1,10 @@
 <template>
-  <nav class="k-header">
-    <div class="k-header__item logo-wrap">
+  <div class="ks-header">
+    <div class="ks-name">
       <img class="logo" src="../../assets/logo/header-logo.png" alt="LOGO">
     </div>
-  </nav>
+    <div class="ks-user-info">用户名<a>退出</a></div>
+  </div>
 </template>
 
 <script lang="babel">

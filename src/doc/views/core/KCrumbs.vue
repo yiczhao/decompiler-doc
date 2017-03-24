@@ -1,19 +1,17 @@
 <template>
-  <nav class="k-crumbs-container f14">
-    <ul class="k-crumbs m0 p0 ell">
+  <div class="ks-breadcrumb">
       <!-- 面包屑 Home 部分图标 -->
       <!--<img class="k-crumbs__home" src="../../../static/images/icons/home.png" alt="home icon">-->
-      <li class="k-crumbs__item" v-for="path in routePath" track-by="$index"
-      >
+      <!-- <li class="" v-for="path in routePath" track-by="$index"
+      > -->
+      <span v-for="path in routePath" track-by="$index">
         <!-- 面包屑导航链接  @click="$router.go({name: path.route})" -->
-        <a class="k-crumbs__point tdn" :class="routePath.length - 1 === $index && 'k-crumbs__active'"
-           v-text="path.cn"
-        ></a>
+        <a v-text="path.cn"></a>
         <span v-if="routePath.length - 1 !== $index"
               class="k-crumbs__split">/&nbsp;</span>
-      </li>
-    </ul>
-  </nav>
+      </span>
+      <!-- </li> -->
+  </div>
 </template>
 
 <script lang="babel">

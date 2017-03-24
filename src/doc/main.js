@@ -15,11 +15,10 @@ import VueResource from 'vue-resource'
 import  Z from 'vue-validator'
 import $validate from './utils/validate'
 import RouterMap from './router'
-import Utils from './utils'
 
 
-import Directives from './directives'
-import Filter from './filters'
+
+
 
 
 
@@ -32,10 +31,7 @@ Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(VueValidator)
 
-// attach utils
-Vue.use(Utils)
-Vue.use(Filter)
-Vue.use(Directives)
+
 
 
 

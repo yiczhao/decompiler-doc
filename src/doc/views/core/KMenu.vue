@@ -1,7 +1,18 @@
 <template>
-  <nav class="k-menu-container fix l">
-    <ul class="k-menu" style="overflow-y: scroll">
-      <div class="menu-container" v-for="mobj in Menu">
+  <nav class="ks-menu" style="overflow-y: auto;">
+    <ul class="menu-once">
+      <li v-for="mobj in Menu">
+        <span v-text="mobj.name"></span>
+        <ul class="menu-second">
+            <li  v-for="smobj in mobj.subMenu">
+            <i class="icon" :class="smobj.icon"></i>
+              <a v-link="{name: smobj.link}" 
+                :data-ksa="smobj.ksa"
+                 v-text="smobj.name"></a>
+            </li>
+        </ul>
+      </li>
+      <!-- <div class="menu-container" v-for="mobj in Menu">
         <li class="k-menu__item title"
             v-text="mobj.name"
         ></li>
@@ -25,7 +36,7 @@
         </div>
 
 
-      </div>
+      </div> -->
     </ul>
   </nav>
 </template>

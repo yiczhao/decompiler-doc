@@ -1,12 +1,12 @@
 <template>
-  <div class="app-container">
+  <div>
     <k-header></k-header>
-    <div class="content-container">
+    <div class="ks-center">
       <k-menu></k-menu>
-      <div class="work-container" v-el:main-container>
+      <div class="ks-content" v-el:main-container>
         <k-crumbs></k-crumbs>
-        <loading-mask></loading-mask>
-        <div class="router-container">
+        <!-- <loading-mask></loading-mask> -->
+        <div class="ks-container-fluid">
           <div class="router-wrap">
             <router-view class="p20"></router-view>
           </div>
@@ -22,7 +22,7 @@
   import KMenu from './core/KMenu.vue'
   import KFooter from './core/KFooter.vue'
   import KCrumbs from './core/KCrumbs.vue'
-  import LoadingMask from '../components/LoadingMask.vue'
+  
 
   export default{
     data () {
@@ -58,6 +58,6 @@
       }
     },
 
-    components: { KHeader, KMenu, KFooter, KCrumbs, LoadingMask }
+    components: { KHeader, KMenu, KFooter, KCrumbs }
   }
 </script>
