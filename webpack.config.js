@@ -97,7 +97,7 @@ module.exports = {
 
     vue: {
         loaders: {
-            scss: 'vue-style-loader!ks-autobem-loader?type=css!sass-loader',
+            scss: 'vue-style-loader!css-loader!ks-autobem-loader?type=css!sass-loader',
             html: 'vue-html-loader!ks-autobem-loader?type=html',
             markdown: 'vue-markdown-loader'
         }
