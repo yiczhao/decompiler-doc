@@ -1,0 +1,83 @@
+body, ul,h1,h2,h3,h4,h5,h6,p,blockquote,input{
+	margin: 0;
+    padding: 0;
+}
+
+body{
+	
+    font: 13px/1.7 PingFangSC-Regular,microsoft yahei,Arial,sans-serif;
+}
+
+/**
+* 合并单元格边框
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+* 去除链接默认的下划线，提高文字可读性
+*/
+a {
+  text-decoration: none;
+  color:#444;
+}
+
+/**
+* 去掉 IE 10+ 点击链接时的灰色背景
+*/
+a:active {
+  background-color: transparent;
+}
+
+/**
+* 去掉点击时的焦点框，同时保证使用键盘可以显示焦点框
+*/
+a:active,
+a:hover {
+  outline: 0 none;
+}
+
+/**
+* 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
+*/
+ul, ol {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+
+section{
+  padding-bottom: 20px; //解决360兼容问题
+}

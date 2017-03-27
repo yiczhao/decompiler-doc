@@ -4,7 +4,7 @@
  * @data 16/6/1
  * @email pkeros@vip.qq.com
  */
-require('./styles/app.scss')
+require('./sass/ks.scss')
 
 
 

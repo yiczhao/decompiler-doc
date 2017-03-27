@@ -1,0 +1,298 @@
+.adv {
+    min-height: 600px;
+    background-color:#1F4769;
+    animation: bg 30s infinite linear;
+    position: relative;
+    h2{
+        font-size: 50px;
+        color: #fff;
+        text-align: center;
+        margin-top: top;
+        padding-top: 100px;
+        letter-spacing: 10px;
+        text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    }
+}
+
+.land {
+    position:absolute;
+    top:90%;
+    left:30%;
+    width:500px;
+    height:10px;
+    background:#000;
+    border-radius:10%;
+}
+.chimney {
+    position:absolute;
+    left:15%;
+    width:40px;
+    height:10px;
+    background:#ff8c1a;
+    border-radius:10%;
+}
+
+// 火
+%fire{
+    position:absolute;
+    width:8px;
+    background:#ff8c1a;
+    border-radius:5px;
+}
+$fire:(1,0%,15%,24px),(2,55%,18.2%,30px),(3,54%,21.5%,34px);
+@each $type, $bottom, $left, $height in $fire {
+    .fire#{$type} {
+        @extend %fire;
+        bottom:$bottom;
+        left:$left;
+        height:$height;
+    }
+}
+
+
+
+%stick {
+    position:absolute;
+    background:#001;
+    border-radius:5px;
+}
+$stick:(1,44%,6%,7px,90px),(2,44%,30%,7px,90px),(3,800%,4%,150px,6px);
+@each $type, $bottom, $left, $width, $height in $stick {
+    .stick#{$type} {
+        @extend %stick;
+        bottom:$bottom;
+        left:$left;
+        width:$width;
+        height:$height;
+    }
+}
+.stick2, .stick3 { z-index:10; }
+
+.vessel {
+    z-index:10;
+    position:absolute;
+    bottom:460%;
+    left:15%;
+    width:34px;
+    height:34px;
+    border-radius:5%;  
+    border:solid #001;
+}
+.fluid {
+    position:absolute;
+    top:50%;
+    width:35px;
+    height:18px;
+    background:#ff3300;
+    border-radius:10%;
+}
+.water{
+    position:absolute;
+    top:60%;
+    left:70%;
+    width:4%;
+    height:10px;
+    background:#009FC6;
+    border-radius:15%
+}
+.camp {
+    z-index:10;
+    position:absolute;
+    bottom:40%;
+    left:50%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #EBD090;
+    border-radius:5%
+}
+.camp1 {
+    z-index:25;
+    position:absolute;
+    bottom:40%;
+    left:67.7%;
+    width: 100px;
+    height: 50px;
+    -webkit-transform: skew(27deg);
+    -moz-transform: skew(27deg);
+    -o-transform: skew(27deg);
+    background: #E38D32;
+    border-radius:5%
+}
+.camp2{
+    z-index:20;
+    position:absolute;
+    bottom:40%;
+    left:65%;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: skew(27deg);
+    -moz-transform: skew(27deg);
+    -o-transform: skew(27deg);
+    background: #D84315;
+    border-radius:5%
+}
+.camp3 {
+    z-index:10;
+    position:absolute;
+    bottom:40%;
+    left:60%;
+    width: 0;
+    height: 0;
+    border-right: 18px solid transparent;
+    border-bottom: 101px solid #000;
+}
+.camp4 {
+    z-index:25;
+    position:absolute;
+    bottom:100%;
+    left:67.5%;
+    width: 80px;
+    height: 80px;
+    -webkit-transform: skew(27deg);
+    -moz-transform: skew(27deg);
+    -o-transform: skew(27deg);
+    background: #663d00;
+    border-radius:10%;
+    opacity:0.6;
+}
+
+// 山
+%mountain{
+    position:absolute;
+    bottom:90.5%;
+    width: 0;
+    height: 0;
+    border-bottom: 200px solid;
+}
+$mountain:(1,5,30%,left,#333),(2,5,46%,right,#222),(3,2,80.4%,right,#222),(4,2,65%,left,#333),(5,1,48%,left,#111);
+@each $type, $index, $left, $direction, $bor-color in $mountain {
+    .mountain#{$type}{
+        @extend %mountain;
+        z-index:$index;
+        left:$left;
+        border-#{$direction}: 80px solid transparent;
+        border-bottom-color:  $bor-color;
+    }
+}
+.mountain5{
+    bottom:592%;
+    border-right: 80px solid transparent;
+    border-bottom: 100px solid; 
+}
+
+.moon {
+    position:absolute;
+    bottom:2000%;
+    left:15%;
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    box-shadow: 4px 6px 0px #fff;
+    animation: moon 30s infinite linear;
+}
+
+// 月光
+$light:('',-30%,-30%,200%,200%,#eee,0.5),(2,-330%,-130%,400%,400%,#fff,0.2),(3,-830%,-230%,600%,600%,#fff,0.1);
+@each $type, $top, $left, $width, $height, $background, $opacity in $light {
+    .light#{$type} {
+        position:relative;
+        top:$top;
+        left:$left;
+        width: $width;
+        height:$height;
+        background:$background;
+        opacity:$opacity;
+        border-radius:50%;
+    }
+}
+
+// 星星
+%stars {
+    z-index:1;
+    position:absolute;
+    border-radius:50%;
+    background:#ddd;
+    animation: moon 30s infinite linear;
+}
+$stars:('',2500%,10%,6px,6px),(2,1800%,35%,10px,10px),(3,1500%,4%,4px,4px),(4,2300%,40%,6px,6px);
+@each $type, $bottom, $left, $width, $height in $stars {
+    .stars#{$type} {
+        @extend %stars;
+        bottom:$bottom;
+        left:$left;
+        width: $width;
+        height: $height;
+    }
+}
+// 烟
+%smoke{
+    z-index:30;
+    position:absolute;
+    width:5px;
+    border-radius:25%;
+    background:#994d00;
+    animation: bounce 2.5s infinite linear;
+}
+$smoke:('',1000%,20%,10px,.6),(1,800%,17%,10px,1),(2,1100%,17%,10px,.6),(3,1300%,20%,5px,.48),(4,1400%,17%,5px,.44);
+@each $type, $bottom, $left, $height, $opacity in $smoke {
+    .smoke#{$type} {
+        @extend %smoke;
+        bottom:$bottom;
+        left:$left;
+        height: $height;
+        opacity:$opacity;
+    }
+}
+.smoke4 { animation: bounce 3.5s infinite linear; }
+
+@-webkit-keyframes "bounce" {
+    0% {
+        -webkit-transform:  translateY(0px);
+        transform:  translateY(0px);
+    }
+    100% {
+        -webkit-transform:  translateY(-10px);
+        transform:  translateY(-10px);
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+// 云
+%cloud {
+    z-index:100;
+    position:absolute;
+    width:40px;
+    height:10px;
+    background:#fff;
+    border-radius:15px;
+    opacity:0.7;
+}
+$cloud:('',1500%,57%,19.0s),(1,1400%,51%,19.5s),(2,1500%,77%,17.5s),(3,1900%,48%,18.5s);
+@each $type, $bottom, $left, $animation in $cloud {
+    .cloud#{$type} {
+        @extend %cloud;
+        bottom:$bottom;
+        left:$left;
+        animation: float $animation infinite linear;
+    }
+}
+
+@-webkit-keyframes "float" {
+    0% { transform:  translateX(0px); }
+    50% { transform:  translateX(-40px); }
+    100% { transform:  translateX(0px); }
+}
+@-webkit-keyframes "bg" {
+    0% { background:#212121; }
+    50% { background:#03A9F4; }
+    100% { background:#212121; }
+}
+@-webkit-keyframes "moon" {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

@@ -1,7 +1,14 @@
 <template>
-  <div class="ks-footer">
-    © {{new Date().getFullYear()}} <a>卡说 · 权限系统</a>
-    <a class="beian" href="http://www.miibeian.gov.cn" target="_blank">南昌网安备案第360101011060901号.</a>
-    <span class="r"><a href="http://www.kashuo.com/" target="_blank">Power by Suzhou KASHUO Inc.</a></span>
-  </div>
+	<div class="ks-footer">
+		<div class="company"> 
+			<a class="a-t" href="http://www.kashuo.com">@kashuo.com</a> 
+		</div> 
+		<div class="about-us"> 
+			<a href="http://www.kashuo.com/">关于卡说</a><span>|</span>
+			<a href="#">服务协议</a><span>|</span> 
+			<a href="#">使用教程</a><span>|</span> 
+			<a href="#">客服中心</a><span>|</span> 
+			<a href="#">联系我们</a>
+		</div>
+	</div>
 </template>

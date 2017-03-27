@@ -40,6 +40,68 @@ export default (router) => {
           }
         },
 
+        /* 基础布局 */
+        /* layout布局 */
+        '/layout': {
+          name: 'layout',
+          cnName: 'layout布局',
+          component: (resolve) => {
+            require(['./views/base/layout.md'], resolve)
+          }
+        },
+        /* button组件样式 */
+        '/button': {
+          name: 'button',
+          cnName: 'button组件样式',
+          component: (resolve) => {
+            require(['./views/base/button.md'], resolve)
+          }
+        },
+        /* Table 表格样式 */
+        '/table': {
+          name: 'table',
+          cnName: 'Table 表格样式',
+          component: (resolve) => {
+            require(['./views/base/table.md'], resolve)
+          }
+        },
+
+        /* 内容布局 */
+        /* 整体表单样式 */
+        '/overall': {
+          name: 'overall',
+          cnName: '整体表单样式',
+          component: (resolve) => {
+            require(['./views/layout/overall.md'], resolve)
+          }
+        },
+        /* 表单验证样式 */
+        '/form-validate': {
+          name: 'form-validate',
+          cnName: '表单验证样式',
+          component: (resolve) => {
+            require(['./views/layout/form-validate.md'], resolve)
+          }
+        },
+
+        
+        /* 搜索条件样式 */
+        '/search': {
+          name: 'search',
+          cnName: '搜索条件样式',
+          component: (resolve) => {
+            require(['./views/layout/search.md'], resolve)
+          }
+        },
+
+        
+
+
+
+
+
+
+
         
         /* form */
         '/form': {
