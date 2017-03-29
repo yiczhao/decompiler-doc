@@ -16,7 +16,7 @@
         CLS_NS_FORM = '.form',
         CLS_WRAPPER = 'nice-' + NS,
         // CLS_MSG_BOX = 'msg-box',
-        CLS_MSG_BOX = 'msg-box error-msg',
+        CLS_MSG_BOX = 'error-msg',
         ARIA_REQUIRED = 'aria-required',
         ARIA_INVALID = 'aria-invalid',
         DATA_RULE = 'data-rule',
