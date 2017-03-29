@@ -28,7 +28,9 @@ export default [
         subMenu: [
             {name: '整体表单样式', icon: 'icon', link: 'overall'},
             {name: '表单验证样式', icon: 'icon', link: 'form-validate'},
-            {name: '搜索条件样式', icon: 'icon', link: 'search'}
+            {name: '搜索条件样式', icon: 'icon', link: 'search'},
+            {name: '表格管理页面布局', icon: 'icon', link: 'table-manage'}
+            
             
         ]
     },

@@ -83,8 +83,6 @@ export default (router) => {
             require(['./views/layout/form-validate.md'], resolve)
           }
         },
-
-        
         /* 搜索条件样式 */
         '/search': {
           name: 'search',
@@ -93,6 +91,17 @@ export default (router) => {
             require(['./views/layout/search.md'], resolve)
           }
         },
+        /* 表格管理页面布局 */
+        '/table-manage': {
+          name: 'table-manage',
+          cnName: '表格管理页面布局',
+          component: (resolve) => {
+            require(['./views/layout/table-manage.md'], resolve)
+          }
+        },
+
+
+        
 
         
 

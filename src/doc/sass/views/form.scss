@@ -37,10 +37,10 @@ textarea{
 	padding: 10px;
 }
 .ks-form-group{
-	display: flex;
+	@extend %display-flex;
 	align-items: center;
 	&  + .ks-form-group{ margin-top: 30px; }
-	label{
+	& > label{
 		width: 140px;
 	    text-align: right;
 	    padding-right: 20px;
@@ -53,13 +53,13 @@ textarea{
 		margin-right: 5px;
 	}
 	input{
-		flex: 1;
+		@extend %flex-1;
 		box-sizing: border-box;
 		vertical-align: middle;
 	}
 	textarea{
 		min-height: 100px;
-	    flex: 1;
+		@extend %flex-1;
 	}
 	p{
 		height: 36px;
@@ -67,22 +67,19 @@ textarea{
 	    margin: 0;
 	}
 	span{ padding: 0 10px; }
-	// .ks-line-box{
-	// 	margin-left: -10px;
-	// 	input{
-	// 		vertical-align: middle;
-	// 		margin-right: 10px;
-	// 	}
-	// }
+	.ks-line-box label {
+		font-weight: normal;
+		margin-right: 20px;
+	}
 }
 
 // 表单验证
 .has-error{
 	position: relative;
-	flex: 1;
-	display: flex;
+	@extend %flex-1;
+	@extend %display-flex;
 	line-height: 36px;
-	input{ flex: 1; }
+	input{ @extend %flex-1; }
 	i{
 		vertical-align: middle;
 		margin-right: 10px;

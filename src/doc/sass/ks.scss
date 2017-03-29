@@ -3,6 +3,14 @@
 @import './views/index';
 @import "./base/font/index";
 
+// 组件样式
+@import "../../min/ks/components/kspage/style.css"; //分页
+@import "../../min/ks/components/kspagegroup/style.css"; //分页组
+@import "../../min/ks/components/ksradio/style.css"; //单选
+
+
+
+
 // @import "~highlight.js/styles/github-gist.css";
 
 
