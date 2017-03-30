@@ -48,7 +48,7 @@ export default [
     {
         name: '日志 Log',
         subMenu: [
-            {name: '更新日志', icon: 'icon', link: ''}
+            {name: '更新日志', icon: 'icon', link: 'update'}
         ]
     },
 ]
