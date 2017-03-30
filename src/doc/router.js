@@ -65,6 +65,16 @@ export default (router) => {
             require(['./views/base/table.md'], resolve)
           }
         },
+        /* 多标题表格样式 */
+        '/multiple-table': {
+          name: 'multiple-table',
+          cnName: '多标题表格样式',
+          component: (resolve) => {
+            require(['./views/base/multiple-table.md'], resolve)
+          }
+        },
+
+        
 
         /* 内容布局 */
         /* 整体表单样式 */
@@ -99,10 +109,18 @@ export default (router) => {
             require(['./views/layout/table-manage.md'], resolve)
           }
         },
+        /* 查看图片组件调用 */
+        '/view-image': {
+          name: 'view-image',
+          cnName: '查看图片组件调用',
+          component: (resolve) => {
+            require(['./views/layout/view-image.md'], resolve)
+          }
+        },
 
 
         
-
+// 
         
 
 

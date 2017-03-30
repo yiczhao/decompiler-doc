@@ -19,7 +19,9 @@ export default [
         subMenu: [
             {name: 'layout 布局', icon: 'icon', link: 'layout'},
             {name: 'button组件样式', icon: 'icon', link: 'button'},
-            {name: 'Table 表格样式', icon: 'icon', link: 'table'}
+            {name: 'Table 表格样式', icon: 'icon', link: 'table'},
+            {name: '多标题表格样式', icon: 'icon', link: 'multiple-table'}
+
         ]
     },
 
@@ -29,7 +31,10 @@ export default [
             {name: '整体表单样式', icon: 'icon', link: 'overall'},
             {name: '表单验证样式', icon: 'icon', link: 'form-validate'},
             {name: '搜索条件样式', icon: 'icon', link: 'search'},
-            {name: '表格管理页面布局', icon: 'icon', link: 'table-manage'}
+            {name: '表格管理页面布局', icon: 'icon', link: 'table-manage'},
+            {name: '查看图片组件调用', icon: 'icon', link: 'view-image'}
+
+            
             
             
         ]
