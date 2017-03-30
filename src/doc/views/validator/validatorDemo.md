@@ -22,6 +22,7 @@
 
 
 <b>代码片段：</b>
+
 ```html
 <form class="form" data-validator-option="{timely:2}">
     <div class="form-item">
@@ -40,6 +41,7 @@
 <br/>
 
 <b>示例：</b>
+
 <form id="form1" class="form" data-validator-option="{timely:3,focusCleanup:true}">
     <h5>required( dependency-expression )</h5>
     <div class="form-item">
@@ -67,6 +69,7 @@
 <br/>
 
 <b>代码片段：</b>
+
 ```html
 <form id="form1" class="form" data-validator-option="{timely:3,focusCleanup:true}">
     <h5>required( dependency-expression )</h5>
@@ -98,6 +101,7 @@
 <br/>
 
 <b>示例：</b>
+
 <form class="form" data-validator-option="{timely:2,showOk:''}">
     <div class="form-item">
         <input type="text" class="contact" name="mobile" placeholder="手机号" data-rule="required(from, .contact); mobile" data-msg-required="请至少填写一种联系方式">
@@ -115,6 +119,7 @@
 <br/>
 
 <b>代码片段：</b>
+
 ```html
 <form class="form" data-validator-option="{timely:2,showOk:''}">
     <div class="form-item">
@@ -136,6 +141,7 @@
 <br/>
 
 <b>示例：</b>
+
 <form id="form1" data-validator-option="{theme:'bootstrap', timely:2, stopOnError:true}">
     <div class="form-group">
         <label class="control-label">Username</label>
@@ -185,6 +191,7 @@
 <br/>
 
 <B>代码片段：</B>
+
 ```html
 <form id="form1" data-validator-option="{theme:'bootstrap', timely:2, stopOnError:true}">
     <div class="form-group">

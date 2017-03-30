@@ -53,17 +53,17 @@
     <div class="ks-form-group">
         <label>Interest</label>
         <div class="ks-line-box">
-            <input type="checkbox" data-rule="checked">sports
-            <input type="checkbox">movie
-            <input type="checkbox">game
+            <label><input type="checkbox" data-rule="checked">sports</label>
+            <label><input type="checkbox">movie</label>
+            <label><input type="checkbox">game</label>
         </div>
     </div>
     <div class="ks-form-group">
         <label>Interest</label>
         <div class="ks-line-box">
-            <input type="radio" name="interest" data-rule="checked">sports
-            <input type="radio" name="interest">movie
-            <input type="radio" name="interest">game
+            <label><input type="radio" name="interest" data-rule="checked">sports</label>
+            <label><input type="radio" name="interest">movie</label>
+            <label><input type="radio" name="interest">game</label>
         </div>
     </div>
     <div class="ks-form-group">

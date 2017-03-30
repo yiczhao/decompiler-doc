@@ -27,6 +27,7 @@
 .table-striped {
     overflow-y: hidden;
     margin: 0 -20px;
+    margin-bottom: 20px;
     table { @extend %table; }
     & tbody tr:nth-of-type(odd) { background-color: #fcfcfc; }
 } 
