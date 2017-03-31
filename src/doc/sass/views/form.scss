@@ -1,0 +1,99 @@
+%form-common{
+	border: 1px solid #c8c8c8;
+	border-radius: 3px;
+	background: #fff;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+}
+form{
+	max-width: 680px;
+	margin: 20px auto 20px;
+}
+input{ @extend %form-common; }
+input:focus, textarea:focus {
+    border-color: #00bcd4;
+    outline: 0;
+}
+input[type=checkbox]{
+	margin-right: 10px;
+	& + input[type=checkbox]{
+		margin-left: 20px;
+	}
+}
+input[type=radio]{
+	margin-right: 10px;
+	& + input[type=radio]{
+		margin-left: 20px;
+	}
+}
+select{ 
+	@extend %form-common; 
+	outline: 0;
+}
+textarea{
+	@extend %form-common;
+	line-height: inherit;
+	padding: 10px;
+}
+.ks-form-group{
+	@extend %display-flex;
+	align-items: center;
+	&  + .ks-form-group{ margin-top: 30px; }
+	& > label{
+		width: 140px;
+	    text-align: right;
+	    padding-right: 20px;
+	    font-weight: bold;
+	    align-self: baseline;
+		line-height: 36px;
+	}
+	em{
+		color: red;
+		margin-right: 5px;
+	}
+	input{
+		@extend %flex-1;
+		box-sizing: border-box;
+		vertical-align: middle;
+	}
+	textarea{
+		min-height: 100px;
+		@extend %flex-1;
+	}
+	p{
+		height: 36px;
+	    line-height: 36px;
+	    margin: 0;
+	}
+	span{ padding: 0 10px; }
+	.ks-line-box label {
+		font-weight: normal;
+		margin-right: 20px;
+	}
+}
+
+// 表单验证
+.has-error{
+	position: relative;
+	@extend %flex-1;
+	@extend %display-flex;
+	line-height: 36px;
+	input{ @extend %flex-1; }
+	i{
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.error-msg{
+		line-height: 22px;
+		position: absolute;
+	    top: 38px;
+	    left: 0;
+	    white-space: nowrap;
+	    padding: 0;
+	    color:$danger;
+	    span{
+	    	padding: 0;
+	    }
+	}
+}

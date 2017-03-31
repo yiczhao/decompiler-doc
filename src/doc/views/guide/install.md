@@ -25,6 +25,7 @@
         components:['KsDatePicker','KsPage'],
         directives:['KsLimitNumberFixed'],
         filters:['addPrefix'],
+        renderField:[],
         data:{
             max:10000,
             datepicker:'2011-10-10'
@@ -33,6 +34,9 @@
             sublime:function(){
                 alert('lll')
             }
+        },
+        preReady:function(){
+            
         },
         ready:function(){
 
@@ -49,9 +53,11 @@
 | components | 页面中需要的组件（注入组件，会加载此库）| Array | 否 | | 无 |
 | directives | 页面中需要的指令（注入指令，会加载此库） | Array | 否 | | 无 |
 | filters | 页面中需要的过滤器（注入过滤器，会加载此库） | Array | 否 | | 无 |
+| renderField | 避免差值符号展现（组件渲染前隐藏，渲染后展现元素） | Array | 否 | | 无 |
 | data | 双向绑定到页面的值 | Object | 否 | | 无 |
 | methods | 绑定到页面的方法 | Object | 否 | | 无 |
-| ready | 页面渲染后调用 | Function | 否 | | 无 |
+| preReady | DOM loader 后调用钩子 | Function | 否 | | 无 |
+| ready | 页面渲染后调用钩子 | Function | 否 | | 无 |
 
 ## 属性例子
 

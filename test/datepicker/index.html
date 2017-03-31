@@ -4,30 +4,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8079/dist/bootstrap.css?6e659451bcc1da1d9b53">
+    <link rel="stylesheet" type="text/css" href="/dist/app.css">
 
     <script src="/test/datepicker/ks/index.js"></script>
     <script type="text/javascript">
         
         KS({
-            // kspath:'aa',
-
-            // loads:{
-            //     i18n:'//cdn.bootcss.com/require-i18n/2.0.6/i18n',
-            //     bootstrapcc:{
-            //         js:'//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap',
-            //         css:'//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap',
-            //     }
-            // },
+            // kspath:'/src/min/ks/',
             components:['KsDatePicker','KsPage','KsDialog','KsModal'], 
             directives:['KsLimitNumberFixed'],
+            // renderField:['div'],
             // filters:['cc'],
             data:{
                 name:'zdzDesigner-----',
                 checked:false,
                 max:10000,
                 page:1,
-                datepicker:'2011-10-10'
+                datepicker:'2011-10-10',
+                datemonthpicker:''
             },
             methods:{
                 change:function(val){
@@ -40,6 +34,9 @@
                     this.$KsDialog.success('1111', '2333', true)();
                     // this.$KsModal.info('1', '2', '3')();
                 }
+            },
+            preReady:function(){
+                console.log('preReady')
             },
             ready:function(){
                 // $('#form1').validator({
@@ -58,12 +55,17 @@
     </script>
 </head>
 <body id="app">
-    {{name}}
+    <!-- {{name}} -->
     <input type="text" name="" v-model="name">
-    <div>
+    <div id="renderField1">
         <ks-date-picker :value.sync="datepicker" style="width:200px"></ks-date-picker>
         <input type="hidden" name=""  value="{{datepicker}}">
         {{datepicker}}
+    </div>
+    <div>
+        <ks-date-picker :value.sync="datemonthpicker" type="datemonth" style="width:200px"></ks-date-picker>
+        <input type="hidden" name=""  value="{{datemonthpicker}}">
+        <!-- {{datemonthpicker}} -->
     </div>
     <br>
     <ks-page 

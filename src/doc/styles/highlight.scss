@@ -19,6 +19,7 @@ hr {
 }
 
 .ks-hljs {
+
   line-height: 1.8;
   font-family: Menlo,Monaco,Consolas,Courier,monospace;
   padding: 16px;
@@ -28,4 +29,5 @@ hr {
   border: 1px solid #eaeefb;
   border-radius: 4px;
   -webkit-font-smoothing: auto;
+  overflow-x: auto;
 }

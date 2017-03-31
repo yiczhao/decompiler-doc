@@ -1,45 +1,45 @@
 /**
  * 模块配置
  */
+var scope = KS.pathScope('config.js')
 
- define(function(){
+define(function(){
     return function(kspath,ksroot){
 
-        var kspath = kspath ||'/src/min/ks'
+        var kspath = kspath || scope
         return {
 
-            'CSS': ksroot+'ks/util/require-css',
-            'Vue': ksroot+'ks/util/vue.min',
             // iconfont 字体样式
-            'iconfont':ksroot+'ks/font-icon/iconfont',
-            'jquery': ksroot+'ks/util/jquery.min',
-            'validator': {
-                js:ksroot+'ks/util/validator/index',
-                css:ksroot+'ks/util/validator/style'
-            },
-            'validator-cn':ksroot+'ks/util/validator/cn',
+            'iconfont':scope+'font-icon/iconfont',
+            'CSS': scope+'util/require-css',
+            'Vue': scope+'util/vue.min',
+            // 'axios':scope+'util/axios',
+            // 'qs':scope+'util/qs',
+            'jquery': scope+'util/jquery.min',
+            'validator':scope+'util/validator/index',
+            
             
             'component-KsDatePicker':{ 
-                js:kspath+'/components/ksdatepicker/index',
-                css:kspath+'/components/ksdatepicker/style'
+                js:kspath+'components/ksdatepicker/index',
+                css:kspath+'components/ksdatepicker/style'
             },
             'component-KsPage': {
-                js:kspath+'/components/kspage/index',
-                css:kspath+'/components/kspage/style'
+                js:kspath+'components/kspage/index',
+                css:kspath+'components/kspage/style'
             },
             'component-KsDialog': {
-                js:kspath+'/components/ksdialog/index',
-                css:kspath+'/components/ksdialog/style'
+                js:kspath+'components/ksdialog/index',
+                css:kspath+'components/ksdialog/style'
             },
             'component-KsModal': {
-                js:kspath+'/components/ksmodal/index',
-                css:kspath+'/components/ksmodal/style'
+                js:kspath+'components/ksmodal/index',
+                css:kspath+'components/ksmodal/style'
             },
             'component-KsModalEntity': {
-                js:kspath+'/components/ksmodalentity/index',
-                css:kspath+'/components/ksmodalentity/style'
+                js:kspath+'components/ksmodalentity/index',
+                css:kspath+'components/ksmodalentity/style'
             },
-            'directive-KsLimitNumberFixed':kspath+'/directives/kslimitnumberfixed/index'
+            'directive-KsLimitNumberFixed':kspath+'directives/kslimitnumberfixed/index'
             
         }    
 

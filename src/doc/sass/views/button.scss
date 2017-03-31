@@ -1,0 +1,48 @@
+// 默认按钮公共部分
+.ks-btn{
+    min-width: 90px;
+    font-size: 14px;
+    padding: 9px 11px;
+    border: 1px solid #c8c8c8;
+    background: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 36px;
+    line-height: 1;
+    outline: 0;
+    color:#fff;
+    & + .ks-btn{ margin-left: 10px;}
+}
+
+// 弱化按钮公共部分
+%plain-common{
+    @extend .ks-btn;
+    background: $plain;
+    &:hover{ background: lighten($plain,5%); }
+    &:active{ background: darken($plain,5%); }
+}
+
+/* 红色 */  /* 蓝色 */  /* 绿色 */  /* 橙色 */  /* 青色 */  /* 默认 */
+$button-bg:(danger,$danger),(primary,$primary),(success,$success),(warning,$warning),(info,$info),(default,$plain);
+@each $type, $bg-color in $button-bg {
+    // 默认按钮
+    .ks-btn-#{$type}{
+        @extend .ks-btn;
+        background: $bg-color;
+        border-color:$bg-color;
+        &:hover{ background: lighten($bg-color,5%); }
+        &:active{ background: darken($bg-color,5%); }
+    }
+    // 弱化按钮
+    .plain.ks-btn-#{$type}{
+        @extend %plain-common;
+        color: $bg-color;
+        border-color:$bg-color;
+    }
+}
+
+.ks-btn-default{
+    color:#777;
+    border-color:#c8c8c8;
+    &:hover{ color:#444; }
+}

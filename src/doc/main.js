@@ -4,7 +4,7 @@
  * @data 16/6/1
  * @email pkeros@vip.qq.com
  */
-require('./styles/app.scss')
+require('./sass/ks.scss')
 
 
 
@@ -15,11 +15,14 @@ import VueResource from 'vue-resource'
 import  Z from 'vue-validator'
 import $validate from './utils/validate'
 import RouterMap from './router'
-import Utils from './utils'
 
 
-import Directives from './directives'
-import Filter from './filters'
+// 公共组件
+import components  from './components'
+
+
+
+
 
 
 
@@ -31,11 +34,9 @@ Vue.config.debug = process.env.NODE_ENV !== 'production'
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(VueValidator)
+Vue.use(components)
 
-// attach utils
-Vue.use(Utils)
-Vue.use(Filter)
-Vue.use(Directives)
+
 
 
 
