@@ -1,6 +1,85 @@
-webpackJsonp([11],{
+webpackJsonp([18],{
 
-/***/ 134:
+/***/ 174:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(175);
+
+/***/ },
+
+/***/ 175:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(176)
+	__vue_script__ = __webpack_require__(180)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] node_modules/vue-markdown-loader/_cache/usageMode-14.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(181)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/decompiler-doc/node_modules/vue-markdown-loader/_cache/usageMode-14.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+
+/***/ 176:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(177);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(179)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../css-loader/index.js!./../../vue-loader/lib/style-rewriter.js!./../../vue-loader/lib/selector.js?type=style&index=0!./usageMode-14.vue", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../vue-loader/lib/style-rewriter.js!./../../vue-loader/lib/selector.js?type=style&index=0!./usageMode-14.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 177:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(178)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.error{\n  color:red;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 178:
 /***/ function(module, exports) {
 
 	/*
@@ -57,7 +136,7 @@ webpackJsonp([11],{
 
 /***/ },
 
-/***/ 135:
+/***/ 179:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -280,86 +359,7 @@ webpackJsonp([11],{
 
 /***/ },
 
-/***/ 169:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(170);
-
-/***/ },
-
-/***/ 170:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(171)
-	__vue_script__ = __webpack_require__(173)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] node_modules/vue-markdown-loader/_cache/usageMode-4.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(174)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/decompiler-doc/node_modules/vue-markdown-loader/_cache/usageMode-4.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-
-/***/ 171:
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(172);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(135)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./../../vue-loader/lib/style-rewriter.js!./../../vue-loader/lib/selector.js?type=style&index=0!./usageMode-4.vue", function() {
-				var newContent = require("!!./../../css-loader/index.js!./../../vue-loader/lib/style-rewriter.js!./../../vue-loader/lib/selector.js?type=style&index=0!./usageMode-4.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 172:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(134)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n.error{\n  color:red;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-
-/***/ 173:
+/***/ 180:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -680,7 +680,7 @@ webpackJsonp([11],{
 
 /***/ },
 
-/***/ 174:
+/***/ 181:
 /***/ function(module, exports) {
 
 	module.exports = "<section><h3>使用方式</h3>\n<br>\n<h4>1、将校验规则写到控件中</h4>\n<br>\n<form class=\"cmxform\" id=\"commentForm\" method=\"get\" action=\"\">\n  <fieldset>\n    <legend>输入您的名字，邮箱，URL，备注。</legend>\n    <p>\n      <label for=\"cname\">Name (必需, 最小两个字母)</label>\n      <input id=\"cname\" name=\"name\" minlength=\"2\" type=\"text\" required>\n    </p>\n    <p>\n      <label for=\"cemail\">E-Mail (必需)</label>\n      <input id=\"cemail\" type=\"email\" name=\"email\" required>\n    </p>\n    <p>\n      <label for=\"curl\">URL (可选)</label>\n      <input id=\"curl\" type=\"url\" name=\"url\">\n    </p>\n    <p>\n      <label for=\"ccomment\">备注 (必需)</label>\n      <textarea id=\"ccomment\" name=\"comment\" required></textarea>\n    </p>\n    <p>\n      <input class=\"submit\" type=\"submit\" value=\"Submit\">\n    </p>\n  </fieldset>\n</form>\n<pre class=\"ks-hljs\"><code><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"cmxform\"</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"commentForm\"</span> <span class=\"hljs-attr\">method</span>=<span class=\"hljs-string\">\"get\"</span> <span class=\"hljs-attr\">action</span>=<span class=\"hljs-string\">\"\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">fieldset</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">legend</span>&gt;</span>输入您的名字，邮箱，URL，备注。<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">legend</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"cname\"</span>&gt;</span>Name (必需, 最小两个字母)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"cname\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"name\"</span> <span class=\"hljs-attr\">minlength</span>=<span class=\"hljs-string\">\"2\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"text\"</span> <span class=\"hljs-attr\">required</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"cemail\"</span>&gt;</span>E-Mail (必需)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"cemail\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"email\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"email\"</span> <span class=\"hljs-attr\">required</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"curl\"</span>&gt;</span>URL (可选)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"curl\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"url\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"url\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"ccomment\"</span>&gt;</span>备注 (必需)<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">textarea</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"ccomment\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"comment\"</span> <span class=\"hljs-attr\">required</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">textarea</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"submit\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"submit\"</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">\"Submit\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">fieldset</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n</code></pre>\n<br>\n<h4>2、 将校验规则写到 js 代码中</h4>\n<br>\n<form class=\"cmxform\" id=\"signupForm\" method=\"get\" action=\"\">\n  <fieldset>\n    <legend>验证完整的表单</legend>\n    <p>\n      <label for=\"firstname\">名字</label>\n      <input id=\"firstname\" name=\"firstname\" type=\"text\">\n    </p>\n    <p>\n      <label for=\"lastname\">姓氏</label>\n      <input id=\"lastname\" name=\"lastname\" type=\"text\">\n    </p>\n    <p>\n      <label for=\"username\">用户名</label>\n      <input id=\"username\" name=\"username\" type=\"text\">\n    </p>\n    <p>\n      <label for=\"password\">密码</label>\n      <input id=\"password\" name=\"password\" type=\"password\">\n    </p>\n    <p>\n      <label for=\"confirm_password\">验证密码</label>\n      <input id=\"confirm_password\" name=\"confirm_password\" type=\"password\">\n    </p>\n    <p>\n      <label for=\"email\">Email</label>\n      <input id=\"email\" name=\"email\" type=\"email\">\n    </p>\n    <p>\n      <label for=\"agree\">请同意我们的声明</label>\n      <input type=\"checkbox\" class=\"checkbox\" id=\"agree\" name=\"agree\">\n    </p>\n    <p>\n      <label for=\"newsletter\">我乐意接收新信息</label>\n      <input type=\"checkbox\" class=\"checkbox\" id=\"newsletter\" name=\"newsletter\">\n    </p>\n    <fieldset id=\"newsletter_topics\">\n      <legend>主题 (至少选择两个) - 注意：如果没有勾选“我乐意接收新信息”以下选项会隐藏，但我们这里作为演示让它可见</legend>\n      <label for=\"topic_marketflash\">\n        <input type=\"checkbox\" id=\"topic_marketflash\" value=\"marketflash\" name=\"topic[]\">Marketflash\n      </label>\n      <label for=\"topic_fuzz\">\n        <input type=\"checkbox\" id=\"topic_fuzz\" value=\"fuzz\" name=\"topic[]\">Latest fuzz\n      </label>\n      <label for=\"topic_digester\">\n        <input type=\"checkbox\" id=\"topic_digester\" value=\"digester\" name=\"topic[]\">Mailing list digester\n      </label>\n      <label for=\"topic\" class=\"error\" style=\"display:none\">至少选择两个</label>\n    </fieldset>\n    <p>\n      <input class=\"submit\" type=\"submit\" value=\"submit\">\n    </p>\n  </fieldset>\n</form>\n<pre class=\"ks-hljs\"><code><span class=\"hljs-meta\">&lt;!DOCTYPE html&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">html</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">head</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">meta</span> <span class=\"hljs-attr\">charset</span>=<span class=\"hljs-string\">\"utf-8\"</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span>&gt;</span><span class=\"javascript\">\n$.validator.setDefaults({\n    <span class=\"hljs-attr\">submitHandler</span>: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) </span>{\n      alert(<span class=\"hljs-string\">\"提交事件!\"</span>);\n    }\n});\nready:<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>)</span>{\n<span class=\"hljs-comment\">// 在键盘按下并释放及提交后验证提交表单</span>\n  $(<span class=\"hljs-string\">\"#signupForm\"</span>).validate({\n      <span class=\"hljs-attr\">rules</span>: {\n        <span class=\"hljs-attr\">firstname</span>: <span class=\"hljs-string\">\"required\"</span>,\n        <span class=\"hljs-attr\">lastname</span>: <span class=\"hljs-string\">\"required\"</span>,\n        <span class=\"hljs-attr\">username</span>: {\n          <span class=\"hljs-attr\">required</span>: <span class=\"hljs-literal\">true</span>,\n          <span class=\"hljs-attr\">minlength</span>: <span class=\"hljs-number\">2</span>\n        },\n        <span class=\"hljs-attr\">password</span>: {\n          <span class=\"hljs-attr\">required</span>: <span class=\"hljs-literal\">true</span>,\n          <span class=\"hljs-attr\">minlength</span>: <span class=\"hljs-number\">5</span>\n        },\n        <span class=\"hljs-attr\">confirm_password</span>: {\n          <span class=\"hljs-attr\">required</span>: <span class=\"hljs-literal\">true</span>,\n          <span class=\"hljs-attr\">minlength</span>: <span class=\"hljs-number\">5</span>,\n          <span class=\"hljs-attr\">equalTo</span>: <span class=\"hljs-string\">\"#password\"</span>\n        },\n        <span class=\"hljs-attr\">email</span>: {\n          <span class=\"hljs-attr\">required</span>: <span class=\"hljs-literal\">true</span>,\n          <span class=\"hljs-attr\">email</span>: <span class=\"hljs-literal\">true</span>\n        },\n        <span class=\"hljs-string\">\"topic[]\"</span>: {\n          <span class=\"hljs-attr\">required</span>: <span class=\"hljs-string\">\"#newsletter:checked\"</span>,\n          <span class=\"hljs-attr\">minlength</span>: <span class=\"hljs-number\">2</span>\n        },\n        <span class=\"hljs-attr\">agree</span>: <span class=\"hljs-string\">\"required\"</span>\n      },\n      <span class=\"hljs-attr\">messages</span>: {\n        <span class=\"hljs-attr\">firstname</span>: <span class=\"hljs-string\">\"请输入您的名字\"</span>,\n        <span class=\"hljs-attr\">lastname</span>: <span class=\"hljs-string\">\"请输入您的姓氏\"</span>,\n        <span class=\"hljs-attr\">username</span>: {\n          <span class=\"hljs-attr\">required</span>: <span class=\"hljs-string\">\"请输入用户名\"</span>,\n          <span class=\"hljs-attr\">minlength</span>: <span class=\"hljs-string\">\"用户名必需由两个字母组成\"</span>\n        },\n        <span class=\"hljs-attr\">password</span>: {\n          <span class=\"hljs-attr\">required</span>: <span class=\"hljs-string\">\"请输入密码\"</span>,\n          <span class=\"hljs-attr\">minlength</span>: <span class=\"hljs-string\">\"密码长度不能小于 5 个字母\"</span>\n        },\n        <span class=\"hljs-attr\">confirm_password</span>: {\n          <span class=\"hljs-attr\">required</span>: <span class=\"hljs-string\">\"请输入密码\"</span>,\n          <span class=\"hljs-attr\">minlength</span>: <span class=\"hljs-string\">\"密码长度不能小于 5 个字母\"</span>,\n          <span class=\"hljs-attr\">equalTo</span>: <span class=\"hljs-string\">\"两次密码输入不一致\"</span>\n        },\n        <span class=\"hljs-attr\">email</span>: <span class=\"hljs-string\">\"请输入一个正确的邮箱\"</span>,\n        <span class=\"hljs-attr\">agree</span>: <span class=\"hljs-string\">\"请接受我们的声明\"</span>,\n        <span class=\"hljs-attr\">topic</span>: <span class=\"hljs-string\">\"请选择两个主题\"</span>\n      }\n  });\n});\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">style</span>&gt;</span><span class=\"css\">\n<span class=\"hljs-selector-class\">.error</span>{\n  <span class=\"hljs-attribute\">color</span>:red;\n}\n</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">style</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">head</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">body</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"cmxform\"</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"signupForm\"</span> <span class=\"hljs-attr\">method</span>=<span class=\"hljs-string\">\"get\"</span> <span class=\"hljs-attr\">action</span>=<span class=\"hljs-string\">\"\"</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">fieldset</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">legend</span>&gt;</span>验证完整的表单<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">legend</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"firstname\"</span>&gt;</span>名字<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"firstname\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"firstname\"</span> <span class=\"hljs-attr\">required</span> <span class=\"hljs-attr\">title</span>=<span class=\"hljs-string\">\"3~10位\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"text\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"lastname\"</span>&gt;</span>姓氏<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"lastname\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"lastname\"</span>  <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"text\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"username\"</span>&gt;</span>用户名<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"username\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"username\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"text\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"password\"</span>&gt;</span>密码<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"password\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"password\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"password\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"confirm_password\"</span>&gt;</span>验证密码<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"confirm_password\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"confirm_password\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"password\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"email\"</span>&gt;</span>Email<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"email\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"email\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"email\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"agree\"</span>&gt;</span>请同意我们的声明<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"checkbox\"</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"checkbox\"</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"agree\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"agree\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"newsletter\"</span>&gt;</span>我乐意接收新信息<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"checkbox\"</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"checkbox\"</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"newsletter\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"newsletter\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">fieldset</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"newsletter_topics\"</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">legend</span>&gt;</span>主题 (至少选择两个) - 注意：如果没有勾选“我乐意接收新信息”以下选项会隐藏，但我们这里作为演示让它可见<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">legend</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"topic_marketflash\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"checkbox\"</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"topic_marketflash\"</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">\"marketflash\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"topic[]\"</span>&gt;</span>Marketflash\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"topic_fuzz\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"checkbox\"</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"topic_fuzz\"</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">\"fuzz\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"topic[]\"</span>&gt;</span>Latest fuzz\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"topic_digester\"</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"checkbox\"</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">\"topic_digester\"</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">\"digester\"</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"topic[]\"</span>&gt;</span>Mailing list digester\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">label</span> <span class=\"hljs-attr\">for</span>=<span class=\"hljs-string\">\"topic\"</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"error\"</span> <span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">\"display:none\"</span>&gt;</span>至少选择两个<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">label</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">fieldset</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">input</span> <span class=\"hljs-attr\">class</span>=<span class=\"hljs-string\">\"submit\"</span> <span class=\"hljs-attr\">type</span>=<span class=\"hljs-string\">\"submit\"</span> <span class=\"hljs-attr\">value</span>=<span class=\"hljs-string\">\"提交\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">fieldset</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">form</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">body</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">html</span>&gt;</span>\n\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span>\n</code></pre>\n\n</section>";
