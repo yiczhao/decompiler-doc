@@ -11,7 +11,8 @@
         CLS_NS_FIELD = '.field',
         CLS_NS_FORM = '.form',
         CLS_WRAPPER = 'nice-' + NS,
-        CLS_MSG_BOX = 'msg-box',
+        // CLS_MSG_BOX = 'msg-box',
+        CLS_MSG_BOX = 'error-msg',
         ARIA_REQUIRED = 'aria-required',
         ARIA_INVALID = 'aria-invalid',
         DATA_RULE = 'data-rule',
@@ -99,7 +100,8 @@
             },
             msgWrapper: 'span',
             msgArrow: '',
-            msgIcon: '<span class="n-icon"></span>',
+            // msgIcon: '<span class="n-icon"></span>',
+            msgIcon: '<i class="iconfont">&#xe60c;</i>',
             msgClass: 'n-right',
             msgStyle: '',
             msgShow: null,
@@ -117,6 +119,7 @@
         focusInvalid  {Boolean}     true            Whether to focus the field that is invalid
         ignoreBlank   {Boolean}     false           When the field has no value, whether to ignore validation
         ignore        {jqSelector}    ''            Ignored fields (Using jQuery selector)
+
         beforeSubmit  {Function}                    Do something before submit form
         dataFilter    {Function}                    Convert ajax results
         valid         {Function}                    Triggered when the form is valid
@@ -124,6 +127,7 @@
         validClass    {String}      'n-valid'       Add this class name to a valid field
         invalidClass  {String}      'n-invalid'     Add this class name to a invalid field
         bindClassTo   {jqSelector}  ':verifiable'   Which element should the className binding to
+
         display       {Function}                    Callback function to get dynamic display
         target        {Function}                    Callback function to get dynamic target
         msgShow       {Function}                    Trigger this callback when show message
@@ -135,11 +139,13 @@
         msgStyle      {String}                      Custom message css style
         msgClass      {String}                      Additional added to the message class names
         formClass     {String}                      Additional added to the form class names
+
         messages      {Object}                      Custom messages for the current instance
         rules         {Object}                      Custom rules for the current instance
         fields        {Object}                      Field validation configuration
         {String}        key    name|#id
         {String|Object} value                       Rule string or an object which can pass more arguments
+
         fields[key][rule]       {String}            Rule string
         fields[key][display]    {String|Function}
         fields[key][tip]        {String}            Custom tip message
