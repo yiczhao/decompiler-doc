@@ -147,7 +147,6 @@ $('#form1').validator({
     /* 假设服务端返回结果为： {"code":400, "msg":"名字已被占用"}
     */
     dataFilter:function(data){
-        console.log('????',data);
          if (data.code === 200){
             return "";
          } else {
