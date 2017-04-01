@@ -69,7 +69,7 @@
 .hljs-link {
   text-decoration: underline;
 }
-.ks-row{display:table;table-layout:fixed;border-spacing:0}.ks-col,.ks-col-auto,.ks-col-auto-top,.ks-col-top,.KsPageGroup-statistical{display:table-cell;vertical-align:middle;word-break:break-all}.ks-col-auto-top,.ks-col-top{vertical-align:top}.ks-row-auto,.KsPageGroup{box-sizing:border-box;width:100%;display:table;border-spacing:0;table-layout:auto}.ks-col-auto,.ks-col-auto-top,.KsPageGroup-statistical{width:1px;white-space:nowrap}.ks-row{box-sizing:border-box;width:100%}.KsPageGroup li,.KsPage li{display:inline-block;width:36px;height:36px;line-height:36px;text-align:center;border-radius:4px;color:#000;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.KsPageGroup li:hover,.KsPage li:hover{background:#f5f5f5;color:#000}.KsPage .active,.KsPageGroup .active,.KsPageGroup li.active:hover,.KsPage li.active:hover{background:#2196f3;color:#fff}.KsPage .disabled,.KsPageGroup .disabled{color:#999;cursor:not-allowed}.KsPage .disabled:hover,.KsPageGroup .disabled:hover{background:transparent;color:#999}.KsPageGroup{color:#999;line-height:36px}.KsPageGroup-statistical{padding-right:20px}.KsPageGroup-statistical span{color:#000;padding:0 5px}.ks-row{display:table;table-layout:fixed;border-spacing:0}.ks-col,.ks-col-auto,.ks-col-auto-top,.ks-col-top,.KsPageGroup-statistical{display:table-cell;vertical-align:middle;word-break:break-all}.ks-col-auto-top,.ks-col-top{vertical-align:top}.ks-row-auto,.KsPageGroup{box-sizing:border-box;width:100%;display:table;border-spacing:0;table-layout:auto}.ks-col-auto,.ks-col-auto-top,.KsPageGroup-statistical{width:1px;white-space:nowrap}.ks-row{box-sizing:border-box;width:100%}.KsPageGroup li,.KsPage li{display:inline-block;width:36px;height:36px;line-height:36px;text-align:center;border-radius:4px;color:#000;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.KsPageGroup li:hover,.KsPage li:hover{background:#f5f5f5;color:#000}.KsPage .active,.KsPageGroup .active,.KsPageGroup li.active:hover,.KsPage li.active:hover{background:#2196f3;color:#fff}.KsPage .disabled,.KsPageGroup .disabled{color:#999;cursor:not-allowed}.KsPage .disabled:hover,.KsPageGroup .disabled:hover{background:transparent;color:#999}.KsPageGroup{color:#999;line-height:36px}.KsPageGroup-statistical{padding-right:20px}.KsPageGroup-statistical span{color:#000;padding:0 5px}.KSNRRadio{position:relative;display:inline-block;padding:2px 3px;vertical-align:middle;font-size:14px}.KSNRRadio__container.disable{opacity:.6}.KSNRRadio__container.disable *{cursor:not-allowed}.KSNRRadio__entity{display:none}.KSNRRadio__entity:checked+.KSNRRadio__skin:before{opacity:1}.KSNRRadio__text{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.KSNRRadio__skin,.KSNRRadio__text{display:inline-block;cursor:pointer}.KSNRRadio__skin{border:1px solid #d0d0d5;border-radius:50%;width:18px;height:18px;text-align:center;line-height:18px}.KSNRRadio__skin:before{content:"";display:inline-block;height:10px;width:10px;border-radius:50%;opacity:0;-webkit-transition:opacity .3s;transition:opacity .3s}@charset "UTF-8";
+.ks-row{display:table;table-layout:fixed;border-spacing:0}.ks-col,.ks-col-auto,.ks-col-auto-top,.ks-col-top,.KsPageGroup-statistical{display:table-cell;vertical-align:middle;word-break:break-all}.ks-col-auto-top,.ks-col-top{vertical-align:top}.ks-row-auto,.KsPageGroup{box-sizing:border-box;width:100%;display:table;border-spacing:0;table-layout:auto}.ks-col-auto,.ks-col-auto-top,.KsPageGroup-statistical{width:1px;white-space:nowrap}.ks-row{box-sizing:border-box;width:100%}.KsPageGroup li,.KsPage li{display:inline-block;width:36px;height:36px;line-height:36px;text-align:center;border-radius:4px;color:#000;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.KsPageGroup li:hover,.KsPage li:hover{background:#f5f5f5;color:#000}.KsPage .active,.KsPageGroup .active,.KsPageGroup li.active:hover,.KsPage li.active:hover{background:#2196f3;color:#fff}.KsPage .disabled,.KsPageGroup .disabled{color:#999;cursor:not-allowed}.KsPage .disabled:hover,.KsPageGroup .disabled:hover{background:transparent;color:#999}.KsPageGroup{color:#999;line-height:36px}.KsPageGroup-statistical{padding-right:20px}.KsPageGroup-statistical span{color:#000;padding:0 5px}.ks-row{display:table;table-layout:fixed;border-spacing:0}.ks-col,.ks-col-auto,.ks-col-auto-top,.ks-col-top,.KsPageGroup-statistical{display:table-cell;vertical-align:middle;word-break:break-all}.ks-col-auto-top,.ks-col-top{vertical-align:top}.ks-row-auto,.KsPageGroup{box-sizing:border-box;width:100%;display:table;border-spacing:0;table-layout:auto}.ks-col-auto,.ks-col-auto-top,.KsPageGroup-statistical{width:1px;white-space:nowrap}.ks-row{box-sizing:border-box;width:100%}.KsPageGroup li,.KsPage li{display:inline-block;width:36px;height:36px;line-height:36px;text-align:center;border-radius:4px;color:#000;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.KsPageGroup li:hover,.KsPage li:hover{background:#f5f5f5;color:#000}.KsPage .active,.KsPageGroup .active,.KsPageGroup li.active:hover,.KsPage li.active:hover{background:#2196f3;color:#fff}.KsPage .disabled,.KsPageGroup .disabled{color:#999;cursor:not-allowed}.KsPage .disabled:hover,.KsPageGroup .disabled:hover{background:transparent;color:#999}.KsPageGroup{color:#999;line-height:36px}.KsPageGroup-statistical{padding-right:20px}.KsPageGroup-statistical span{color:#000;padding:0 5px}.KSNRRadio{position:relative;display:inline-block;padding:2px 3px;vertical-align:middle;font-size:14px}.KSNRRadio__container.disable{opacity:.6}.KSNRRadio__container.disable *{cursor:not-allowed}.KSNRRadio__entity{display:none}.KSNRRadio__entity:checked+.KSNRRadio__skin:before{opacity:1}.KSNRRadio__text{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.KSNRRadio__skin,.KSNRRadio__text{display:inline-block;cursor:pointer}.KSNRRadio__skin{border:1px solid #d0d0d5;border-radius:50%;width:18px;height:18px;text-align:center;line-height:18px}.KSNRRadio__skin:before{content:"";display:inline-block;height:10px;width:10px;border-radius:50%;opacity:0;-webkit-transition:opacity .3s;transition:opacity .3s}.ks-image-box{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5)}.ks-image-box .image-content{position:fixed;top:54px;left:54px;right:54px;bottom:54px;background:#444}.ks-image-box img{max-width:100%;max-height:100%;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.ks-image-box i{position:absolute;right:10px;top:10px;width:54px;height:54px;text-align:center;line-height:54px;color:#fff;background:rgba(0,0,0,.25);font-size:33px;cursor:pointer;border-radius:2px}.ks-image-box i:hover{background:#f44336}.ks-image-box i:active{background:#ea1c0d}.h1{font-size:30px}.h2{font-size:24px}.h3{font-size:18px}.h4{font-size:16px}.h5{font-size:14px}.h6{font-size:12px}.primary{color:#2196f3;border-color:#2196f3}.primary-light{color:#42a5f5;border-color:#42a5f5}.primary-deep{color:#1e88e5;border-color:#1e88e5}.success{color:#4caf50;border-color:#4caf50}.success-light{color:#66bb6a;border-color:#66bb6a}.success-deep{color:#43a047;border-color:#43a047}.info{color:#00bcd4;border-color:#00bcd4}.info-light{color:#26c6da;border-color:#26c6da}.info-deep{color:#00acc1;border-color:#00acc1}.danger{color:#f44336;border-color:#f44336}.danger-light{color:#ef5350;border-color:#ef5350}.danger-deep{color:#e53935;border-color:#e53935}.warning{color:#ff5722;border-color:#ff5722}.warning-light{color:#ff7043;border-color:#ff7043}.warning-deep{color:#f4511e;border-color:#f4511e}.dark{color:#777;border-color:#777}.dark-light{color:#999;border-color:#999}.dark-deep{color:#444;border-color:#444}.gray{color:#f5f5f5;border-color:#f5f5f5}.gray-light{color:#fcfcfc;border-color:#fcfcfc}.gray-deep{color:#e9e9e9;border-color:#e9e9e9}.bg-primary{background:#2196f3;color:#fff}.bg-primary-light{background:#42a5f5;color:#fff}.bg-primary-deep{background:#1e88e5;color:#fff}.bg-success{background:#4caf50;color:#fff}.bg-success-light{background:#66bb6a;color:#fff}.bg-success-deep{background:#43a047;color:#fff}.bg-info{background:#00bcd4;color:#fff}.bg-info-light{background:#26c6da;color:#fff}.bg-info-deep{background:#00acc1;color:#fff}.bg-danger{background:#f44336;color:#fff}.bg-danger-light{background:#ef5350;color:#fff}.bg-danger-deep{background:#e53935;color:#fff}.bg-warning{background:#ff5722;color:#fff}.bg-warning-light{background:#ff7043;color:#fff}.bg-warning-deep{background:#f4511e;color:#fff}.bg-dark{background:#777;color:#fff}.bg-dark-light{background:#999;color:#fff}.bg-dark-deep{background:#444;color:#fff}.bg-gray{background:#f5f5f5;color:#fff}.bg-gray-light{background:#fcfcfc;color:#fff}.bg-gray-deep{background:#e9e9e9;color:#fff}.ks-row,.KsDateMonth,.KsDateMonth-date-btn,.KsDateMonth-date-days,.KsDateMonth-date-week,.KsDatePicker .KsDater,.KsDater,.KsDater-date-btn,.KsDater-date-days,.KsDater-date-week,.KsDaterMulti,.KsDaterMulti-date-btn,.KsDaterMulti-date-days,.KsDaterMulti-date-week,.KsDaterMultiPicker .KsDater,.KsDateYear,.KsDateYear-date-btn,.KsDateYear-date-days,.KsDateYear-date-week,.tb{display:table;table-layout:fixed;border-spacing:0}.ks-col,.ks-col-auto,.ks-col-auto-top,.ks-col-top,.KsDateMonth-date,.KsDateMonth-date-btn span,.KsDateMonth-date-days span,.KsDateMonth-date-head .interstice,.KsDateMonth-date-head .month,.KsDateMonth-date-head .next,.KsDateMonth-date-head .retreat,.KsDateMonth-date-head .year,.KsDateMonth-date-week span,.KsDater-date,.KsDater-date-btn span,.KsDater-date-days span,.KsDater-date-head .interstice,.KsDater-date-head .month,.KsDater-date-head .next,.KsDater-date-head .retreat,.KsDater-date-head .year,.KsDater-date-week span,.KsDaterMulti-date,.KsDaterMulti-date-btn span,.KsDaterMulti-date-days span,.KsDaterMulti-date-head .interstice,.KsDaterMulti-date-head .month,.KsDaterMulti-date-head .next,.KsDaterMulti-date-head .retreat,.KsDaterMulti-date-head .year,.KsDaterMulti-date-week span,.KsDateYear-date,.KsDateYear-date-btn span,.KsDateYear-date-days span,.KsDateYear-date-head .interstice,.KsDateYear-date-head .month,.KsDateYear-date-head .next,.KsDateYear-date-head .retreat,.KsDateYear-date-head .year,.KsDateYear-date-week span,.tb-cell{display:table-cell;vertical-align:middle;word-break:break-all}.ib-w,.ib-w.ib{letter-spacing:-.31em;word-spacing:-.43em;text-rendering:optimizespeed;font-family:PingFangSC-Regular,microsoft yahei,Arial,sans-serif;display:-ms-flexbox;-ms-flex-flow:row wrap;-ms-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start}.ib{display:inline-block;zoom:1;letter-spacing:normal;word-spacing:normal;text-rendering:auto;box-sizing:border-box}.ib,.ks-col-auto-top,.ks-col-top{vertical-align:top}.ks-row-auto,.KsDateMonth-date-head,.KsDateMonthPicker-input,.KsDatePicker-input,.KsDater-date-head,.KsDaterMulti-date-head,.KsDaterMultiPicker-input,.KsDateYear-date-head,.KsDateYearPicker-input{box-sizing:border-box;width:100%;display:table;border-spacing:0;table-layout:auto}.ks-col-auto,.ks-col-auto-top,.KsDateMonth-date-head .month,.KsDateMonth-date-head .year,.KsDater-date-head .month,.KsDater-date-head .year,.KsDaterMulti-date-head .month,.KsDaterMulti-date-head .year,.KsDateYear-date-head .month,.KsDateYear-date-head .year{width:1px;white-space:nowrap}.ks-row,.KsDateMonth,.KsDateMonth-date-btn,.KsDateMonth-date-days,.KsDateMonth-date-week,.KsDatePicker .KsDater,.KsDater,.KsDater-date-btn,.KsDater-date-days,.KsDater-date-week,.KsDaterMulti,.KsDaterMulti-date-btn,.KsDaterMulti-date-days,.KsDaterMulti-date-week,.KsDaterMultiPicker .KsDater,.KsDateYear,.KsDateYear-date-btn,.KsDateYear-date-days,.KsDateYear-date-week,.tb{box-sizing:border-box;width:100%}.KsDateMonthPicker-input,.KsDatePicker-input,.KsDaterMultiPicker-input,.KsDateYearPicker-input{background:#fff;border:1px solid #c8c8c8;border-radius:4px}.KsDateMonthPicker-input .date-icon,.KsDatePicker-input .date-icon,.KsDaterMultiPicker-input .date-icon,.KsDateYearPicker-input .date-icon{border-right:1px solid #c8c8c8}.KsDateMonthPicker-input .date-icon i,.KsDatePicker-input .date-icon i,.KsDaterMultiPicker-input .date-icon i,.KsDateYearPicker-input .date-icon i{padding:11px}.KsDateMonthPicker-input input,.KsDatePicker-input input,.KsDaterMultiPicker-input input,.KsDateYearPicker-input input{height:36px;border:0;outline:0;padding:0 10px;width:100%;box-sizing:border-box;background:transparent}.KsDateMonth-date-btn,.KsDateMonth-date-days,.KsDateMonth-date-week,.KsDater-date-btn,.KsDater-date-days,.KsDater-date-week,.KsDaterMulti-date-btn,.KsDaterMulti-date-days,.KsDaterMulti-date-week,.KsDateYear-date-btn,.KsDateYear-date-days,.KsDateYear-date-week{padding:0 32px;text-align:center;line-height:36px}.KsDateMonth-date-btn,.KsDateMonth-date-days,.KsDater-date-btn,.KsDater-date-days,.KsDaterMulti-date-btn,.KsDaterMulti-date-days,.KsDateYear-date-btn,.KsDateYear-date-days{padding-bottom:5px}.KsDateMonth-date-btn span,.KsDateMonth-date-days span,.KsDater-date-btn span,.KsDater-date-days span,.KsDaterMulti-date-btn span,.KsDaterMulti-date-days span,.KsDateYear-date-btn span,.KsDateYear-date-days span{cursor:pointer;border-radius:4px}.KsDateMonth-date-btn span:hover,.KsDateMonth-date-days span:hover,.KsDater-date-btn span:hover,.KsDater-date-days span:hover,.KsDaterMulti-date-btn span:hover,.KsDaterMulti-date-days span:hover,.KsDateYear-date-btn span:hover,.KsDateYear-date-days span:hover{background:#f5f5f5}.KsDateMonth-date-btn span.active,.KsDateMonth-date-days span.active,.KsDater-date-btn span.active,.KsDater-date-days span.active,.KsDaterMulti-date-btn span.active,.KsDaterMulti-date-days span.active,.KsDateYear-date-btn span.active,.KsDateYear-date-days span.active{color:#fff;background:#2196f3}.KsDateMonth-date-btn .collect,.KsDateMonth-date-btn .future,.KsDateMonth-date-btn .pass,.KsDateMonth-date-days .collect,.KsDateMonth-date-days .future,.KsDateMonth-date-days .pass,.KsDater-date-btn .collect,.KsDater-date-btn .future,.KsDater-date-btn .pass,.KsDater-date-days .collect,.KsDater-date-days .future,.KsDater-date-days .pass,.KsDaterMulti-date-btn .collect,.KsDaterMulti-date-btn .future,.KsDaterMulti-date-btn .pass,.KsDaterMulti-date-days .collect,.KsDaterMulti-date-days .future,.KsDaterMulti-date-days .pass,.KsDateYear-date-btn .collect,.KsDateYear-date-btn .future,.KsDateYear-date-btn .pass,.KsDateYear-date-days .collect,.KsDateYear-date-days .future,.KsDateYear-date-days .pass{color:#c8c8c8}.KsDateMonth-date-btn .scope-bg,.KsDateMonth-date-days .scope-bg,.KsDater-date-btn .scope-bg,.KsDater-date-days .scope-bg,.KsDaterMulti-date-btn .scope-bg,.KsDaterMulti-date-days .scope-bg,.KsDateYear-date-btn .scope-bg,.KsDateYear-date-days .scope-bg{background:#f5f5f5;border-radius:0}.KsDateMonth,.KsDatePicker .KsDater,.KsDater,.KsDaterMulti,.KsDaterMultiPicker .KsDater,.KsDateYear{display:inline-block;margin-top:-1px}.KsDateMonth-date,.KsDater-date,.KsDaterMulti-date,.KsDateYear-date{border:1px solid #c8c8c8;border-left:transparent;width:314px;background:#fff}.KsDateMonth-date-head,.KsDater-date-head,.KsDaterMulti-date-head,.KsDateYear-date-head{padding:30px 18px 15px;font-size:14px}.KsDateMonth-date-head .next,.KsDateMonth-date-head .retreat,.KsDater-date-head .next,.KsDater-date-head .retreat,.KsDaterMulti-date-head .next,.KsDaterMulti-date-head .retreat,.KsDateYear-date-head .next,.KsDateYear-date-head .retreat{cursor:pointer}.KsDateMonth-date-head .next,.KsDater-date-head .next,.KsDaterMulti-date-head .next,.KsDateYear-date-head .next{text-align:right}.KsDateMonth-date-week,.KsDater-date-week,.KsDaterMulti-date-week,.KsDateYear-date-week{font-weight:700;color:#c8c8c8}.KsDateMonth-date-week .week,.KsDater-date-week .week,.KsDaterMulti-date-week .week,.KsDateYear-date-week .week{color:#ef5350}.KsDateMonth-date-days:last-child,.KsDater-date-days:last-child,.KsDaterMulti-date-days:last-child,.KsDateYear-date-days:last-child{margin-bottom:10px}.KsDateMonth-date-btn select,.KsDater-date-btn select,.KsDaterMulti-date-btn select,.KsDateYear-date-btn select{width:70px;border-color:#e5e5e5}.KsDateMonth-date-btn .mlr-10,.KsDater-date-btn .mlr-10,.KsDaterMulti-date-btn .mlr-10,.KsDateYear-date-btn .mlr-10{margin:0 10px}.KsDateMonth-date-btn .reset,.KsDateMonth-date-btn .today,.KsDater-date-btn .reset,.KsDater-date-btn .today,.KsDaterMulti-date-btn .reset,.KsDaterMulti-date-btn .today,.KsDateYear-date-btn .reset,.KsDateYear-date-btn .today{color:#2196f3}.KsDateMonth-date-btn .clear,.KsDater-date-btn .clear,.KsDaterMulti-date-btn .clear,.KsDateYear-date-btn .clear{color:#f44336}.KsDateMonth-date-btn .clear:hover,.KsDateMonth-date-btn .collect:hover,.KsDateMonth-date-btn .reset:hover,.KsDateMonth-date-btn .selects:hover,.KsDateMonth-date-btn .today:hover,.KsDater-date-btn .clear:hover,.KsDater-date-btn .collect:hover,.KsDater-date-btn .reset:hover,.KsDater-date-btn .selects:hover,.KsDater-date-btn .today:hover,.KsDaterMulti-date-btn .clear:hover,.KsDaterMulti-date-btn .collect:hover,.KsDaterMulti-date-btn .reset:hover,.KsDaterMulti-date-btn .selects:hover,.KsDaterMulti-date-btn .today:hover,.KsDateYear-date-btn .clear:hover,.KsDateYear-date-btn .collect:hover,.KsDateYear-date-btn .reset:hover,.KsDateYear-date-btn .selects:hover,.KsDateYear-date-btn .today:hover{background:transparent}.KsDateMonth-date-btn .clear,.KsDateMonth-date-btn .today,.KsDater-date-btn .clear,.KsDater-date-btn .today,.KsDaterMulti-date-btn .clear,.KsDaterMulti-date-btn .today,.KsDateYear-date-btn .clear,.KsDateYear-date-btn .today{padding-bottom:20px}.KsDateMonth-date:first-child,.KsDater-date:first-child,.KsDaterMulti-date:first-child,.KsDateYear-date:first-child{border-left:1px solid #c8c8c8}.KsDateMonth,.KsDatePicker .KsDater,.KsDater,.KsDaterMulti,.KsDaterMultiPicker .KsDater,.KsDateYear{z-index:1;width:auto;min-width:316px}.KsDateMonth-date-head .interstice,.KsDater-date-head .interstice,.KsDaterMulti-date-head .interstice,.KsDateYear-date-head .interstice{width:16px}.KsDateMonth-date-head .month,.KsDater-date-head .month,.KsDaterMulti-date-head .month,.KsDateYear-date-head .month{font-weight:700}.KsDateMonthPicker .KsDateMonth,.KsDateMonthPicker .KsDater,.KsDatePicker .KsDateMonth,.KsDatePicker .KsDater,.KsDaterMultiPicker .KsDateMonth,.KsDaterMultiPicker .KsDater,.KsDateYearPicker .KsDateMonth,.KsDateYearPicker .KsDater{position:absolute}.KsDatePicker .KsDater-head .year,.KsDaterMultiPicker .KsDater-head .year{color:#c8c8c8}.KsDateMonthPicker .KsDater-date-head .year,.KsDateYearPicker .KsDater-date-head .year{font-weight:700}.KsDateMonthPicker .KsDater-days,.KsDateYearPicker .KsDater-days{margin:28px 0}.readonly.KsDatePicker .KsDater-date,.readonly.KsDaterMultiPicker .KsDaterMulti-date{background:#f5f5f5}.readonly.KsDatePicker .KsDater-date-days span,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days span{pointer-events:none;color:#c8c8c8}.readonly.KsDatePicker .KsDater-date-days span.active,.readonly.KsDatePicker .KsDater-date-days span.begin-active,.readonly.KsDatePicker .KsDater-date-days span.end-active,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.active,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.begin-active,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days span.end-active{background:#777;border-radius:0;color:#fff}.readonly.KsDatePicker .KsDater-date-days-btn,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn{padding:0}.readonly.KsDatePicker .KsDater-date-days-btn .collect,.readonly.KsDatePicker .KsDater-date-days-btn .reset,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .collect,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .reset{padding:0 32px 5px;pointer-events:none}.readonly.KsDatePicker .KsDater-date-days-btn .reset,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .reset{text-align:left;padding-left:42px}.readonly.KsDatePicker .KsDater-date-days-btn .collect,.readonly.KsDaterMultiPicker .KsDaterMulti-date-days-btn .collect{border-left:8px solid #f5f5f5;margin-left:-5px;display:block}.KsDatePicker{position:relative}.KsDaterMulti-date{min-width:316px}.KsDaterMulti-date-btn{border-top:1px solid #c8c8c8}.KsDaterMultiPicker{position:relative}.KsDaterMultiPicker-input input{text-align:center;min-width:100px}.KsDaterMultiPicker-input .scope-icon{color:#26c6da}.KsDaterMultiPicker .KsDaterMulti{position:absolute}.KsDaterMultiPicker-btn{margin-top:20px;border-top:1px solid #c8c8c8}.KsDaterMultiPicker-btn .collect,.KsDaterMultiPicker-btn .reset{line-height:44px;height:44px}.KsDateMonthPicker,.KsDateYear{position:absolute}.readonly.KsDatePicker .KsDatePicker-input,.readonly.KsDaterMultiPicker .KsDaterMultiPicker-input{background:#e9e9e9}@charset "UTF-8";
 body, ul, h1, h2, h3, h4, h5, h6, p, blockquote, input {
   margin: 0;
   padding: 0; }
@@ -227,400 +227,18 @@ hr {
       background-color: #fff;
       border-bottom: 1px solid #e9e9e9; }
     .ks-app .ks-content .ks-container-fluid {
-      background-color: #fff;
-      margin: 20px;
-      border: 1px solid #e9e9e9;
-      padding: 20px; }
+      margin: 20px; }
+      .ks-app .ks-content .ks-container-fluid .container-box {
+        padding: 20px;
+        border: 1px solid #e9e9e9;
+        background: #fff;
+        margin-bottom: 20px;
+        min-height: 600px; }
   .ks-app .ks-footer {
     height: 50px;
-    line-height: 50px;
-    padding: 0 20px 20px; }
+    line-height: 50px; }
     .ks-app .ks-footer .about-us span {
       margin: 0 10px; }
-
-.adv {
-  min-height: 600px;
-  background-color: #1F4769;
-  animation: bg 30s infinite linear;
-  position: relative; }
-  .adv h2 {
-    font-size: 50px;
-    color: #fff;
-    text-align: center;
-    margin-top: top;
-    padding-top: 100px;
-    letter-spacing: 10px;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); }
-
-.land {
-  position: absolute;
-  top: 90%;
-  left: 30%;
-  width: 500px;
-  height: 10px;
-  background: #000;
-  border-radius: 10%; }
-
-.chimney {
-  position: absolute;
-  left: 15%;
-  width: 40px;
-  height: 10px;
-  background: #ff8c1a;
-  border-radius: 10%; }
-
-.fire1, .fire2, .fire3 {
-  position: absolute;
-  width: 8px;
-  background: #ff8c1a;
-  border-radius: 5px; }
-
-.fire1 {
-  bottom: 0%;
-  left: 15%;
-  height: 24px; }
-
-.fire2 {
-  bottom: 55%;
-  left: 18.2%;
-  height: 30px; }
-
-.fire3 {
-  bottom: 54%;
-  left: 21.5%;
-  height: 34px; }
-
-.stick1, .stick2, .stick3 {
-  position: absolute;
-  background: #001;
-  border-radius: 5px; }
-
-.stick1 {
-  bottom: 44%;
-  left: 6%;
-  width: 7px;
-  height: 90px; }
-
-.stick2 {
-  bottom: 44%;
-  left: 30%;
-  width: 7px;
-  height: 90px; }
-
-.stick3 {
-  bottom: 800%;
-  left: 4%;
-  width: 150px;
-  height: 6px; }
-
-.stick2, .stick3 {
-  z-index: 10; }
-
-.vessel {
-  z-index: 10;
-  position: absolute;
-  bottom: 460%;
-  left: 15%;
-  width: 34px;
-  height: 34px;
-  border-radius: 5%;
-  border: solid #001; }
-
-.fluid {
-  position: absolute;
-  top: 50%;
-  width: 35px;
-  height: 18px;
-  background: #ff3300;
-  border-radius: 10%; }
-
-.water {
-  position: absolute;
-  top: 60%;
-  left: 70%;
-  width: 4%;
-  height: 10px;
-  background: #009FC6;
-  border-radius: 15%; }
-
-.camp {
-  z-index: 10;
-  position: absolute;
-  bottom: 40%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid #EBD090;
-  border-radius: 5%; }
-
-.camp1 {
-  z-index: 25;
-  position: absolute;
-  bottom: 40%;
-  left: 67.7%;
-  width: 100px;
-  height: 50px;
-  -webkit-transform: skew(27deg);
-  -moz-transform: skew(27deg);
-  -o-transform: skew(27deg);
-  background: #E38D32;
-  border-radius: 5%; }
-
-.camp2 {
-  z-index: 20;
-  position: absolute;
-  bottom: 40%;
-  left: 65%;
-  width: 100px;
-  height: 100px;
-  -webkit-transform: skew(27deg);
-  -moz-transform: skew(27deg);
-  -o-transform: skew(27deg);
-  background: #D84315;
-  border-radius: 5%; }
-
-.camp3 {
-  z-index: 10;
-  position: absolute;
-  bottom: 40%;
-  left: 60%;
-  width: 0;
-  height: 0;
-  border-right: 18px solid transparent;
-  border-bottom: 101px solid #000; }
-
-.camp4 {
-  z-index: 25;
-  position: absolute;
-  bottom: 100%;
-  left: 67.5%;
-  width: 80px;
-  height: 80px;
-  -webkit-transform: skew(27deg);
-  -moz-transform: skew(27deg);
-  -o-transform: skew(27deg);
-  background: #663d00;
-  border-radius: 10%;
-  opacity: 0.6; }
-
-.mountain1, .mountain2, .mountain3, .mountain4, .mountain5 {
-  position: absolute;
-  bottom: 90.5%;
-  width: 0;
-  height: 0;
-  border-bottom: 200px solid; }
-
-.mountain1 {
-  z-index: 5;
-  left: 30%;
-  border-left: 80px solid transparent;
-  border-bottom-color: #333; }
-
-.mountain2 {
-  z-index: 5;
-  left: 46%;
-  border-right: 80px solid transparent;
-  border-bottom-color: #222; }
-
-.mountain3 {
-  z-index: 2;
-  left: 80.4%;
-  border-right: 80px solid transparent;
-  border-bottom-color: #222; }
-
-.mountain4 {
-  z-index: 2;
-  left: 65%;
-  border-left: 80px solid transparent;
-  border-bottom-color: #333; }
-
-.mountain5 {
-  z-index: 1;
-  left: 48%;
-  border-left: 80px solid transparent;
-  border-bottom-color: #111; }
-
-.mountain5 {
-  bottom: 592%;
-  border-right: 80px solid transparent;
-  border-bottom: 100px solid; }
-
-.moon {
-  position: absolute;
-  bottom: 2000%;
-  left: 15%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  box-shadow: 4px 6px 0px #fff;
-  animation: moon 30s infinite linear; }
-
-.light {
-  position: relative;
-  top: -30%;
-  left: -30%;
-  width: 200%;
-  height: 200%;
-  background: #eee;
-  opacity: 0.5;
-  border-radius: 50%; }
-
-.light2 {
-  position: relative;
-  top: -330%;
-  left: -130%;
-  width: 400%;
-  height: 400%;
-  background: #fff;
-  opacity: 0.2;
-  border-radius: 50%; }
-
-.light3 {
-  position: relative;
-  top: -830%;
-  left: -230%;
-  width: 600%;
-  height: 600%;
-  background: #fff;
-  opacity: 0.1;
-  border-radius: 50%; }
-
-.stars, .stars2, .stars3, .stars4 {
-  z-index: 1;
-  position: absolute;
-  border-radius: 50%;
-  background: #ddd;
-  animation: moon 30s infinite linear; }
-
-.stars {
-  bottom: 2500%;
-  left: 10%;
-  width: 6px;
-  height: 6px; }
-
-.stars2 {
-  bottom: 1800%;
-  left: 35%;
-  width: 10px;
-  height: 10px; }
-
-.stars3 {
-  bottom: 1500%;
-  left: 4%;
-  width: 4px;
-  height: 4px; }
-
-.stars4 {
-  bottom: 2300%;
-  left: 40%;
-  width: 6px;
-  height: 6px; }
-
-.smoke, .smoke1, .smoke2, .smoke3, .smoke4 {
-  z-index: 30;
-  position: absolute;
-  width: 5px;
-  border-radius: 25%;
-  background: #994d00;
-  animation: bounce 2.5s infinite linear; }
-
-.smoke {
-  bottom: 1000%;
-  left: 20%;
-  height: 10px;
-  opacity: 0.6; }
-
-.smoke1 {
-  bottom: 800%;
-  left: 17%;
-  height: 10px;
-  opacity: 1; }
-
-.smoke2 {
-  bottom: 1100%;
-  left: 17%;
-  height: 10px;
-  opacity: 0.6; }
-
-.smoke3 {
-  bottom: 1300%;
-  left: 20%;
-  height: 5px;
-  opacity: 0.48; }
-
-.smoke4 {
-  bottom: 1400%;
-  left: 17%;
-  height: 5px;
-  opacity: 0.44; }
-
-.smoke4 {
-  animation: bounce 3.5s infinite linear; }
-
-@-webkit-keyframes "bounce" {
-  0% {
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px); }
-  100% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px); }
-  100% {
-    opacity: 0; } }
-
-.cloud, .cloud1, .cloud2, .cloud3 {
-  z-index: 100;
-  position: absolute;
-  width: 40px;
-  height: 10px;
-  background: #fff;
-  border-radius: 15px;
-  opacity: 0.7; }
-
-.cloud {
-  bottom: 1500%;
-  left: 57%;
-  animation: float 19s infinite linear; }
-
-.cloud1 {
-  bottom: 1400%;
-  left: 51%;
-  animation: float 19.5s infinite linear; }
-
-.cloud2 {
-  bottom: 1500%;
-  left: 77%;
-  animation: float 17.5s infinite linear; }
-
-.cloud3 {
-  bottom: 1900%;
-  left: 48%;
-  animation: float 18.5s infinite linear; }
-
-@-webkit-keyframes "float" {
-  0% {
-    transform: translateX(0px); }
-  50% {
-    transform: translateX(-40px); }
-  100% {
-    transform: translateX(0px); } }
-
-@-webkit-keyframes "bg" {
-  0% {
-    background: #212121; }
-  50% {
-    background: #03A9F4; }
-  100% {
-    background: #212121; } }
-
-@-webkit-keyframes "moon" {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 input, select, textarea {
   border: 1px solid #c8c8c8;
@@ -630,7 +248,7 @@ input, select, textarea {
   line-height: 36px;
   padding: 0 10px; }
 
-form {
+.form {
   max-width: 680px;
   margin: 20px auto 20px; }
 
@@ -807,26 +425,29 @@ textarea {
   .ks-btn-default:hover {
     color: #444; }
 
+/* table基础样式 */
+.table-striped table td, .multiple-table > table td, .table-striped table th {
+  padding: 10px 20px;
+  border: 0;
+  line-height: 1.7em; }
+
+.table-striped table td, .multiple-table > table td {
+  border-bottom: 1px solid #e9e9e9;
+  vertical-align: top; }
+  .table-striped table td a, .multiple-table > table td a {
+    color: #2196F3;
+    cursor: pointer; }
+  .table-striped table td i, .multiple-table > table td i {
+    padding-right: 10px; }
+
 .table-striped table {
-  /* table基础样式 */
   width: 100%;
   white-space: nowrap; }
-  .table-striped table th, .table-striped table td {
-    padding: 10px 20px;
-    border: 0;
-    line-height: 1.7em; }
   .table-striped table th {
     border-bottom: 1px solid #999;
     border-top: 1px solid #e9e9e9;
-    font-weight: bold; }
-  .table-striped table td {
-    border-bottom: 1px solid #e9e9e9;
-    vertical-align: top; }
-    .table-striped table td a {
-      color: #2196F3;
-      cursor: pointer; }
-    .table-striped table td i {
-      padding-right: 10px; }
+    font-weight: bold;
+    text-align: left; }
 
 .table-striped {
   overflow-y: hidden;
@@ -849,6 +470,8 @@ textarea {
         margin-right: 10px; }
     .ks-search-criteria .right div + div {
       margin-left: 20px; }
+  .ks-search-criteria + .ks-search-criteria {
+    margin-top: -20px; }
 
 .ks-app, .ks-app .ks-header, .ks-app .ks-center, .ks-app .ks-content, .ks-app .ks-footer, .ks-form-group, .has-error, .ks-search-criteria, .ks-search-criteria .right {
   display: -webkit-box;
@@ -862,7 +485,7 @@ textarea {
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
 
-.ks-app .ks-content, .ks-app .ks-content .ks-container-fluid, .ks-app .ks-footer .company, .ks-form-group input, .ks-form-group textarea, .has-error, .has-error input {
+.ks-app .ks-content, .ks-app .ks-content .ks-container-fluid, .ks-app .ks-footer .company, .ks-form-group input, .ks-form-group textarea, .ks-form-group .flex-box, .has-error, .has-error input {
   -webkit-box-flex: 1;
   /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;
@@ -874,352 +497,23 @@ textarea {
   flex: 1;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
 
-@font-face {
-  font-family: "iconfont";
-  src: url(./dist/./iconfont.eot?38ae459f);
-  src: url(./dist/./iconfont.eot?38ae459f) format("embedded-opentype"), url(./dist/./iconfont.woff?e1777e74) format("woff"), url(./dist/./iconfont.ttf?89e57521) format("truetype"), url(./dist/./iconfont.svg?00acef3b) format("svg"); }
-
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  line-height: 1;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-nanrentouxiang:before {
-  content: "\E651"; }
-
-.icon-xiajiantou:before {
-  content: "\E622"; }
-
-.icon-shangjiantou:before {
-  content: "\E623"; }
-
-.icon-sanjiaojiantouxia:before {
-  content: "\E656"; }
-
-.icon-lock:before {
-  content: "\E650"; }
-
-.icon-jianhao:before {
-  content: "\E64E"; }
-
-.icon-chengshishitu:before {
-  content: "\E668"; }
-
-.icon-zhexianquyuxingupolylineshapedregion:before {
-  content: "\E655"; }
-
-.icon-shizhong:before {
-  content: "\E624"; }
-
-.icon-xiangyoujiantou2:before {
-  content: "\E654"; }
-
-.icon-right-arrow:before {
-  content: "\E667"; }
-
-.icon-weixinzhifu:before {
-  content: "\E625"; }
-
-.icon-appshusandian:before {
-  content: "\E626"; }
-
-.icon-chenggong:before {
-  content: "\E627"; }
-
-.icon-arrow-right:before {
-  content: "\E659"; }
-
-.icon-huoxuanzhong:before {
-  content: "\E652"; }
-
-.icon-jiahao:before {
-  content: "\E64F"; }
-
-.icon-triangle-copy-copy:before {
-  content: "\E628"; }
-
-.icon-loading-copy:before {
-  content: "\E629"; }
-
-.icon-chenggong1:before {
-  content: "\E62A"; }
-
-.icon-iconzhenghe31:before {
-  content: "\E62B"; }
-
-.icon-1-copy-copy:before {
-  content: "\E677"; }
-
-.icon-icohongbao:before {
-  content: "\E62C"; }
-
-.icon-icohongbaoyouhui:before {
-  content: "\E62D"; }
-
-.icon-icohuiyuan:before {
-  content: "\E62E"; }
-
-.icon-icohui:before {
-  content: "\E62F"; }
-
-.icon-icoji:before {
-  content: "\E630"; }
-
-.icon-icohome:before {
-  content: "\E631"; }
-
-.icon-icomap:before {
-  content: "\E632"; }
-
-.icon-icostar:before {
-  content: "\E633"; }
-
-.icon-icowifi:before {
-  content: "\E634"; }
-
-.icon-icochongzhihuodong:before {
-  content: "\E635"; }
-
-.icon-icochu:before {
-  content: "\E636"; }
-
-.icon-icochuzhiqia:before {
-  content: "\E637"; }
-
-.icon-icoerweima:before {
-  content: "\E638"; }
-
-.icon-icofanhui:before {
-  content: "\E639"; }
-
-.icon-icofujinmendian:before {
-  content: "\E63A"; }
-
-.icon-icoyanzhengma:before {
-  content: "\E63B"; }
-
-.icon-icoyouhuiquan:before {
-  content: "\E63C"; }
-
-.icon-icozhekou:before {
-  content: "\E63D"; }
-
-.icon-ico12:before {
-  content: "\E63E"; }
-
-.icon-icojifen:before {
-  content: "\E63F"; }
-
-.icon-icojifenhuodong:before {
-  content: "\E640"; }
-
-.icon-icojiasu:before {
-  content: "\E641"; }
-
-.icon-icolipin:before {
-  content: "\E642"; }
-
-.icon-icomendian:before {
-  content: "\E643"; }
-
-.icon-icoshengri:before {
-  content: "\E644"; }
-
-.icon-icoshouji:before {
-  content: "\E645"; }
-
-.icon-icotequan:before {
-  content: "\E646"; }
-
-.icon-icoxiaofeiyouhui:before {
-  content: "\E647"; }
-
-.icon-icoxingbie:before {
-  content: "\E648"; }
-
-.icon-bangzhu:before {
-  content: "\E649"; }
-
-.icon-daohangico:before {
-  content: "\E64A"; }
-
-.icon-kongico:before {
-  content: "\E64B"; }
-
-.icon-jiayouzhanico:before {
-  content: "\E64C"; }
-
-.icon-jiantou:before {
-  content: "\E64D"; }
-
-.icon-rentouliangrenhover:before {
-  content: "\E653"; }
-
-.icon-copy:before {
-  content: "\E600"; }
-
-.icon-anonymous-iconfont:before {
-  content: "\E601"; }
-
-.icon-copy1:before {
-  content: "\E602"; }
-
-.icon-copy2:before {
-  content: "\E603"; }
-
-.icon-anonymous-iconfont1:before {
-  content: "\E604"; }
-
-.icon-danxuanweixuan:before {
-  content: "\E605"; }
-
-.icon-danxuanxuanze:before {
-  content: "\E606"; }
-
-.icon-fuxuanbukexuan:before {
-  content: "\E607"; }
-
-.icon-fuxuanweixuan:before {
-  content: "\E608"; }
-
-.icon-fuxuanxuanze:before {
-  content: "\E609"; }
-
-.icon-anquanzhongxin:before {
-  content: "\E60A"; }
-
-.icon-chenggongtubiao:before {
-  content: "\E60B"; }
-
-.icon-cuowu:before {
-  content: "\E60C"; }
-
-.icon-cuowutubiao:before {
-  content: "\E60D"; }
-
-.icon-jibenshezhi:before {
-  content: "\E60E"; }
-
-.icon-jiaoyiguanli:before {
-  content: "\E60F"; }
-
-.icon-mendian:before {
-  content: "\E610"; }
-
-.icon-guanbitubiaoanniu:before {
-  content: "\E611"; }
-
-.icon-huiyuanqia:before {
-  content: "\E612"; }
-
-.icon-jifen:before {
-  content: "\E613"; }
-
-.icon-quedingxiaotubiao:before {
-  content: "\E614"; }
-
-.icon-rili:before {
-  content: "\E615"; }
-
-.icon-shijian:before {
-  content: "\E616"; }
-
-.icon-sousuo:before {
-  content: "\E617"; }
-
-.icon-quxiaoxiaotubiao:before {
-  content: "\E618"; }
-
-.icon-xialajiantou:before {
-  content: "\E619"; }
-
-.icon-xianjinhongbao:before {
-  content: "\E61A"; }
-
-.icon-xinxitubiao:before {
-  content: "\E61B"; }
-
-.icon-yingxiao:before {
-  content: "\E61C"; }
-
-.icon-yonghu:before {
-  content: "\E61D"; }
-
-.icon-zhengque:before {
-  content: "\E61E"; }
-
-.icon-zhuyi:before {
-  content: "\E61F"; }
-
-.icon-xialajiantoufuben:before {
-  content: "\E620"; }
-
-.icon-chuzhiqia:before {
-  content: "\E621"; }
-
-.icon-hongbaoicocopy:before {
-  content: "\E65A"; }
-
-.icon-shuzi:before {
-  content: "\E65B"; }
-
-.icon-shuzi0:before {
-  content: "\E65C"; }
-
-.icon-shuzi01:before {
-  content: "\E65D"; }
-
-.icon-shuzi02:before {
-  content: "\E65E"; }
-
-.icon-shuzi03:before {
-  content: "\E65F"; }
-
-.icon-shuzi04:before {
-  content: "\E660"; }
-
-.icon-shuzi05:before {
-  content: "\E661"; }
-
-.icon-shuzi06:before {
-  content: "\E662"; }
-
-.icon-shuzi08:before {
-  content: "\E663"; }
-
-.icon-shuzi09:before {
-  content: "\E664"; }
-
-.icon-jiazai:before {
-  content: "\E666"; }
-
-.icon-jiahao1:before {
-  content: "\E657"; }
-
-.icon-jianhao1:before {
-  content: "\E658"; }
-
-.icon-buzoupen:before {
-  content: "\E665"; }
-
-.icon-biaogegengduoneirongico:before {
-  content: "\E6C0"; }
-
-.icon-quanxiancaozuoico:before {
-  content: "\E6C1"; }
-
-.icon-shanchuico:before {
-  content: "\E6C2"; }
-
-.icon-shezhiico:before {
-  content: "\E6C3"; }
-
-.icon-shouyeico:before {
-  content: "\E6C4"; }
-
-.icon-excel:before {
-  content: "\E6CE"; }
+.multiple-table {
+  overflow-y: hidden;
+  margin: 0 -20px;
+  margin-bottom: 20px; }
+  .multiple-table > table {
+    width: 100%;
+    white-space: nowrap; }
+    .multiple-table > table thead {
+      border-bottom: 1px solid #999;
+      border-top: 1px solid #e9e9e9; }
+      .multiple-table > table thead div {
+        border-bottom: 1px solid #999;
+        margin-right: -20px; }
+    .multiple-table > table th {
+      font-weight: bold;
+      text-align: left;
+      padding: 0 20px;
+      font-size: 12px; }
+  .multiple-table tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc; }

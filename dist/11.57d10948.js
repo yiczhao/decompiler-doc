@@ -1,22 +1,22 @@
-webpackJsonp([10],{
+webpackJsonp([11],{
 
-/***/ 147:
+/***/ 150:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(148);
+	module.exports = __webpack_require__(151);
 
 /***/ },
 
-/***/ 148:
+/***/ 151:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(149)
+	__vue_script__ = __webpack_require__(152)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] node_modules/vue-markdown-loader/_cache/table-manage-8.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(150)
+	  console.warn("[vue-loader] node_modules/vue-markdown-loader/_cache/table-manage-7.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(153)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -26,7 +26,7 @@ webpackJsonp([10],{
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/decompiler-doc/node_modules/vue-markdown-loader/_cache/table-manage-8.vue"
+	  var id = "/Users/zdzdesigner/Documents/KS/KS-FED/decompiler-doc/node_modules/vue-markdown-loader/_cache/table-manage-7.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -36,7 +36,7 @@ webpackJsonp([10],{
 
 /***/ },
 
-/***/ 149:
+/***/ 152:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -46,6 +46,19 @@ webpackJsonp([10],{
 	});
 	// <template><section><h2>表格管理页面布局</h2>
 	// <hr>
+	// <div class="ks-search-criteria">
+	//     <div class="right">
+	//         <div>
+	//             <span>name:</span><input type="text">
+	//         </div>
+	//         <div>
+	//             <span>name:</span><input type="text">
+	//         </div>
+	//         <div>
+	//             <button class="ks-btn-primary">查询</button>
+	//         </div>
+	//     </div>
+	// </div>
 	// <div class="ks-search-criteria">
 	//     <button class="ks-btn-success">新建</button>
 	//     <button class="ks-btn-primary">设置</button>
@@ -106,10 +119,10 @@ webpackJsonp([10],{
 
 /***/ },
 
-/***/ 150:
+/***/ 153:
 /***/ function(module, exports) {
 
-	module.exports = "<section><h2>表格管理页面布局</h2>\n<hr>\n<div class=\"ks-search-criteria\">\n    <button class=\"ks-btn-success\">新建</button>\n    <button class=\"ks-btn-primary\">设置</button>\n    <div class=\"right\">\n        <div>\n            <span>name:</span><input type=\"text\">\n        </div>\n        <div>\n            <span>name:</span><input type=\"text\">\n        </div>\n        <div>\n            <button class=\"ks-btn-primary\">查询</button>\n        </div>\n    </div>\n</div>\n<div class=\"table-striped\">\n    <table>\n        <tr>\n            <th v-for=\"1 in 12\">第{{$index+1}}列</th>\n        </tr>\n        <tr>\n            <td v-for=\"1 in 12\">第1行,第{{$index+1}}列</td>\n        </tr>\n        <tr>\n            <td v-for=\"1 in 12\">第1行,第{{$index+1}}列</td>\n        </tr>\n        <tr>\n            <td v-for=\"1 in 12\">第1行,第{{$index+1}}列</td>\n        </tr>\n        <tr>\n            <td v-for=\"1 in 12\">第1行,第{{$index+1}}列</td>\n        </tr>\n    </table>\n</div>\n<p><ks-page-group :current.sync=\"page_current2\" :length=\"7\" :total=\"100\" :sizes=\"[10,17,30]\" :on-change=\"change2\"></ks-page-group></p>\n</section>";
+	module.exports = "<section><h2>表格管理页面布局</h2>\n<hr>\n<div class=\"ks-search-criteria\">\n    <div class=\"right\">\n        <div>\n            <span>name:</span><input type=\"text\">\n        </div>\n        <div>\n            <span>name:</span><input type=\"text\">\n        </div>\n        <div>\n            <button class=\"ks-btn-primary\">查询</button>\n        </div>\n    </div>\n</div>\n<div class=\"ks-search-criteria\">\n    <button class=\"ks-btn-success\">新建</button>\n    <button class=\"ks-btn-primary\">设置</button>\n    <div class=\"right\">\n        <div>\n            <span>name:</span><input type=\"text\">\n        </div>\n        <div>\n            <span>name:</span><input type=\"text\">\n        </div>\n        <div>\n            <button class=\"ks-btn-primary\">查询</button>\n        </div>\n    </div>\n</div>\n<div class=\"table-striped\">\n    <table>\n        <tr>\n            <th v-for=\"1 in 12\">第{{$index+1}}列</th>\n        </tr>\n        <tr>\n            <td v-for=\"1 in 12\">第1行,第{{$index+1}}列</td>\n        </tr>\n        <tr>\n            <td v-for=\"1 in 12\">第1行,第{{$index+1}}列</td>\n        </tr>\n        <tr>\n            <td v-for=\"1 in 12\">第1行,第{{$index+1}}列</td>\n        </tr>\n        <tr>\n            <td v-for=\"1 in 12\">第1行,第{{$index+1}}列</td>\n        </tr>\n    </table>\n</div>\n<p><ks-page-group :current.sync=\"page_current2\" :length=\"7\" :total=\"100\" :sizes=\"[10,17,30]\" :on-change=\"change2\"></ks-page-group></p>\n</section>";
 
 /***/ }
 

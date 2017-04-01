@@ -65,9 +65,13 @@ webpackJsonp([1],{
 	//                 <k-crumbs></k-crumbs>
 	//                 <!-- <loading-mask></loading-mask> -->
 	//                 <div class="ks-container-fluid">
-	//                     <router-view></router-view>
+	//                     <div class="container-box">
+	//                         <router-view></router-view>
+	//                     </div>
+	//                     <k-footer></k-footer>
+	//
 	//                 </div>
-	//                 <k-footer></k-footer>
+	//                 <!-- <k-footer></k-footer> -->
 	//             </div>
 	//         </div>
 	//     </div>
@@ -294,10 +298,10 @@ webpackJsonp([1],{
 	    subMenu: [{ name: '简介', icon: 'icon', link: 'install' }, { name: '快速上手', icon: 'icon', link: '' }]
 	}, {
 	    name: '基础布局',
-	    subMenu: [{ name: 'layout 布局', icon: 'icon', link: 'layout' }, { name: 'button组件样式', icon: 'icon', link: 'button' }, { name: 'Table 表格样式', icon: 'icon', link: 'table' }]
+	    subMenu: [{ name: 'layout 布局', icon: 'icon', link: 'layout' }, { name: 'button组件样式', icon: 'icon', link: 'button' }, { name: 'Table 表格样式', icon: 'icon', link: 'table' }, { name: '多标题表格样式', icon: 'icon', link: 'multiple-table' }]
 	}, {
 	    name: '内容布局',
-	    subMenu: [{ name: '整体表单样式', icon: 'icon', link: 'overall' }, { name: '表单验证样式', icon: 'icon', link: 'form-validate' }, { name: '搜索条件样式', icon: 'icon', link: 'search' }, { name: '表格管理页面布局', icon: 'icon', link: 'table-manage' }]
+	    subMenu: [{ name: '整体表单样式', icon: 'icon', link: 'overall' }, { name: '表单验证样式', icon: 'icon', link: 'form-validate' }, { name: '搜索条件样式', icon: 'icon', link: 'search' }, { name: '表格管理页面布局', icon: 'icon', link: 'table-manage' }, { name: '查看图片组件调用', icon: 'icon', link: 'view-image' }]
 	}, {
 	    name: '验证 Validate',
 	    subMenu: [{ name: '简介', icon: 'icon', link: 'briefIntroduction' }, { name: '了解规则', icon: 'icon', link: 'understandingRules' }, { name: 'DOM 绑定', icon: 'icon', link: 'domBindings' }, { name: '方法 & 事件', icon: 'icon', link: 'methodAndEvent' }, { name: 'demo 示例', icon: 'icon', link: 'validatorDemo' }]
@@ -443,7 +447,7 @@ webpackJsonp([1],{
 /***/ 121:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"ks-app\">\n    <k-header></k-header>\n    <div class=\"ks-center\">\n        <k-menu></k-menu>\n        <div class=\"ks-content\" v-el:main-container>\n            <k-crumbs></k-crumbs>\n            <!-- <loading-mask></loading-mask> -->\n            <div class=\"ks-container-fluid\">\n                <router-view></router-view>\n            </div>\n            <k-footer></k-footer>\n        </div>\n    </div>\n</div>\n\n\n<!-- <div>\n    <k-header></k-header>\n    <div class=\"ks-center\">\n        <k-menu></k-menu>\n        <div class=\"ks-content\" v-el:main-container>\n            <k-crumbs></k-crumbs>\n            <div class=\"ks-container-fluid\">\n                <div class=\"router-wrap\">\n                    <router-view class=\"p20\"></router-view>\n                </div>\n            </div>\n            <k-footer></k-footer>\n        </div>\n    </div>\n</div> -->\n";
+	module.exports = "\n<div class=\"ks-app\">\n    <k-header></k-header>\n    <div class=\"ks-center\">\n        <k-menu></k-menu>\n        <div class=\"ks-content\" v-el:main-container>\n            <k-crumbs></k-crumbs>\n            <!-- <loading-mask></loading-mask> -->\n            <div class=\"ks-container-fluid\">\n                <div class=\"container-box\">\n                    <router-view></router-view>\n                </div>\n                <k-footer></k-footer>\n                \n            </div>\n            <!-- <k-footer></k-footer> -->\n        </div>\n    </div>\n</div>\n\n\n<!-- <div>\n    <k-header></k-header>\n    <div class=\"ks-center\">\n        <k-menu></k-menu>\n        <div class=\"ks-content\" v-el:main-container>\n            <k-crumbs></k-crumbs>\n            <div class=\"ks-container-fluid\">\n                <div class=\"router-wrap\">\n                    <router-view class=\"p20\"></router-view>\n                </div>\n            </div>\n            <k-footer></k-footer>\n        </div>\n    </div>\n</div> -->\n";
 
 /***/ }
 
