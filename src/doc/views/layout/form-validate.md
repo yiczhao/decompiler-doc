@@ -4,7 +4,7 @@
 
 <br/>
 
-<form data-validator-option="{theme:'bootstrap', timely:2, stopOnError:true}">
+<form class="form" data-validator-option="{theme:'bootstrap', timely:2, stopOnError:true}">
     <div class="ks-form-group">
         <label>Username</label>
         <div class="has-error">
@@ -67,6 +67,10 @@
         </div>
     </div>
     <div class="ks-form-group">
+        <label>日期</label>
+        <div class="flex-box"><ks-date-picker></ks-date-picker></div>
+    </div>
+    <div class="ks-form-group">
         <label>Note</label>
         <textarea data-rule="required;"></textarea>
     </div>
@@ -84,7 +88,7 @@
 </form>
 
 ```html
-<form data-validator-option="{theme:'bootstrap', timely:2, stopOnError:true}">
+<form class="form" data-validator-option="{theme:'bootstrap', timely:2, stopOnError:true}">
     <div class="ks-form-group">
         <label>Username</label>
         <div class="has-error">
@@ -145,6 +149,10 @@
             <input type="radio" name="interest">movie
             <input type="radio" name="interest">game
         </div>
+    </div>
+    <div class="ks-form-group">
+        <label>日期</label>
+        <div class="flex-box"><ks-date-picker></ks-date-picker></div>
     </div>
     <div class="ks-form-group">
         <label>Note</label>

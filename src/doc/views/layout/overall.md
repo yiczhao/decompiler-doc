@@ -4,7 +4,7 @@
 
 <br>
 
-<form>
+<form class="form">
     <div class="ks-form-group">
         <label>标准输入框</label>
         <input type="text" placeholder="标准输入框">
@@ -41,7 +41,7 @@
 
 
 ```html
-<form>
+<form class="form">
     <div class="ks-form-group">
         <label>标准输入框</label>
         <input type="text" placeholder="标准输入框">
