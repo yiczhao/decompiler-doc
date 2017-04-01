@@ -1,6 +1,6 @@
 <template>
 	<div class="ks-footer">
-		<!-- <div class="company"> 
+		<div class="company"> 
 			<a class="a-t" href="http://www.kashuo.com">@kashuo.com</a> 
 		</div> 
 		<div class="about-us"> 
@@ -9,6 +9,6 @@
 			<a href="#">使用教程</a><span>|</span> 
 			<a href="#">客服中心</a><span>|</span> 
 			<a href="#">联系我们</a>
-		</div> -->
+		</div>
 	</div>
 </template>

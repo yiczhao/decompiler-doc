@@ -16,6 +16,9 @@ import ksPageGroup from '../../min/ks/components/kspagegroup/index.js'
 import ksRadio from '../../min/ks/components/ksradio/index.js'
 
 import ksImage from '../../min/ks/components/ksimage/index.js'
+
+
+import ksDatePicker from '../../min/ks/components/ksdatepicker/index.js'
 // import phone from './phone'
 // import tableStatus from './table-status'
 // import {
@@ -41,7 +44,8 @@ const components = {
     ksPage,
     ksPageGroup,
     ksRadio,
-    ksImage
+    ksImage,
+    ksDatePicker
 
 }
 
