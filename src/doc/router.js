@@ -279,6 +279,14 @@ export default (router) => {
                 require(['./views/validator/validatorDemo.md'], resolve)
               }
             },
+            /* remote 远程验证*/
+            '/remote': {
+              name: 'remote',
+              cnName: 'remote 远程验证',
+              component: (resolve) => {
+                require(['./views/validator/remote.md'], resolve)
+              }
+            },
 
           },
         },

@@ -48,6 +48,8 @@ export default [
             {name:'DOM 绑定',icon:'icon',link:'domBindings'},
             {name:'方法 & 事件',icon:'icon',link:'methodAndEvent'},
             {name:'demo 示例',icon:'icon',link:'validatorDemo'},
+            {name:'remote 远程验证',icon:'icon',link:'remote'},
+
         ]
     },
     {
