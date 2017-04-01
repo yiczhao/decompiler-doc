@@ -6,7 +6,7 @@
     line-height: 36px;
     padding: 0 10px;
 }
-form{
+.form{
 	max-width: 680px;
 	margin: 20px auto 20px;
 }
@@ -70,6 +70,9 @@ textarea{
 	.ks-line-box label {
 		font-weight: normal;
 		margin-right: 20px;
+	}
+	.flex-box{
+		@extend %flex-1;
 	}
 }
 
