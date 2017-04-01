@@ -7,7 +7,10 @@
                 <k-crumbs></k-crumbs>
                 <!-- <loading-mask></loading-mask> -->
                 <div class="ks-container-fluid">
-                    <router-view></router-view>
+                    <div class="container-box">
+                        <router-view></router-view>
+                    </div>
+                    
                 </div>
                 <k-footer></k-footer>
             </div>
