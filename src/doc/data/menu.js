@@ -10,7 +10,7 @@ export default [
         name: '开发指南 Guide',
         subMenu: [
             {name: '简介', icon: 'icon', link: 'install'},
-            {name: '快速上手', icon: 'icon', link: ''}
+            // {name: '快速上手', icon: 'icon', link: ''}
         ]
     },
 
