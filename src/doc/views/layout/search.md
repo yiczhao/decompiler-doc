@@ -56,6 +56,9 @@
 	<button class="ks-btn-primary">设置</button>
 	<div class="right">
 		<div>
+			<ks-date-picker></ks-date-picker>
+		</div>
+		<div>
 			<span>name:</span><input type="text">
 		</div>
 		<div>
@@ -72,6 +75,9 @@
 	<button class="ks-btn-success">新建</button>
 	<button class="ks-btn-primary">设置</button>
 	<div class="right">
+		<div>
+			<ks-date-picker></ks-date-picker>
+		</div>
 		<div>
 			<span>name:</span><input type="text">
 		</div>
