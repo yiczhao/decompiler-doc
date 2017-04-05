@@ -56,7 +56,10 @@
 	<button class="ks-btn-primary">设置</button>
 	<div class="right">
 		<div>
-			<ks-date-picker></ks-date-picker>
+			<span>日期:</span>
+			<div class="inline-box">
+				<ks-date-picker></ks-date-picker>
+			</div>
 		</div>
 		<div>
 			<span>name:</span><input type="text">
@@ -76,7 +79,10 @@
 	<button class="ks-btn-primary">设置</button>
 	<div class="right">
 		<div>
-			<ks-date-picker></ks-date-picker>
+			<span>日期:</span>
+			<div class="inline-box">
+				<ks-date-picker></ks-date-picker>
+			</div>
 		</div>
 		<div>
 			<span>name:</span><input type="text">
