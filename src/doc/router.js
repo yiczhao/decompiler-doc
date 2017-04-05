@@ -118,6 +118,15 @@ export default (router) => {
           }
         },
 
+        /* 更新日志 */
+        '/update': {
+          name: 'update',
+          cnName: '更新日志',
+          component: (resolve) => {
+            require(['./views/log/update.md'], resolve)
+          }
+        },
+
 
         
 // 
@@ -150,6 +159,10 @@ export default (router) => {
             }
           }
         },
+
+
+
+
         /* data */
         '/data': {
           name: 'data',
@@ -277,6 +290,14 @@ export default (router) => {
               cnName: 'demo 示例',
               component: (resolve) => {
                 require(['./views/validator/validatorDemo.md'], resolve)
+              }
+            },
+            /* remote 远程验证*/
+            '/remote': {
+              name: 'remote',
+              cnName: 'remote 远程验证',
+              component: (resolve) => {
+                require(['./views/validator/remote.md'], resolve)
               }
             },
 
