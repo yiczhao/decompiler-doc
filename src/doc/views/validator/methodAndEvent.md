@@ -100,3 +100,68 @@ $("#username").trigger("hidemsg");
 // Hide all messages form the form
 $("#form").trigger("hidemsg");
 ```
+
+
+
+
+#### dataFilter - 转换ajax返回数据为插件支持的格式
+<b>类型：</b>Function(data)
+<b>默认：</b>null
+<b>示例：</b>如果服务端返回格式无法更改，可以用 dataFilter 参数转换
+
+<form id="form3" data-validator-option="{theme:'bootstrap', timely:2, stopOnError:true}">
+    <div class="ks-form-group">
+        <label>Username</label>
+        <div class="has-error">
+            <input type="text" name="username" 
+                data-rule="required;username;dataFilter;" 
+                data-rule-username="[/[\w\d]{4,30}/, 'Please enter 3-12 digits, letters, underscores']" 
+                data-tip="You can use letters, numbers and periods">
+        </div>
+    </div>
+   <div class="ks-form-group">
+        <label></label>
+        <button class="ks-btn-primary" @click="sub">Submit</button>
+    </div>
+</form>
+
+```javascript
+/* 假设服务端返回结果为： {"status":600, "msg":"名字已被占用"}
+ */
+$('#form3').validator({
+    dataFilter: function(data) {
+        if (data.status === 200) return "";
+        else return data.msg;
+    },
+    fields: {
+        name: "required; length(4~12); remote(/user/check/name)"
+    }
+});
+```
+
+
+
+
+<script lang="babel">
+  export default{
+    data(){
+      return {
+        
+      }
+    },
+    methods:{
+        //提交按钮
+        sub:function(){
+            console.log('loding……');
+            
+        },
+    },
+    
+    created:function(){
+      
+    },
+    ready:function(){
+
+    },
+  }
+</script>

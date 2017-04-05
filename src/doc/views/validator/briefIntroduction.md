@@ -5,21 +5,21 @@
 
 |规则 | 描述（验证信息） |  示例|
 |---|---|----|
-|  required |  此处不能为空 | data-rule=“required;”  |
-| digits | 请填写数字  | | 
-| letters | 请填写字母 |  | 
-| date  | 请填写有效的日期，格式:yyyy-mm-dd |  | 
-| time | 请填写有效的时间，00:00到23:59之间 |  | 
-| email  | 请填写有效的邮箱 |  | 
-| url | 请填写有效的网址 |  | 
-| qq   | 请填写有效的QQ号 |  | 
-| IDcard | 请填写正确的身份证号码 |  | 
-| tel | 请填写有效的电话号码 |  | 
-| mobile  | 请填写有效的手机号 |  | 
-| zipcode |   请检查邮政编码格式 |  | 
-| chinese  |  请填写中文字符 |  | 
-| username  |  请填写3-12位数字、字母、下划线 |  | 
-| password | 请填写6-16位字符，不能包含空格 |  | 
+|  required |  此处不能为空 | data-rule="required;"  |
+| digits | 请填写数字  | data-rule="digits;"  | 
+| letters | 请填写字母 | data-rule="letters" | 
+| date  | 请填写有效的日期，格式:yyyy-mm-dd | data-rule="date" | 
+| time | 请填写有效的时间，00:00到23:59之间 | data-rule="time" | 
+| email  | 请填写有效的邮箱 | data-rule="email" | 
+| url | 请填写有效的网址 | data-rule="url" | 
+| qq   | 请填写有效的QQ号 |  data-rule="qq" | 
+| IDcard | 请填写正确的身份证号码 | data-rule="IDcard" | 
+| tel | 请填写有效的电话号码 | data-rule="tel" | 
+| mobile  | 请填写有效的手机号 | data-rule="mobile" | 
+| zipcode |   请检查邮政编码格式 | data-rule="zipcode" | 
+| chinese  |  请填写中文字符 | data-rule="chinese" | 
+| username  |  请填写3-12位数字、字母、下划线 | data-rule="username" | 
+| password | 请填写6-16位字符，不能包含空格 | data-rule="password" | 
 
 <br/>
 
@@ -133,9 +133,33 @@
         >
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" v-on:click="onSubmit">Submit</button>
         <button type="reset" class="btn btn-default">reset</button>
     </div>
 </form>
 <br/>
+
+<script lang="babel">
+  export default{
+    data(){
+      return {
+        hello:'你好！'
+      }
+    },
+    methods:{
+        onSubmit:function(){
+            console.log('?????--');
+            $('#form').trigger("validate");
+        },
+    },
+    
+    created:function(){
+
+    },
+    ready:function(){
+      // 在键盘按下并释放及提交后验证提交表单
+     
+    },
+  }
+</script>
 
