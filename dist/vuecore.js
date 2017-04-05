@@ -51,7 +51,7 @@
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vuex = __webpack_require__(240);
+	var _vuex = __webpack_require__(246);
 
 	var _vuex2 = _interopRequireDefault(_vuex);
 
@@ -16866,7 +16866,7 @@
 
 /***/ },
 
-/***/ 240:
+/***/ 246:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
