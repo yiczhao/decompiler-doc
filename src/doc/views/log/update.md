@@ -21,3 +21,4 @@
 >> 添加 <a v-link="{name:'multiple-table'}">添加 多标题表格样式 </a> 【2017.03.31】
 
 >> 添加 <a v-link="{name:'remote'}"> validator-remote 远程验证</a>【2017.04.01】
+

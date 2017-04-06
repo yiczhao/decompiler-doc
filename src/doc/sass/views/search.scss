@@ -2,20 +2,23 @@
 	padding-bottom: 20px;
 	@extend %display-flex;
 	align-items: flex-end;
-	.right{
+	& > .right{
 		flex:1;
-		text-align: right;
+		// text-align: right;
 		@extend %display-flex;
     	justify-content: flex-end;
     	flex-wrap: wrap;
-    	div {
+    	& > div {
     		margin-top: 20px;
     		span{
 	    		margin-right: 10px;
 	    	}
     	}
-    	div + div{
+    	& > div + div{
     		margin-left: 20px;
+    	}
+    	& > div > .inline-box{
+    		display: inline-table;
     	}
 	}
 	& + .ks-search-criteria{
