@@ -459,21 +459,22 @@ textarea {
 .ks-search-criteria {
   padding-bottom: 20px;
   align-items: flex-end; }
-  .ks-search-criteria .right {
+  .ks-search-criteria > .right {
     flex: 1;
-    text-align: right;
     justify-content: flex-end;
     flex-wrap: wrap; }
-    .ks-search-criteria .right div {
+    .ks-search-criteria > .right > div {
       margin-top: 20px; }
-      .ks-search-criteria .right div span {
+      .ks-search-criteria > .right > div span {
         margin-right: 10px; }
-    .ks-search-criteria .right div + div {
+    .ks-search-criteria > .right > div + div {
       margin-left: 20px; }
+    .ks-search-criteria > .right > div > .inline-box {
+      display: inline-table; }
   .ks-search-criteria + .ks-search-criteria {
     margin-top: -20px; }
 
-.ks-app, .ks-app .ks-header, .ks-app .ks-center, .ks-app .ks-content, .ks-app .ks-footer, .ks-form-group, .has-error, .ks-search-criteria, .ks-search-criteria .right {
+.ks-app, .ks-app .ks-header, .ks-app .ks-center, .ks-app .ks-content, .ks-app .ks-footer, .ks-form-group, .has-error, .ks-search-criteria, .ks-search-criteria > .right {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
