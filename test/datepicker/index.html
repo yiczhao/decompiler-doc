@@ -58,12 +58,12 @@
     <!-- {{name}} -->
     <input type="text" name="" v-model="name">
     <div id="renderField1">
-        <ks-date-picker :value.sync="datepicker" style="width:200px"></ks-date-picker>
+        <ks-date-picker type="datemonth" :value.sync="datepicker" min="2011-10" style="width:200px"></ks-date-picker>
         <input type="hidden" name=""  value="{{datepicker}}">
         {{datepicker}}
     </div>
     <div>
-        <ks-date-picker :value.sync="datemonthpicker" type="datemonth" style="width:200px"></ks-date-picker>
+        <ks-date-picker :value.sync="datemonthpicker" type="date" style="width:200px"></ks-date-picker>
         <input type="hidden" name=""  value="{{datemonthpicker}}">
         <!-- {{datemonthpicker}} -->
     </div>

@@ -30,21 +30,27 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
         
         options.renderField = options.renderField || []
         
-        document.addEventListener('DOMContentLoaded',function(){
-            nodeFields = options.renderField.reduce(function(arr,node){
-                if('string' == typeof node ){
-                    node = document.querySelectorAll(node)
+        var domLoadPromise = new Promise(function(resolve,reject){
+
+            document.addEventListener('DOMContentLoaded',function(){
+                nodeFields = options.renderField.reduce(function(arr,node){
+                    if('string' == typeof node ){
+                        node = document.querySelectorAll(node)
+                    }
+                    return arr.concat(Array.prototype.slice.call(node))
+                },[]) 
+                !nodeFields.length && nodeFields.push(options.el)
+                nodeFields.forEach(function(node){
+                    node.style.display = 'none'
+                })
+
+                if('function' === typeof options.preReady){
+                    options.preReady()
                 }
-                return arr.concat(Array.prototype.slice.call(node))
-            },[]) 
-            !nodeFields.length && nodeFields.push(options.el)
-            nodeFields.forEach(function(node){
-                node.style.display = 'none'
+                resolve()
+                
             })
-            if('function' === typeof options.preReady){
-                options.preReady()
-            }
-            
+
         })
         
 
@@ -61,7 +67,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                 // 加载字体
                 loader.iconfont()
                 // 验证
-                loader.validator()
+                
                 // 获取paths 和 shim
                 var pathsAndShim = loader.compilePathsAndShim(config)
                 // requirejs配置 ，返回注入的模块
@@ -79,7 +85,9 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                 // 依赖组件注册
                 Promise.all([loader.vue()
                             ,requireModule(needModule)
-                            ,loader.apiLoad(options.loads)])
+                            ,loader.apiLoad(options.loads)
+                            ,loader.validator()
+                            ,domLoadPromise])
                     .then(function(arg){
                         
                         var Vue = arg[0]

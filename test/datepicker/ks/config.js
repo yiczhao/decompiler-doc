@@ -20,8 +20,8 @@ define(function(){
             
             
             'component-KsDatePicker':{ 
-                js:kspath+'components/ksdatepicker/index',
-                css:kspath+'components/ksdatepicker/style'
+                js:kspath+'components/ksdatepicker/index.1.0.0',
+                css:kspath+'components/ksdatepicker/style.1.0.0'
             },
             'component-KsPage': {
                 js:kspath+'components/kspage/index',
