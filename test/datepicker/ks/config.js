@@ -17,8 +17,9 @@ define(function(){
             // 'qs':scope+'util/qs',
             'jquery': scope+'util/jquery.min',
             'validator':scope+'util/validator/index',
-            
-            
+            'vue-prototype':{
+                $notice:'KsNoticeCenter'
+            },
             'component-KsDatePicker':{ 
                 js:kspath+'components/ksdatepicker/index.1.0.0',
                 css:kspath+'components/ksdatepicker/style.1.0.0'
@@ -39,6 +40,15 @@ define(function(){
                 js:kspath+'components/ksmodalentity/index',
                 css:kspath+'components/ksmodalentity/style'
             },
+            'component-KsSwitch':{ 
+                js:kspath+'components/ksswitch/index',
+                css:kspath+'components/ksswitch/style'
+            },
+            'component-KsNoticeCenter':{ 
+                js:kspath+'components/ksnoticecenter/index',
+                css:kspath+'components/ksnoticecenter/style'
+            },
+            
             'directive-KsLimitNumberFixed':kspath+'directives/kslimitnumberfixed/index'
             
         }    

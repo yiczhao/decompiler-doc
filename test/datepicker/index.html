@@ -11,7 +11,8 @@
         
         KS({
             // kspath:'/src/min/ks/',
-            components:['KsDatePicker','KsPage','KsDialog','KsModal'], 
+            components:['KsDatePicker','KsPage','KsDialog','KsModal','KsSwitch'], 
+            propertys:{KsModal:'KsModal'},
             directives:['KsLimitNumberFixed'],
             // renderField:['div'],
             // filters:['cc'],
@@ -21,7 +22,8 @@
                 max:10000,
                 page:1,
                 datepicker:'2011-10-10',
-                datemonthpicker:''
+                datemonthpicker:'',
+                switch:''
             },
             methods:{
                 change:function(val){
@@ -45,6 +47,7 @@
                 //     }
                 // });
                 console.log(this.ksloads)
+                // this.switch = ""
             }
         })
 
@@ -55,6 +58,8 @@
     </script>
 </head>
 <body id="app">
+    <ks-switch v-bind:checked.sync="switch" name="cc"></ks-switch>
+    <input type="text" name="kq" v-bind:value="switch">
     <!-- {{name}} -->
     <input type="text" name="" v-model="name">
     <div id="renderField1">

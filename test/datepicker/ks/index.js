@@ -201,7 +201,7 @@ function getCurrentScript() {var doc = document; if(doc.currentScript) {return d
                     config[key] = JSON.parse(JSON.stringify(loadAndKspath.loads[key]))
                 })
 
-            // console.log(config)
+            console.log(config)
             return config 
 
         },
