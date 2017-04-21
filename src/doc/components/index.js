@@ -18,7 +18,7 @@ import ksRadio from '../../min/ks/components/ksradio/index.js'
 import ksImage from '../../min/ks/components/ksimage/index.js'
 
 
-import ksDatePicker from '../../min/ks/components/ksdatepicker/index.js'
+import ksDatePicker from '../../min/ks/components/ksdatepicker/index.1.0.0.js'
 // import phone from './phone'
 // import tableStatus from './table-status'
 // import {
