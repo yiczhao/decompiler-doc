@@ -6,14 +6,22 @@
 
 <br>
 
-<div class="multiple-table">
-    <table>  
-        <thead>    
+
+<div class="table-striped">
+    <table>
+        <!-- 普通表头 -->
+        <thead style="display: none;">
+            <tr>
+                <th v-for="1 in 8">标题{{$index+1}}</th>
+            </tr>
+        </thead>  
+        <!-- 多表头 -->
+        <thead  class="multiple-tit">    
             <tr>      
                 <th rowspan="2">表头一</th>      
                 <th rowspan="2">表头二</th>      
-                <th colspan="2"><div>表头三</div></th>      
-                <th colspan="3"><div>表头四</div></th>
+                <th colspan="2"><div class="tit-bor">表头三</div></th>      
+                <th colspan="3"><div class="tit-bor">表头四</div></th>
                 <th rowspan="2">表头五</th>     
             </tr>    
             <tr>      
@@ -38,18 +46,20 @@
     </table>
 </div>
 
+
 ```html
-<div class="multiple-table">
-    <table>  
-        <thead>    
+<div class="table-striped">
+    <table>
+        <!-- 多表头 -->
+        <thead  class="multiple-tit">    
             <tr>      
                 <th rowspan="2">表头一</th>      
                 <th rowspan="2">表头二</th>      
-                <th colspan="2"><div>表头三</div></th>      
-                <th colspan="3"><div>表头四</div></th>
+                <th colspan="2"><div class="tit-bor">表头三</div></th>      
+                <th colspan="3"><div class="tit-bor">表头四</div></th>
                 <th rowspan="2">表头五</th>     
             </tr>    
-            <tr> // 此行中添加的是 向右合并的单元格的表头     
+            <tr>   // 此行中添加的是 向右合并的单元格的表头     
                 <th>当月</th>      
                 <th>上月</th>      
                 <th>当月</th>      
