@@ -48,6 +48,10 @@ define(function(){
                 js:kspath+'components/ksnoticecenter/index',
                 css:kspath+'components/ksnoticecenter/style'
             },
+            'component-KsIcon':{ 
+                js:kspath+'components/ksicon/index.1.0.0',
+                css:kspath+'components/ksicon/style.1.0.0'
+            },
             
             'directive-KsLimitNumberFixed':kspath+'directives/kslimitnumberfixed/index'
             

@@ -11,7 +11,7 @@
         
         KS({
             // kspath:'/src/min/ks/',
-            components:['KsDatePicker','KsPage','KsDialog','KsModal','KsSwitch'], 
+            components:['KsDatePicker','KsPage','KsDialog','KsModal','KsSwitch','KsIcon'], 
             propertys:{KsModal:'KsModal'},
             directives:['KsLimitNumberFixed'],
             // renderField:['div'],
@@ -58,6 +58,7 @@
     </script>
 </head>
 <body id="app">
+<ks-icon name="shangjiantou"></ks-icon>
     <ks-switch v-bind:checked.sync="switch" name="cc"></ks-switch>
     <input type="text" name="kq" v-bind:value="switch">
     <!-- {{name}} -->
